@@ -1,5 +1,6 @@
-@use "abstracts" as *;
+@use "abstracts" as a;
+// bring specific folders required into here so styles available
 
 body {
-   background-color: $bgColor;
+   background-color: a.$bgColor;
 }
