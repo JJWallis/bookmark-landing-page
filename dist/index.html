@@ -12,19 +12,42 @@
       <script defer="" src="/main.d8ebb8d6.js"></script>
    <script src="/main.48b3db1d.js"></script></head>
    <body>
-      <header class="header">
-         <div class="hdr_wrapper alignment">
+      <header class="hdr">
+         <div class="hdr_content alignment">
             <a href="/" aria-label="Logo directing to homepage">
-               <img src="/logo-bookmark.ac40e765.svg" alt="Clickable boomark logo" class="logo">
+               <img src="/logo-bookmark.ac40e765.svg">
             </a>
-            <nav class="hdr_nav">
-               <ul class="hdr_nav-ul">
+            <button aria-label="Interactive hamburger icon to display mobile navigation menu">
+               <img src="/icon-hamburger.cb455b0f.svg">
+            </button>
+            <div class="hdr_mobile-nav-ct">
+               <div class="mb-sb">
+                  <a href="/" aria-label="Logo directing to homepage.">
+                     <img src="/logo-bookmark-mobile.8db7a98f.svg">
+                  </a>
+                  <a href="/" aria-label="Cross icon to close navigation menu.">
+                     <img src="/icon-close.1add023a.svg">
+                  </a>
+               </div>
+               <nav class="hdr_nav-mb">
+                  <ul>
+                     <li><a href="/">Features</a></li>
+                     <li><a href="/">Pricing</a></li>
+                     <li><a href="/">Contact</a></li>
+                     <li><a href="/" class="btn-lnk lnk-red">Login</a></li>
+                  </ul>
+               </nav>
+               <!-- inline SVG -->
+               <!-- inline SVG -->
+            </div>
+            <!-- <nav class="hdr_nav-wd hidden">
+               <ul>
                   <li><a href="/">Features</a></li>
                   <li><a href="/">Pricing</a></li>
                   <li><a href="/">Contact</a></li>
-                  <li><a href="/" class="btn-lnk lnk-login">Login</a></li>
+                  <li><a href="/" class="btn-lnk lnk-red">Login</a></li>
                </ul>
-            </nav>
+            </nav> -->
          </div>
       </header>
 
@@ -51,7 +74,7 @@
          <div class="feat-wrapper">
             <div class="feat_content alignment">
                <section>
-                  <h2 class="feat_title">Features</h2>
+                  <h2 class="feat_title sub-title">Features</h2>
                   <p class="dsc dsc-cntr">
                      Features Our aim is to make it quick and easy for you to
                      access your favourite websites. Your bookmarks sync between
@@ -80,20 +103,22 @@
                </div>
                <div class="split">
                   <section class="feat_carousel-content">
-                     <h2 class="carousel-title">Bookmark in one click</h2>
+                     <h2 class="carousel-title sub-title">
+                        Bookmark in one click
+                     </h2>
                      <p class="dsc dsc-lft">
                         Organize your bookmarks however you like. Our simple
                         drag-and-drop interface gives you complete control over
                         how you manage your favourite sites.
                      </p>
                      <a href="/" class="btn-lnk lnk-blue">More Info</a>
-                     <!-- <h2 class="carousel-title">Intelligent search</h2> -->
+                     <!-- <h2 class="carousel-title sub-title">Intelligent search</h2> -->
                      <!-- <p class="dsc dsc-lft">
                         Intelligent search Our powerful search feature will help
                         you find saved sites in no time at all. No need to trawl
                         through all of your bookmarks.
                      </p> -->
-                     <!-- <h2 class="carousel-title">Share your bookmarks</h2> -->
+                     <!-- <h2 class="carousel-title sub-title">Share your bookmarks</h2> -->
                      <!-- <p class="dsc dsc-lft">
                         Easily share your bookmarks and collections with others.
                         Create a shareable link that you can send at the click of a
@@ -106,62 +131,137 @@
          <div class="ext-wrapper">
             <div class="ext_content alignment">
                <section>
-                  <h2 class="ext_title">Download the extension</h2>
-                  <p class="dsc dsc-cntr"></p>
+                  <h2 class="ext_title sub-title">Download the extension</h2>
+                  <p class="dsc dsc-cntr">
+                     We’ve got more browsers in the pipeline. Please do let us
+                     know if you’ve got a favourite you’d like us to prioritize.
+                  </p>
+               </section>
+               <div class="ext_fp">
+                  <div class="split-3 card-brwsr">
+                     <img src="/logo-chrome.cbec2daf.svg" alt="Google Chrome browser logo.">
+                     <h3 class="browser-title">Add to Chrome</h3>
+                     <small class="min-version">Minimum version 62</small>
+                     <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
+                  </div>
+                  <div class="split-3 card-brwsr">
+                     <img src="/logo-firefox.00dbb33c.svg" alt="Firefox browser logo.">
+                     <h3 class="browser-title">Add to Firefox</h3>
+                     <small class="min-version">Minimum version 55</small>
+                     <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
+                  </div>
+                  <div class="split-3 card-brwsr">
+                     <img src="/logo-opera.07043d32.svg" alt="Opera browser logo.">
+                     <h3 class="browser-title">Add to Opera</h3>
+                     <small class="min-version">Minimum version 46</small>
+                     <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="faq-wrapper">
+            <div class="alignment">
+               <section class="faq_content">
+                  <h2 class="faq_title sub-title">
+                     Frequently Asked Questions
+                  </h2>
+                  <p class="dsc dsc-cntr">
+                     Here are some of our FAQs. If you have any other questions
+                     you’d like answered please feel free to email us.
+                  </p>
+                  <div class="faq_btns-ct">
+                     <aside class="aside">
+                        <button class="faq_btn">
+                           <p class="faq_question">What is Bookmark?</p>
+                           <!-- inline SVG -->
+                        </button>
+                        <p class="faq_answer">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing
+                           elit. Fusce tincidunt justo eget ultricies fringilla.
+                           Phasellus blandit ipsum quis quam ornare mattis.
+                        </p>
+                     </aside>
+                     <aside class="aside">
+                        <button class="faq_btn">
+                           <p class="faq_question">
+                              How can I request a new browser?
+                           </p>
+                           <!-- inline SVG -->
+                        </button>
+                        <p class="faq_answer">
+                           Vivamus luctus eros aliquet convallis ultricies.
+                           Mauris augue massa, ultricies non ligula. Suspendisse
+                           imperdiet. Vivamus luctus eros aliquet convallis
+                           ultricies. Mauris augue massa, ultricies non ligula.
+                           Suspendisse imperdie tVivamus luctus eros aliquet
+                           convallis ultricies. Mauris augue massa, ultricies
+                           non ligula. Suspendisse imperdiet.
+                        </p>
+                     </aside>
+                     <aside class="aside">
+                        <button class="faq_btn">
+                           <p class="faq_question">Is there a mobile app?</p>
+                           <!-- inline SVG -->
+                        </button>
+                        <p class="faq_answer">
+                           Sed consectetur quam id neque fermentum accumsan.
+                           Praesent luctus vestibulum dolor, ut condimentum urna
+                           vulputate eget. Cras in ligula quis est pharetra
+                           mattis sit amet pharetra purus. Sed sollicitudin ex
+                           et ultricies bibendum.
+                        </p>
+                     </aside>
+                     <aside class="aside">
+                        <button class="faq_btn">
+                           <p class="faq_question">
+                              What about other Chromium browsers?
+                           </p>
+                           <!-- inline SVG -->
+                        </button>
+                        <p class="faq_answer">
+                           Integer condimentum ipsum id imperdiet finibus.
+                           Vivamus in placerat mi, at euismod dui. Aliquam vitae
+                           neque eget nisl gravida pellentesque non ut velit.
+                           More Info 35,000+ already joined Stay up-to-date with
+                           what we’re doing Contact Us Features Pricing Contact
+                        </p>
+                     </aside>
+                  </div>
+                  <a href="/" class="btn-lnk lnk-blue">More Info</a>
                </section>
             </div>
          </div>
-
-         We’ve got more browsers in the pipeline. Please do let us know if
-         you’ve got a favourite you’d like us to prioritize. Add to Chrome
-         Minimum version 62 Add & Install Extension Add to Firefox Minimum
-         version 55 Add & Install Extension Add to Opera Minimum version 46 Add
-         & Install Extension Frequently Asked Questions Here are some of our
-         FAQs. If you have any other questions you’d like answered please feel
-         free to email us.
-
-         <!-- Question 1 -->
-         What is Bookmark?
-
-         <!-- Answer 1 -->
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-         tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
-         quam ornare mattis.
-
-         <!-- Question 2 -->
-         How can I request a new browser?
-
-         <!-- Answer 2 -->
-         Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-         ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
-         aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-         Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-         Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-         <!-- Question 3 -->
-         Is there a mobile app?
-
-         <!-- Answer 3 -->
-         Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-         vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
-         quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
-         et ultricies bibendum.
-
-         <!-- Question 4 -->
-         What about other Chromium browsers?
-
-         <!-- Answer 4 -->
-         Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi,
-         at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non
-         ut velit. More Info 35,000+ already joined Stay up-to-date with what
-         we’re doing Contact Us Features Pricing Contact
-
-         <div class="contact-ct">
-            <div class="contact-content alignment"></div>
+         <div class="contact-wrapper">
+            <div class="contact_content alignment">
+               <section>
+                  <h4 class="contact_sub-title">35,000 + Already Joined</h4>
+                  <h2 class="contact_title sub-title">
+                     Stay up-to-date with what we're doing
+                  </h2>
+                  <input type="text" placeholder="Enter email here..." class="input" id="email">
+                  <a href="/" class="btn-lnk lnk-red">Contact Us</a>
+               </section>
+            </div>
          </div>
       </main>
-      <footer class="footer">
-         <div class="ft_wrapper alignment"></div>
+
+      <footer class="ftr">
+         <div class="ftr_content alignment">
+            <nav class="ftr_nav">
+               <ul>
+                  <li>
+                     <a href="/" aria-label="Logo directing to homepage">
+                        <img src="/logo-bookmark-ft.b674fae8.svg">
+                     </a>
+                  </li>
+                  <li><a href="/">Features</a></li>
+                  <li><a href="/">Pricing</a></li>
+                  <li><a href="/">Contact</a></li>
+               </ul>
+            </nav>
+            <!-- Inline SVG -->
+            <!-- Inline SVG -->
+         </div>
       </footer>
    </body>
 </html>
