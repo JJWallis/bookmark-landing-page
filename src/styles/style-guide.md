@@ -1,44 +1,120 @@
-# Front-end Style Guide
+## Task
 
-## Layout
+-  Create the rounded blue background shape with code
+-  Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
 
-The designs were created to the following widths:
+# Layout:
 
-- Mobile: 375px
-- Desktop: 1440px
+    ## Header/Footer
 
-## Colors
+        - horizontal row
+        - same max-width as <main>
 
-### Primary
+    ## Hero/Carousel
 
-- Soft Blue: hsl(231, 69%, 60%)
-- Soft Red: hsl(0, 94%, 66%)
+        - 2 col (split)
 
-### Neutral
+    ## FAQ/Descriptions/Email-Contact
 
-- Grayish Blue: hsl(229, 8%, 60%)
-- Very Dark Blue: hsl(229, 31%, 21%)
+        - 1 col
+        - max-width (centred)
 
-## Typography
+    ## Vertical spacing between sections
 
-### Body Copy
+# Component:
 
-- Font size: 18px
+    ## Typography
 
-### Fonts
+        - Body: 18px 'Rubik', sans-serif
 
-- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
-- Weights: 400, 500
+    ## Headings
 
-## Icons
+        - h1 = ... | left-aligned|
+        - h2 = fs + fw | width | line-height + margin | centre-aligned
+        - h3 (browser titles) - ... | centre-aligned
+        - h4 (email contact) - ... | centre-aligned
 
-For the icons in the design, you can choose between using the icons provided or an font icon library.
+    ## Hero section + Caurosel
 
-Some library suggestions can be found below:
+        descriptions - left-alignment | vertical spacing
+        2 col spacing
 
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
+    ## Hero dual buttons
 
-- Create the rounded blue background shape with code
-- Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
+        - horizontal + spacing |
+
+    ## Buttons
+
+        Caurosel Interactive:
+            - border-bottom (light-grey) | could be on Features container itself
+            - inactive = fc | height 90% - red border sits on top of grey container one? | centre aligned
+            - hover/active states = primary red colour bottom-border | black fc
+        FAQ = border | 1st child (top-border) | hover - colour (primary red)
+
+    ## Descriptions
+
+        - fs (+ FAQ questions) + fw | width | line-height + margin | centre-aligned (not Bookmark)
+
+    ## Browsers
+
+        - container = horizontal row
+        - cards = shadow | bg-dots | centred aligned content within | increasing top-margin
+        - descriptions = fs
+
+    ## FAQ
+
+        - container - max-width + width |
+        - answers - fs | margin | width | line-height |
+
+    ## Links + Input
+
+        - border-radius | padding (em) | shadow (input same) | fs
+        - login link (header) - same btn styles | hover - white bg, bg + txt color - normal bg colour
+        - links (nav + footer) = larger fs + uppercase | l/r margin | not same btn styles | hover - primary red
+        - firefox (hero) - hover (txt colour - not bg colour)
+
+    ## Input
+
+        - width | placeholder (fc) | border (black)
+        - validation = primary red border + error icon + box-shadow |
+        - input error mssg (white + fs + italic)
+
+    ## SVGS
+
+        - logo = white fill colour for footer | width
+        - illustrations = width | positioned (diff offset to dynamic)
+        - blue curved background = height, width, fill, border-radius
+        - arrows (faq) - width | JS fill (primary red) on click
+        - browser logos = width, spacing, centre aligned
+        - social media = width, horizontal layout + spacing, hover state - fill (primary red)
+
+# Structural:
+
+-
+
+# Colors/Vars:
+
+    ## Primary
+
+        - Soft Blue: hsl(231, 69%, 60%)
+        - Soft Red: hsl(0, 94%, 66%)
+
+    ## Text
+
+        - primary - hsl(229, 31%, 21%) ?
+        - secondary - Grayish Blue: hsl(229, 8%, 60%)
+        - tertiary - white
+
+    ## Footer
+
+        - Very Dark Blue: hsl(229, 31%, 21%)
+
+    ## Shadow
+
+# Extra:
+
+    ## Mobile
+
+        - header nav = row (hamburger + logo) | footer nav = col
+        - Txt align centre - except FAQ + input
+        - Flex-wrap = carousel + browser cards
