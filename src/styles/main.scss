@@ -1,5 +1,6 @@
 @use "abstracts";
 @use "base";
-
-// bring all files into here in order so styles apply
-// order doens't matter - just specifying what gets compiled
+@use "components";
+@use "layout";
+@use "pages";
+@use "vendors";
