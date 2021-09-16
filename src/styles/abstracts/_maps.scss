@@ -1,7 +1,5 @@
-@use 'sass:map'; // maybe not required
-
 $breakpoints: (
-   small: 20em,
-   medium: 40em,
-   large: 60em,
+   small: 40em,
+   medium: 60em,
+   large: 80em,
 );

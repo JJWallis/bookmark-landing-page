@@ -3,23 +3,30 @@
 -  Create the rounded blue background shape with code
 -  Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
 
-# Layout:
+# Colors/Vars:
 
-    ## Header/Footer
+    ## Primary
 
-        - horizontal row
-        - same max-width as <main>
+        - Soft Blue: hsl(231, 69%, 60%)
+        - Soft Red: hsl(0, 94%, 66%)
 
-    ## Hero/Carousel
+    ## Text
 
-        - 2 col (split)
+        - primary - hsl(229, 31%, 21%) ?
+        - secondary - Grayish Blue: hsl(229, 8%, 60%)
+        - tertiary - white
 
-    ## FAQ/Descriptions/Email-Contact
+    ## Footer
 
-        - 1 col
-        - max-width (centred)
+        - Very Dark Blue: hsl(229, 31%, 21%)
 
-    ## Vertical spacing between sections
+    ## Shadow
+
+# Extra:
+
+    ## Mobile
+        - Txt align centre - except FAQ + input (+ error mssg)
+        - Flex-wrap = carousel + browser cards
 
 # Component:
 
@@ -87,34 +94,3 @@
         - arrows (faq) - width | JS fill (primary red) on click
         - browser logos = width, spacing, centre aligned
         - social media = width, horizontal layout + spacing, hover state - fill (primary red)
-
-# Structural:
-
--
-
-# Colors/Vars:
-
-    ## Primary
-
-        - Soft Blue: hsl(231, 69%, 60%)
-        - Soft Red: hsl(0, 94%, 66%)
-
-    ## Text
-
-        - primary - hsl(229, 31%, 21%) ?
-        - secondary - Grayish Blue: hsl(229, 8%, 60%)
-        - tertiary - white
-
-    ## Footer
-
-        - Very Dark Blue: hsl(229, 31%, 21%)
-
-    ## Shadow
-
-# Extra:
-
-    ## Mobile
-
-        - header nav = row (hamburger + logo) | footer nav = col
-        - Txt align centre - except FAQ + input
-        - Flex-wrap = carousel + browser cards

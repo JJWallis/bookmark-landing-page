@@ -1,3 +1,5 @@
+@use "maps" as *;
+
 @mixin flexParent($direction, $justify, $align, $wrap) {
    display: $direction;
    justify-content: $justify;
@@ -28,16 +30,43 @@
    background: $colour $url $repeat $position / $size;
 }
 
+@mixin btnLinks($bgColor, $color, $borderColor, $hoverColor) {
+   padding: 0.5em;
+   background-color: $bgColor;
+   color: $color;
+   border-radius: 0.4rem;
+   box-shadow: 0 0 0.4rem 0 rgba(black, 0.5);
+
+   &:hover {
+      background-color: white;
+      border: 0.2rem solid $borderColor;
+      color: $hoverColor;
+   }
+}
+
+@mixin after($content, $width, $bottom) {
+   &::after {
+      content: $content;
+      display: absolute;
+      width: $width;
+      height: 0.2rem;
+      bottom: $bottom;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+}
+
+@mixin blueBgSvg() {
+} // create!
+
 @mixin mq($key) {
-   $size: map-get($breakpoints, $key);
-   @media (min-width: $size) {
+   @media (min-width: map-get($breakpoints, $key)) {
       @content;
    }
 }
 
-@include mq(small) {
-   background-color: red;
-}
-
-@mixin cq() {
+@mixin fq() {
+   @supports (font-size: clamp) {
+      @content;
+   }
 }
