@@ -11,11 +11,12 @@
       <link rel="stylesheet" href="/main.48b3db1d.css" type="text/css">
       <script defer="" src="/main.d8ebb8d6.js"></script>
    <script src="/main.48b3db1d.js"></script></head>
+
    <body>
       <header class="hdr">
          <div class="hdr_cnt alignment">
             <a href="/" aria-label="Logo directing to homepage.">
-               <img src="/logo-bookmark.ac40e765.svg">
+               <img src="/logo-bookmark.ac40e765.svg" class="bm-logo">
             </a>
             <button aria-label="Interactive hamburger icon to display mobile navigation menu" class="hamburger-btn">
                <img src="/icon-hamburger.cb455b0f.svg">
@@ -73,8 +74,8 @@
          </div>
 
          <div class="feat-wrapper">
-            <div class="feat_cnt alignment">
-               <section>
+            <div class="alignment">
+               <section class="feat_cnt">
                   <h2 class="feat_title sub-title">Features</h2>
                   <p class="dsc">
                      Features Our aim is to make it quick and easy for you to
@@ -145,8 +146,8 @@
          </div>
 
          <div class="ext-wrapper">
-            <div class="ext_cnt alignment">
-               <section>
+            <div class="alignment">
+               <section class="ext_cnt">
                   <h2 class="ext_title sub-title">Download the extension</h2>
                   <p class="dsc">
                      We’ve got more browsers in the pipeline. Please do let us
@@ -155,19 +156,19 @@
                </section>
                <div class="flex-parent-wp">
                   <div class="split-3 card-brwsr">
-                     <img src="/logo-chrome.cbec2daf.svg" alt="Google Chrome browser logo.">
+                     <img src="/logo-chrome.cbec2daf.svg" alt="Google Chrome browser logo." class="brwsr-logo">
                      <h3 class="brwsr-title">Add to Chrome</h3>
                      <small class="min-version">Minimum version 62</small>
                      <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
                   </div>
                   <div class="split-3 card-brwsr">
-                     <img src="/logo-firefox.00dbb33c.svg" alt="Firefox browser logo.">
+                     <img src="/logo-firefox.00dbb33c.svg" alt="Firefox browser logo." class="brwsr-logo">
                      <h3 class="brwsr-title">Add to Firefox</h3>
                      <small class="min-version">Minimum version 55</small>
                      <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
                   </div>
                   <div class="split-3 card-brwsr">
-                     <img src="/logo-opera.07043d32.svg" alt="Opera browser logo.">
+                     <img src="/logo-opera.07043d32.svg" alt="Opera browser logo." class="brwsr-logo">
                      <h3 class="brwsr-title">Add to Opera</h3>
                      <small class="min-version">Minimum version 46</small>
                      <a href="/" class="btn-lnk lnk-blue">Add & Install Extension</a>
@@ -177,8 +178,8 @@
          </div>
 
          <div class="faq-wrapper">
-            <div class="alignment">
-               <section class="faq_cnt">
+            <div class="faq_cnt alignment">
+               <section class="sctn-cntr">
                   <h2 class="faq_title sub-title">
                      Frequently Asked Questions
                   </h2>
@@ -187,7 +188,7 @@
                      you’d like answered please feel free to email us.
                   </p>
                   <div class="faq_qstns-ct">
-                     <aside class="aside">
+                     <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">What is Bookmark?</p>
                            <!-- inline SVG -->
@@ -198,7 +199,7 @@
                            Phasellus blandit ipsum quis quam ornare mattis.
                         </p>
                      </aside>
-                     <aside class="aside">
+                     <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">
                               How can I request a new browser?
@@ -215,7 +216,7 @@
                            non ligula. Suspendisse imperdiet.
                         </p>
                      </aside>
-                     <aside class="aside">
+                     <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">Is there a mobile app?</p>
                            <!-- inline SVG -->
@@ -228,7 +229,7 @@
                            et ultricies bibendum.
                         </p>
                      </aside>
-                     <aside class="aside">
+                     <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">
                               What about other Chromium browsers?
@@ -251,14 +252,14 @@
 
          <div class="contact-wrapper">
             <div class="contact_cnt alignment">
-               <section>
+               <section class="sctn-cntr">
                   <h4 class="already-joined">35,000 + Already Joined</h4>
                   <h2 class="contact_title sub-title">
                      Stay up-to-date with what we're doing
                   </h2>
                   <form action="/" class="form">
-                     <input type="email" placeholder="Enter email here..." class="input" id="email">
-                     <button type="submit" class="btn-lnk lnk-red">
+                     <input type="email" placeholder="Enter email here..." class="input" id="email" name="email">
+                     <button type="submit" class="btn-lnk lnk-red" id="btn-contact">
                         Contact Us
                      </button>
                   </form>
@@ -273,7 +274,7 @@
                <ul>
                   <li>
                      <a href="/" aria-label="Logo directing to homepage">
-                        <img src="/logo-bookmark-ft.b674fae8.svg">
+                        <img src="/logo-bookmark-ft.b674fae8.svg" class="bm-logo">
                      </a>
                   </li>
                   <li><a href="/">Features</a></li>
@@ -281,8 +282,10 @@
                   <li><a href="/">Contact</a></li>
                </ul>
             </nav>
-            <!-- Inline SVG -->
-            <!-- Inline SVG -->
+            <div class="ftr_svgs-ct">
+               <!-- Inline SVG -->
+               <!-- Inline SVG -->
+            </div>
          </div>
       </footer>
    </body>
