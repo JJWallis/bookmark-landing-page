@@ -14,33 +14,33 @@
    <body>
       <header class="hdr">
          <div class="hdr_content alignment">
-            <a href="/" aria-label="Logo directing to homepage">
+            <a href="/" aria-label="Logo directing to homepage.">
                <img src="/logo-bookmark.ac40e765.svg">
             </a>
-            <button aria-label="Interactive hamburger icon to display mobile navigation menu">
+            <button aria-label="Interactive hamburger icon to display mobile navigation menu" class="hamburger-btn">
                <img src="/icon-hamburger.cb455b0f.svg">
             </button>
             <div class="hdr_mobile-nav-ct">
-               <div class="mb-sb">
+               <div class="mb-nav-hdr">
                   <a href="/" aria-label="Logo directing to homepage.">
                      <img src="/logo-bookmark-mobile.8db7a98f.svg">
                   </a>
-                  <a href="/" aria-label="Cross icon to close navigation menu.">
+                  <button class="close-btn" aria-label="Cross icon to close active navigation menu.">
                      <img src="/icon-close.1add023a.svg">
-                  </a>
+                  </button>
                </div>
                <nav class="hdr_nav-mb">
                   <ul>
                      <li><a href="/">Features</a></li>
                      <li><a href="/">Pricing</a></li>
                      <li><a href="/">Contact</a></li>
-                     <li><a href="/" class="btn-lnk lnk-red">Login</a></li>
+                     <li><a href="/" class="btn-lnk login">Login</a></li>
                   </ul>
                </nav>
                <!-- inline SVG -->
                <!-- inline SVG -->
             </div>
-            <!-- <nav class="hdr_nav-wd hidden">
+            <!-- <nav class="hdr_nav-wd">
                <ul>
                   <li><a href="/">Features</a></li>
                   <li><a href="/">Pricing</a></li>
@@ -53,13 +53,13 @@
 
       <main class="main">
          <div class="hero-wrapper">
-            <div class="flex-parent hero_fp alignment">
+            <div class="flex-parent alignment">
                <div class="hero_illustration-ct split">
-                  <img src="/illustration-hero.4e84ddbe.svg" alt="A rich blue and light-grey illustration of a website layout." class="illustration-hero">
+                  <img src="/illustration-hero.4e84ddbe.svg" alt="A rich blue and light-grey illustration of a website layout." class="hero_illustration">
                </div>
                <div class="split">
                   <section class="hero_content">
-                     <h1 class="title">A Simple Bookmark Manager</h1>
+                     <h1 class="hero_title">A Simple Bookmark Manager</h1>
                      <p class="dsc dsc-lft">
                         A clean and simple interface to organize your favourite
                         websites. Open a new browser tab and see your sites load
@@ -71,63 +71,79 @@
                </div>
             </div>
          </div>
+
          <div class="feat-wrapper">
             <div class="feat_content alignment">
                <section>
                   <h2 class="feat_title sub-title">Features</h2>
-                  <p class="dsc dsc-cntr">
+                  <p class="dsc">
                      Features Our aim is to make it quick and easy for you to
                      access your favourite websites. Your bookmarks sync between
                      your devices so you can access them on the go.
                   </p>
-                  <div class="carousel-btns-ct">
-                     <button class="carousel-btn">Simple Bookmarking</button>
-                     <button class="carousel-btn">Speedy Searching</button>
-                     <button class="carousel-btn">Easy Sharing</button>
+                  <div class="crsl-btns-ct flex-parent-wp">
+                     <button class="crsl-btn" id="crsl_simple-btn">
+                        Simple Bookmarking
+                     </button>
+                     <button class="crsl-btn" id="crsl_speedy-btn">
+                        Speedy Searching
+                     </button>
+                     <button class="crsl-btn" id="crsl_easy-btn">
+                        Easy Sharing
+                     </button>
                   </div>
                </section>
-            </div>
-            <div class="feat_fp alignment">
-               <div class="feat_illustration-ct split">
-                  <img src="/illustration-features-tab-1.65a2088c.svg" alt="A dark navy blue and light-grey illustration of a website layout." class="illustration-feat">
-                  <!-- <img
+               <div class="flex-parent">
+                  <div class="feat_illustration-ct split">
+                     <img src="/illustration-features-tab-1.65a2088c.svg" alt="A dark navy blue and light-grey illustration of a website layout." class="feat_illustration-tb1">
+                     <!-- <img
                      src="./images/illustration-features-tab-2.svg"
                      alt="A dark navy blue and light-grey illustration of a website layout, with a blue question mark icon positioned over the top-right side."
-                     class="illustration-feat"
+                     class="feat_illustration-tb2"
                   />
                   <img
                      src="./images/illustration-features-tab-3.svg"
                      alt="A dark navy blue and light-grey illustration of a website layout with a male cartoon character holding up a digital card, showcasing a female cartoon character in the same style."
-                     class="illustration-feat"
+                     class="feat_illustration-tb3"
                   /> -->
-               </div>
-               <div class="split">
-                  <section class="feat_carousel-content">
-                     <h2 class="carousel-title sub-title">
-                        Bookmark in one click
-                     </h2>
-                     <p class="dsc dsc-lft">
-                        Organize your bookmarks however you like. Our simple
-                        drag-and-drop interface gives you complete control over
-                        how you manage your favourite sites.
-                     </p>
-                     <a href="/" class="btn-lnk lnk-blue">More Info</a>
-                     <!-- <h2 class="carousel-title sub-title">Intelligent search</h2> -->
-                     <!-- <p class="dsc dsc-lft">
-                        Intelligent search Our powerful search feature will help
-                        you find saved sites in no time at all. No need to trawl
-                        through all of your bookmarks.
-                     </p> -->
-                     <!-- <h2 class="carousel-title sub-title">Share your bookmarks</h2> -->
-                     <!-- <p class="dsc dsc-lft">
-                        Easily share your bookmarks and collections with others.
-                        Create a shareable link that you can send at the click of a
-                        button.
-                     </p> -->
-                  </section>
+                  </div>
+                  <div class="split feat_crsl-content-ct">
+                     <section class="feat_crsl-content-pm">
+                        <h2 class="crsl-title sub-title">
+                           Bookmark in one click
+                        </h2>
+                        <p class="dsc dsc-lft">
+                           Organize your bookmarks however you like. Our simple
+                           drag-and-drop interface gives you complete control
+                           over how you manage your favourite sites.
+                        </p>
+                        <a href="/" class="btn-lnk lnk-blue">More Info</a>
+                     </section>
+                     <!-- <section class="feat_crsl-content-sd">
+                        <h2 class="crsl-title sub-title">Intelligent search</h2>
+                        <p class="dsc dsc-lft">
+                           Intelligent search Our powerful search feature will
+                           help you find saved sites in no time at all. No need
+                           to trawl through all of your bookmarks.
+                        </p>
+                        <a href="/" class="btn-lnk lnk-blue">More Info</a>
+                     </section>
+                     <section class="feat_crsl-content-tr">
+                        <h2 class="crsl-title sub-title">
+                           Share your bookmarks
+                        </h2>
+                        <p class="dsc dsc-lft">
+                           Easily share your bookmarks and collections with
+                           others. Create a shareable link that you can send at
+                           the click of a button.
+                        </p>
+                        <a href="/" class="btn-lnk lnk-blue">More Info</a>
+                     </section> -->
+                  </div>
                </div>
             </div>
          </div>
+
          <div class="ext-wrapper">
             <div class="ext_content alignment">
                <section>
@@ -137,7 +153,7 @@
                      know if you’ve got a favourite you’d like us to prioritize.
                   </p>
                </section>
-               <div class="ext_fp">
+               <div class="flex-parent-wp">
                   <div class="split-3 card-brwsr">
                      <img src="/logo-chrome.cbec2daf.svg" alt="Google Chrome browser logo.">
                      <h3 class="browser-title">Add to Chrome</h3>
@@ -159,6 +175,7 @@
                </div>
             </div>
          </div>
+
          <div class="faq-wrapper">
             <div class="alignment">
                <section class="faq_content">
@@ -231,6 +248,7 @@
                </section>
             </div>
          </div>
+
          <div class="contact-wrapper">
             <div class="contact_content alignment">
                <section>
