@@ -16,18 +16,18 @@
       <header class="hdr">
          <div class="hdr_cnt alignment">
             <a href="/" aria-label="Logo directing to homepage.">
-               <img src="/logo-bookmark.ac40e765.svg" class="bm-logo logo">
+               <img src="/logo-bookmark.ac40e765.svg" alt="Logo directing to homepage." class="bm-logo logo">
             </a>
-            <button aria-label="Interactive hamburger icon to display mobile navigation menu" class="hamburger-btn">
-               <img src="/icon-hamburger.cb455b0f.svg">
+            <button aria-label="Interactive hamburger icon to display mobile navigation menu." class="hamburger-btn">
+               <img src="/icon-hamburger.cb455b0f.svg" alt="Interactive hamburger icon to display mobile navigation menu.">
             </button>
             <div class="hdr_mobile-nav-ct">
                <div class="mb-nav-hdr">
                   <a href="/" aria-label="Logo directing to homepage.">
-                     <img src="/logo-bookmark-mobile.8db7a98f.svg" class="bm-logo logo">
+                     <img src="/logo-bookmark-mobile.8db7a98f.svg" alt="Logo directing to homepage." class="bm-logo logo">
                   </a>
                   <button class="close-btn" aria-label="Cross icon to close active navigation menu.">
-                     <img src="/icon-close.1add023a.svg" class="icn-close">
+                     <img src="/icon-close.1add023a.svg" alt="Cross icon to close active navigation menu." class="icn-close">
                   </button>
                </div>
                <nav class="hdr_nav-mb">
@@ -39,10 +39,10 @@
                   </ul>
                </nav>
                <a href="/" aria-label="Facebook's logo directing to Facebook's home page.">
-                  <img src="/icon-facebook.db88fd38.svg" class="fb-logo logo">
+                  <img src="/icon-facebook.db88fd38.svg" alt="Facebook's logo directing to Facebook's home page." class="fb-logo logo">
                </a>
                <a href="/" aria-label="Twitter's logo directing to Twitter's home page.">
-                  <img src="/logo-bookmark.ac40e765.svg" class="tw-logo logo">
+                  <img src="/logo-bookmark.ac40e765.svg" alt="Twitter's logo directing to Twitter's home page." class="tw-logo logo">
                </a>
             </div>
             <!-- <nav class="hdr_nav-wd">
@@ -195,7 +195,9 @@
                      <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">What is Bookmark?</p>
-                           <!-- inline SVG -->
+                           <svg class="arrow">
+                              <use href="#arrow"></use>
+                           </svg>
                         </button>
                         <p class="faq_answr">
                            Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -208,7 +210,9 @@
                            <p class="faq_qstn">
                               How can I request a new browser?
                            </p>
-                           <!-- inline SVG -->
+                           <svg class="arrow">
+                              <use href="#arrow"></use>
+                           </svg>
                         </button>
                         <p class="faq_answr">
                            Vivamus luctus eros aliquet convallis ultricies.
@@ -223,7 +227,9 @@
                      <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">Is there a mobile app?</p>
-                           <!-- inline SVG -->
+                           <svg class="arrow">
+                              <use href="#arrow"></use>
+                           </svg>
                         </button>
                         <p class="faq_answr">
                            Sed consectetur quam id neque fermentum accumsan.
@@ -238,7 +244,9 @@
                            <p class="faq_qstn">
                               What about other Chromium browsers?
                            </p>
-                           <!-- inline SVG -->
+                           <svg class="arrow">
+                              <use href="#arrow"></use>
+                           </svg>
                         </button>
                         <p class="faq_answr">
                            Integer condimentum ipsum id imperdiet finibus.
@@ -272,13 +280,13 @@
          </div>
       </main>
 
-      <footer class="ftr" style="background-color: black">
+      <footer class="ftr">
          <div class="ftr_cnt alignment">
             <nav class="ftr_nav">
                <ul>
                   <li>
-                     <a href="/" aria-label="Logo directing to homepage">
-                        <img src="/logo-bookmark-ft.b674fae8.svg" class="bm-logo logo">
+                     <a href="/" aria-label="Logo directing to homepage.">
+                        <img src="/logo-bookmark-ft.b674fae8.svg" alt="Logo directing to homepage." class="bm-logo logo">
                      </a>
                   </li>
                   <li><a href="/">Features</a></li>
@@ -288,12 +296,12 @@
             </nav>
             <div class="ftr_svgs-ct">
                <a href="/" aria-label="Facebook's logo directing to Facebook's home page.">
-                  <svg>
+                  <svg class="fb-svg">
                      <use href="#fb"></use>
                   </svg>
                </a>
                <a href="/" aria-label="Twitter's logo directing to Twitter's home page.">
-                  <svg>
+                  <svg class="tw-svg">
                      <use href="#tw"></use>
                   </svg>
                </a>
@@ -304,12 +312,17 @@
       <div class="svg-refs">
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <symbol id="fb">
-               <path fill="#FFF" fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" class="fb-logo-inl"></path>
+               <path fill="#FFF" fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" class="fb-svg"></path>
             </symbol>
          </svg>
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
             <symbol id="tw">
-               <path fill="#FFF" fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" class="tw-logo-inl"></path>
+               <path fill="#FFF" fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" class="tw-svg"></path>
+            </symbol>
+         </svg>
+         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+            <symbol id="arrow">
+               <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"></path>
             </symbol>
          </svg>
       </div>
