@@ -1,6 +1,5 @@
 ## Task
 
--  Create the rounded blue background shape with code
 -  Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
 
 # Colors/Vars:
