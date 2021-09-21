@@ -2,25 +2,6 @@
 
 -  Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
 
-# Colors/Vars:
-
-    ## Primary
-
-        - Soft Blue: hsl(231, 69%, 60%)
-        - Soft Red: hsl(0, 94%, 66%)
-
-    ## Text
-
-        - primary - hsl(229, 31%, 21%) ?
-        - secondary - Grayish Blue: hsl(229, 8%, 60%)
-        - tertiary - white
-
-    ## Footer
-
-        - Very Dark Blue: hsl(229, 31%, 21%)
-
-    ## Shadow
-
 # Extra:
 
     ## Mobile
@@ -28,10 +9,6 @@
         - Flex-wrap = carousel + browser cards
 
 # Component:
-
-    ## Typography
-
-        - Body: 18px 'Rubik', sans-serif
 
     ## Headings
 

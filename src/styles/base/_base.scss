@@ -1,1 +1,23 @@
-// lists, links, btns, forms, body, sticky footer
+ul,
+li {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+button {
+   background-color: transparent;
+   border: none;
+   outline: 1px solid;
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+input {
+   border: none;
+   outline: 1px solid;
+}
