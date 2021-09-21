@@ -116,9 +116,23 @@ main {
   flex-grow: 1;
 }
 
+.alignment-pt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignment {
+  width: 90%;
+  max-width: 60rem;
+  outline: 1px solid red;
+}
+
 .hdr {
   outline: 1px solid;
   background-color: lightgray;
+  padding-block: 2rem;
 }
 
 .hdr_cnt {
