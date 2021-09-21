@@ -1,0 +1,11 @@
+@use "abstracts" as *;
+
+.hdr {
+   outline: 1px solid;
+   background-color: lightgray;
+   //    padding: 1rem;
+}
+
+.hdr_cnt {
+   @include flexParent(row, space-between, center);
+}

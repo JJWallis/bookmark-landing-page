@@ -1,0 +1,11 @@
+@use "abstracts" as *;
+
+.alignment-pt {
+   @include flexParent(column, center, center);
+}
+
+.alignment {
+   width: 90%;
+   max-width: 46.67rem;
+   outline: 1px solid red;
+}

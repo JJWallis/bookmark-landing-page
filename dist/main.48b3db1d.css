@@ -96,6 +96,10 @@ input {
   outline: 1px solid;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font: 1.2rem "Rubik", sans-serif;
 }
@@ -110,6 +114,22 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+.hdr {
+  outline: 1px solid;
+  background-color: lightgray;
+}
+
+.hdr_cnt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ftr {
+  background-color: lightgray;
 }
 
 .svg-refs {
