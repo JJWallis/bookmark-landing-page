@@ -58,6 +58,10 @@
    transition: 300ms ease-in-out;
 }
 
+@mixin outline() {
+   outline: 1px solid white;
+}
+
 @mixin mq($key) {
    @media (min-width: map-get($breakpoints, $key)) {
       @content;
