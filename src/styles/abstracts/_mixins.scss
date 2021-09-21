@@ -12,21 +12,23 @@
    flex-basis: $basis;
 }
 
-@mixin position($position, $width, $top, $left) {
-   display: $position;
+@mixin position($position, $width, $height, $top, $left) {
+   position: $position;
    width: $width;
+   height: $height;
    top: $top;
    left: $left;
 }
 
-@mixin positionCentered($width) {
-   display: absolute;
+@mixin positionCentered($width, $height) {
+   position: absolute;
    width: $width;
+   height: $height;
    inset: 0;
    margin: auto;
 }
 
-@mixin btnLinks($bgColor, $color, $borderColor, $hoverColor) {
+@mixin btnLink($bgColor, $color, $borderColor, $hoverColor) {
    padding: 0.5em;
    background-color: $bgColor;
    color: $color;
@@ -50,6 +52,10 @@
       left: 50%;
       transform: translateX(-50%);
    }
+}
+
+@mixin transition() {
+   transition: 300ms ease-in-out;
 }
 
 @mixin mq($key) {
