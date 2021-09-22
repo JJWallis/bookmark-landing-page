@@ -1,0 +1,13 @@
+@use 'abstracts' as *;
+.sm-mb {
+   @include flexParent(row, center, center);
+   gap: 2.5rem;
+   margin-top: auto;
+}
+
+.logo {
+   @include transition();
+   &-mb:hover {
+      transform: scale(1.3);
+   }
+}

@@ -1,0 +1,47 @@
+@use 'abstracts' as *;
+
+// mobile
+
+.hdr_mobile-nav-ct {
+   @include position(absolute, unset, unset, 0, 0);
+   min-width: 100%;
+   min-height: 100%;
+   background-color: rgba($fcPm, 0.95);
+   padding-top: 2rem;
+   z-index: 100;
+}
+
+.hdr_mobile-nav {
+   @include flexParent(column, unset, unset);
+   width: 90%;
+   min-height: calc(100vh - 80px);
+   margin: 0 auto;
+}
+
+.mb-nav-hdr {
+   @include flexParent(row, space-between, center);
+   margin-bottom: 2.4rem;
+}
+
+.hdr_nav-mb {
+   & li a {
+      padding-block: 1.2rem;
+      border-bottom: 0.1px solid rgba(white, 0.2);
+   }
+   & a {
+      display: block;
+      width: 100%;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.2ch;
+      text-align: center;
+      @include transition();
+      &:first-child {
+         border-top: 1px solid rgba(white, 0.2);
+      }
+      &:hover {
+         background-color: white;
+         color: $fcPm;
+      }
+   }
+}

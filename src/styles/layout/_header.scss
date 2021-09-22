@@ -1,4 +1,4 @@
-@use "abstracts" as *;
+@use 'abstracts' as *;
 
 .hdr {
    outline: 1px solid;
@@ -8,74 +8,4 @@
 
 .hdr_cnt {
    @include flexParent(row, space-between, center);
-}
-
-// header mobile nav component
-
-.hdr_mobile-nav-ct {
-   @include position(absolute, unset, unset, 0, 0);
-   min-width: 100%;
-   min-height: 100%;
-   background-color: rgba($fcPm, 0.95);
-   padding-top: 2rem;
-   z-index: 100;
-}
-
-.hdr_mobile-nav {
-   @include flexParent(column, unset, unset);
-   width: 85%;
-   min-height: calc(100vh - 80px);
-   margin: 0 auto;
-}
-
-.mb-nav-hdr {
-   @include flexParent(row, space-between, center);
-   margin-bottom: 2.4rem;
-}
-
-.hdr_nav-mb {
-   & li a {
-      padding-block: 1.2rem;
-      border-bottom: 0.1px solid rgba(white, 0.2);
-   }
-   & a {
-      display: block;
-      width: 100%;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.2ch;
-      text-align: center;
-      @include transition();
-      &:first-child {
-         border-top: 1px solid rgba(white, 0.2);
-      }
-      &:hover {
-         background-color: white;
-         color: $fcPm;
-      }
-   }
-}
-
-// login btn component
-
-.login-mb {
-   border: 2px solid white;
-   border-radius: 0.4rem;
-   margin-top: 1.7rem;
-   padding: 0.8rem;
-}
-
-// hdr-mb-sm-icns component
-
-.sm-mb {
-   @include flexParent(row, center, center);
-   gap: 2.5rem;
-   margin-top: auto;
-}
-
-.logo {
-   @include transition();
-   &-mb:hover {
-      transform: scale(1.3);
-   }
 }
