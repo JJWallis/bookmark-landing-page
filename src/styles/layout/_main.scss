@@ -24,3 +24,24 @@
    z-index: 2;
    transform: translateX(-50%);
 }
+
+.hero_cnt-ct {
+   @include flexParent(column, unset, center);
+}
+
+.hero_cnt {
+   @include flexParent(column, unset, center);
+   width: 90%;
+   outline: 2px solid;
+}
+
+.hero_title {
+   text-align: center;
+   line-height: 1.4;
+}
+
+.dsc {
+   text-align: center;
+   color: $fcSd;
+   margin-block: 0.7em;
+}

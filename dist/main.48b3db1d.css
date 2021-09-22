@@ -251,6 +251,33 @@ main {
   transform: translateX(-50%);
 }
 
+.hero_cnt-ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+
+.hero_cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  width: 90%;
+  outline: 2px solid;
+}
+
+.hero_title {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.dsc {
+  text-align: center;
+  color: #9194a1;
+  margin-block: 0.7em;
+}
+
 .ftr {
   background-color: lightgray;
 }
