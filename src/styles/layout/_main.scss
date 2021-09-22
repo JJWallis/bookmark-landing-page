@@ -1,1 +1,26 @@
 @use 'abstracts' as *;
+
+.hero-wrapper {
+   outline: 2px solid;
+   position: relative;
+}
+
+.flex-parent {
+   @include flexParent(column, unset, center);
+}
+
+.split {
+   outline: 2px solid;
+   flex-grow: 1;
+}
+
+.hero_illustration-ct {
+   min-height: 300px;
+   width: 100%;
+}
+
+.hero_illustration {
+   @include position(absolute, unset, auto, 7px, 50%);
+   z-index: 2;
+   transform: translateX(-50%);
+}

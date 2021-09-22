@@ -1,4 +1,4 @@
-@use "maps" as *;
+@use 'maps' as *;
 
 @mixin flexParent($direction, $justify, $align) {
    display: flex;
@@ -25,7 +25,7 @@
    width: $width;
    height: $height;
    inset: 0;
-   margin: auto;
+   margin: 0 auto;
 }
 
 @mixin btnLink($bgColor, $color, $borderColor, $hoverColor) {

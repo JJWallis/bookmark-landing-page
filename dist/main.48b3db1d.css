@@ -209,8 +209,6 @@ main {
 }
 
 .hdr {
-  outline: 1px solid;
-  background-color: lightgray;
   padding-block: 2rem;
 }
 
@@ -219,6 +217,38 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero-wrapper {
+  outline: 2px solid;
+  position: relative;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+
+.split {
+  outline: 2px solid;
+  flex-grow: 1;
+}
+
+.hero_illustration-ct {
+  min-height: 300px;
+  width: 100%;
+}
+
+.hero_illustration {
+  position: absolute;
+  width: unset;
+  height: auto;
+  top: 7px;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
 }
 
 .ftr {
