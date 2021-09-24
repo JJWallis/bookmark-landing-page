@@ -128,6 +128,8 @@ var header = document.querySelector('.hdr_cnt');
 var mobileNav = document.querySelector('.hdr_mobile-nav-ct');
 var carouselBtns = document.querySelectorAll('.crsl-btn');
 var carouselCt = document.querySelector('.crsl-btns-ct');
+var carouselCnt = document.querySelectorAll('.feat_dynamic');
+var carouselImgs = document.querySelectorAll('.feat_illustration');
 
 var classList = function classList(el, act, val) {
   return el.classList[act](val);
@@ -137,6 +139,20 @@ var viewport = function viewport() {
   return window.innerWidth;
 };
 
+var carouselMethods = {
+  simple: function simple() {
+    var cntPm = document.querySelectorAll('.feat_pm');
+    isVisible(cntPm);
+  },
+  speedy: function speedy() {
+    var cntSd = document.querySelectorAll('.feat_sd');
+    isVisible(cntSd);
+  },
+  easy: function easy() {
+    var cntTr = document.querySelectorAll('.feat_tr');
+    isVisible(cntTr);
+  }
+};
 header.addEventListener('click', function (e) {
   var target = e.target;
 
@@ -167,9 +183,59 @@ carouselCt.addEventListener('click', function (e) {
     }
 
     classList(target, 'add', 'active');
+    carouselMethods[target.id]();
   }
-}); // Opactity for hamburger + logo vs hidden class
+});
+
+function isVisible(els) {
+  if (classList(els[0], 'contains', 'hidden')) {
+    var _iterator2 = _createForOfIteratorHelper(carouselImgs),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var img = _step2.value;
+        classList(img, 'add', 'hidden');
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+
+    var _iterator3 = _createForOfIteratorHelper(carouselCnt),
+        _step3;
+
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var cnt = _step3.value;
+        classList(cnt, 'add', 'hidden');
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+
+    var _iterator4 = _createForOfIteratorHelper(els),
+        _step4;
+
+    try {
+      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+        var _cnt = _step4.value;
+        classList(_cnt, 'remove', 'hidden');
+      }
+    } catch (err) {
+      _iterator4.e(err);
+    } finally {
+      _iterator4.f();
+    }
+  }
+} // Opactity for hamburger + logo vs hidden class
 // Match viewport size to CSS breakpoints
+// target.matches() re-factored arrow func
+// Re-factored querySelectr + ... all arrow funcs
+// Re-factor - sep func to run loops for carousel (use params for diff)
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

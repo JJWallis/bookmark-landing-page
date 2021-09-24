@@ -1,7 +1,7 @@
 @use 'abstracts' as *;
 
 .feat-wrapper {
-   background: url('/images/bg-blue-shape.svg') no-repeat 150% 67% / 150%;
+   background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
 }
 
 // CAROUSEL COMPONENT
@@ -33,10 +33,12 @@
 }
 
 .feat_crsl-cnt-ct {
-   @include flexParent(column, unset, center);
+   padding-top: 2rem;
+   // uneven column sizes - hero img alignment for fix!
 }
 
 .feat_crsl-cnt {
    width: 90%;
    @include flexParent(column, unset, center);
+   margin: 0 auto;
 }

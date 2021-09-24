@@ -325,7 +325,7 @@ main {
 }
 
 .feat-wrapper {
-  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat 150% 67%/150%;
+  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat 150% 64%/150%;
 }
 
 .crsl-btns-ct {
@@ -354,10 +354,7 @@ main {
 }
 
 .feat_crsl-cnt-ct {
-  display: flex;
-  flex-direction: column;
-  justify-content: unset;
-  align-items: center;
+  padding-top: 2rem;
 }
 
 .feat_crsl-cnt {
@@ -366,6 +363,7 @@ main {
   flex-direction: column;
   justify-content: unset;
   align-items: center;
+  margin: 0 auto;
 }
 
 .ftr {
