@@ -54,8 +54,8 @@
    }
 }
 
-@mixin transition() {
-   transition: 300ms ease-in-out;
+@mixin transition($amount) {
+   transition: $amount ease-in-out;
 }
 
 @mixin outline() {

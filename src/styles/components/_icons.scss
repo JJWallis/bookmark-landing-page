@@ -6,7 +6,7 @@
 }
 
 .logo {
-   @include transition();
+   @include transition(300ms);
    &-mb:hover {
       transform: scale(1.3);
    }

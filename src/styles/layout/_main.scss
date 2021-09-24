@@ -7,23 +7,25 @@
 
 .flex-parent {
    @include flexParent(column, unset, center);
+   gap: 2.5rem;
 }
 
 .split {
-   outline: 2px solid;
    flex-grow: 1;
 }
 
-.hero_illustration-ct {
-   min-height: 300px;
-   width: 100%;
-}
+// HERO COMPONENT
 
-.hero_illustration {
-   @include position(absolute, unset, auto, 7px, 50%);
-   z-index: 2;
-   transform: translateX(-50%);
-}
+// .hero_illustration-ct {
+//    min-height: 300px;
+//    width: 100%;
+// }
+
+// .hero_illustration {
+//    @include position(absolute, unset, auto, 7px, 50%);
+//    z-index: 2;
+//    transform: translateX(-50%);
+// }
 
 .hero_cnt-ct {
    @include flexParent(column, unset, center);
@@ -32,16 +34,60 @@
 .hero_cnt {
    @include flexParent(column, unset, center);
    width: 90%;
-   outline: 2px solid;
 }
 
 .hero_title {
    text-align: center;
    line-height: 1.4;
+   letter-spacing: 0.05ch;
 }
 
 .dsc {
    text-align: center;
    color: $fcSd;
-   margin-block: 0.7em;
+   margin: 1em 0 2em;
+}
+
+// LINKS COMPONENT
+
+.btn-lnk {
+   border-radius: 5px;
+   padding: 0.8em;
+   font-size: 1rem;
+   box-shadow: 0 2px 3px 0 rgba(black, 0.3);
+   @include transition(200ms);
+   &:hover {
+      background-color: white;
+   }
+}
+
+.lnk-blue {
+   background-color: $softBlue;
+   color: white;
+   &:hover {
+      border: 2px solid $softBlue;
+      color: $softBlue;
+   }
+}
+
+.lnk-firefox {
+   color: $fcFx;
+   background-color: #f5f5f5;
+   margin-left: 0.5rem;
+   &:hover {
+      border: 2px solid $fcFx;
+      color: $fcFx;
+   }
+}
+
+// TITLES COMPONENT
+
+.sub-title {
+   margin-top: 0.5em;
+}
+
+// ALIGNMENT COMPONENT
+
+.spacing {
+   margin-block: 2rem;
 }

@@ -35,7 +35,7 @@
       text-transform: uppercase;
       letter-spacing: 0.2ch;
       text-align: center;
-      @include transition();
+      @include transition(300ms);
       &:first-child {
          border-top: 1px solid rgba(white, 0.2);
       }
