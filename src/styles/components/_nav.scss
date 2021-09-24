@@ -37,7 +37,7 @@
       text-align: center;
       @include transition(300ms);
       &:first-child {
-         border-top: 1px solid rgba(white, 0.2);
+         border-top: 0.1px solid rgba(white, 0.2);
       }
       &:hover {
          background-color: white;

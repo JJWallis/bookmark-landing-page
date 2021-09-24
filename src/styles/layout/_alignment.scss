@@ -1,4 +1,4 @@
-@use "abstracts" as *;
+@use 'abstracts' as *;
 
 .alignment-pt {
    @include flexParent(column, center, center);
@@ -8,4 +8,26 @@
    width: 90%;
    max-width: 60rem;
    outline: 1px solid red;
+}
+
+.flex-parent {
+   @include flexParent(column, unset, center);
+   gap: 2.5rem;
+}
+
+.split {
+   flex-grow: 1;
+}
+
+.flex-parent-wp {
+   @include flexParent(row, unset, unset);
+   flex-wrap: wrap;
+}
+
+.flex-parent-wp > * {
+   @include flexChild(1, 300px);
+}
+
+.spacing {
+   margin-block: 2rem;
 }

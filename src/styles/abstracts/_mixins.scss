@@ -1,4 +1,5 @@
 @use 'maps' as *;
+@use 'variables' as *;
 
 @mixin flexParent($direction, $justify, $align) {
    display: flex;
@@ -42,24 +43,8 @@
    }
 }
 
-@mixin after($content, $width, $bottom) {
-   &::after {
-      content: $content;
-      display: absolute;
-      width: $width;
-      height: 0.2rem;
-      bottom: $bottom;
-      left: 50%;
-      transform: translateX(-50%);
-   }
-}
-
 @mixin transition($amount) {
    transition: $amount ease-in-out;
-}
-
-@mixin outline() {
-   outline: 1px solid white;
 }
 
 @mixin mq($key) {

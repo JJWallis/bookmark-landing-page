@@ -118,8 +118,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"scripts/hidden.js":[function(require,module,exports) {
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var header = document.querySelector('.hdr_cnt');
 var mobileNav = document.querySelector('.hdr_mobile-nav-ct');
+var carouselBtns = document.querySelectorAll('.crsl-btn');
+var carouselCt = document.querySelector('.crsl-btns-ct');
 
 var classList = function classList(el, act, val) {
   return el.classList[act](val);
@@ -130,16 +138,38 @@ var viewport = function viewport() {
 };
 
 header.addEventListener('click', function (e) {
+  var target = e.target;
+
   if (viewport() < 800) {
-    if (e.target.matches('.hamburger-btn') || e.target.matches('.btn-hmb')) {
+    if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
       classList(mobileNav, 'remove', 'hidden');
-    } else if (e.target.matches('.close-btn') || e.target.matches('.icn-close')) {
+    } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
       classList(mobileNav, 'add', 'hidden');
     }
   }
+});
+carouselCt.addEventListener('click', function (e) {
+  var target = e.target;
+
+  if (target.matches('.crsl-btn')) {
+    var _iterator = _createForOfIteratorHelper(carouselBtns),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var btn = _step.value;
+        classList(btn, 'remove', 'active');
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+
+    classList(target, 'add', 'active');
+  }
 }); // Opactity for hamburger + logo vs hidden class
 // Match viewport size to CSS breakpoints
-// Modules to export
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
