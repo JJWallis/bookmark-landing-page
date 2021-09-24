@@ -37,3 +37,13 @@
       color: $fcFx;
    }
 }
+
+.lnk-red {
+   background-color: $softRed;
+   color: $fcTr;
+   width: 100%;
+   &:hover {
+      border: 2px solid $softRed;
+      color: $softRed;
+   }
+}

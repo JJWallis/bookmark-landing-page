@@ -1,0 +1,27 @@
+@use 'abstracts' as *;
+
+.contact-wrapper {
+   background-color: $softBlue;
+   padding: 5rem 0 3rem;
+}
+
+.contact_cnt {
+   @include flexParent(column, unset, center);
+}
+
+.contact_sctn {
+   @include flexParent(column, unset, center);
+}
+
+.already-joined {
+   color: $fcTr;
+   letter-spacing: 0.4ch;
+   font-size: 1.1rem;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+.contact_title {
+   color: $fcTr;
+   margin-bottom: 1.2em;
+}
