@@ -1,7 +1,7 @@
 @use 'abstracts' as *;
 
 .feat-wrapper {
-   outline: 2px solid;
+   background: url('/images/bg-blue-shape.svg') no-repeat 150% 67% / 150%;
 }
 
 // CAROUSEL COMPONENT
@@ -30,4 +30,13 @@
       height: 4px;
       background-color: $softRed;
    }
+}
+
+.feat_crsl-cnt-ct {
+   @include flexParent(column, unset, center);
+}
+
+.feat_crsl-cnt {
+   width: 90%;
+   @include flexParent(column, unset, center);
 }
