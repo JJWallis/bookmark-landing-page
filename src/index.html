@@ -19,6 +19,7 @@
       <link rel="stylesheet" href="./styles/main.scss" type="text/css" />
       <script defer src="./scripts/main.js"></script>
       <script defer src="./scripts/hidden.js"></script>
+      <script defer src="./scripts/validation.js"></script>
    </head>
 
    <body>
@@ -227,8 +228,8 @@
                      know if you’ve got a favourite you’d like us to prioritize.
                   </p>
                </section>
-               <div class="flex-parent-wp">
-                  <div class="split-3 card-brwsr">
+               <div class="flex-parent-wp card-brwsr-ct">
+                  <div class="card-brwsr">
                      <img
                         src="./images/logo-chrome.svg"
                         alt="Google Chrome browser logo."
@@ -236,11 +237,11 @@
                      />
                      <h3 class="brwsr-title">Add to Chrome</h3>
                      <small class="min-version">Minimum version 62</small>
-                     <a href="/" class="btn-lnk lnk-blue"
+                     <a href="/" class="btn-lnk lnk-blue lnk-install"
                         >Add & Install Extension</a
                      >
                   </div>
-                  <div class="split-3 card-brwsr">
+                  <div class="card-brwsr">
                      <img
                         src="./images/logo-firefox.svg"
                         alt="Firefox browser logo."
@@ -248,11 +249,11 @@
                      />
                      <h3 class="brwsr-title">Add to Firefox</h3>
                      <small class="min-version">Minimum version 55</small>
-                     <a href="/" class="btn-lnk lnk-blue"
+                     <a href="/" class="btn-lnk lnk-blue lnk-install"
                         >Add & Install Extension</a
                      >
                   </div>
-                  <div class="split-3 card-brwsr">
+                  <div class="card-brwsr">
                      <img
                         src="./images/logo-opera.svg"
                         alt="Opera browser logo."
@@ -260,7 +261,7 @@
                      />
                      <h3 class="brwsr-title">Add to Opera</h3>
                      <small class="min-version">Minimum version 46</small>
-                     <a href="/" class="btn-lnk lnk-blue"
+                     <a href="/" class="btn-lnk lnk-blue lnk-install"
                         >Add & Install Extension</a
                      >
                   </div>
@@ -270,7 +271,7 @@
 
          <div class="faq-wrapper alignment-pt spacing">
             <div class="faq_cnt alignment">
-               <section class="sctn-cntr">
+               <section class="faq_sctn">
                   <h2 class="faq_title sub-title">
                      Frequently Asked Questions
                   </h2>
@@ -351,7 +352,7 @@
 
          <div class="contact-wrapper alignment-pt">
             <div class="contact_cnt alignment">
-               <section class="sctn-cntr">
+               <section class="contact_sctn">
                   <h4 class="already-joined">35,000 + Already Joined</h4>
                   <h2 class="contact_title sub-title">
                      Stay up-to-date with what we're doing
@@ -359,7 +360,7 @@
                   <form action="/" class="form">
                      <input
                         type="email"
-                        placeholder="Enter email here..."
+                        placeholder="Enter your email address"
                         class="input"
                         id="email"
                         name="email"

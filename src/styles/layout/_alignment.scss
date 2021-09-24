@@ -24,10 +24,6 @@
    flex-wrap: wrap;
 }
 
-.flex-parent-wp > * {
-   @include flexChild(1, 300px);
-}
-
 .spacing {
    margin-block: 2rem;
 }
