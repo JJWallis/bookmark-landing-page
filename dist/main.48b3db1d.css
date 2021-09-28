@@ -485,6 +485,41 @@ main {
   align-items: center;
 }
 
+.faq_qstns-ct {
+  margin-bottom: 2.7rem;
+}
+
+.faq_sctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+
+.faq_aside {
+  border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
+}
+
+.faq_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.7rem 0 2.1rem;
+}
+
+.faq_qstn,
+.faq_answr {
+  font-size: 1rem;
+}
+
+.faq_answr {
+  margin-bottom: 2rem;
+  width: 95%;
+  line-height: 1.9;
+}
+
 .ftr {
   background-color: lightgray;
 }

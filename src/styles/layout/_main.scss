@@ -1,1 +1,30 @@
 @use 'abstracts' as *;
+
+.faq_qstns-ct {
+   margin-bottom: 2.7rem;
+}
+
+.faq_sctn {
+   @include flexParent(column, unset, center);
+}
+
+.faq_aside {
+   border-bottom: 0.1px solid rgba($fcSd, 0.5);
+}
+
+.faq_btn {
+   @include flexParent(row, space-between, center);
+   width: 100%;
+   padding: 1.7rem 0 2.1rem;
+}
+
+.faq_qstn,
+.faq_answr {
+   font-size: 1rem;
+}
+
+.faq_answr {
+   margin-bottom: 2rem;
+   width: 95%;
+   line-height: 1.9;
+}
