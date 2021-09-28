@@ -236,12 +236,7 @@ carouselCt.addEventListener('click', function (e) {
 });
 faqCt.addEventListener('click', function (e) {
   var target = e.target;
-
-  if (target.matches('.faq_btn')) {
-    var arrow = target.children[target.children.length - 1];
-    classList(target.nextElementSibling, 'toggle', 'hidden');
-    classList(arrow, 'toggle', 'arrow');
-  }
+  if (target.matches('.faq_btn')) classList(target.nextElementSibling, 'toggle', 'hidden');
 }); // TODO:
 //    Opactity for hamburger + logo vs hidden class
 //    Add event listeners for FAQ content
@@ -278,7 +273,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56943" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57754" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

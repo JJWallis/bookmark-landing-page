@@ -391,10 +391,6 @@ body {
   justify-content: center;
 }
 
-.arrow {
-  transform: rotateX(180deg);
-}
-
 .contact-wrapper {
   background-color: #5368df;
   padding: 5rem 0 3rem;
