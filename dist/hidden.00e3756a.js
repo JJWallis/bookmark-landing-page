@@ -236,7 +236,12 @@ carouselCt.addEventListener('click', function (e) {
 });
 faqCt.addEventListener('click', function (e) {
   var target = e.target;
-  if (target.matches('.faq_btn')) classList(target.nextElementSibling, 'toggle', 'hidden');
+
+  if (target.matches('.faq_btn')) {
+    var arrow = target.children[target.children.length - 1];
+    classList(target.nextElementSibling, 'toggle', 'hidden');
+    classList(arrow, 'toggle', 'arrow');
+  }
 }); // TODO:
 //    Opactity for hamburger + logo vs hidden class
 //    Add event listeners for FAQ content
