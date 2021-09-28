@@ -52,8 +52,14 @@ carouselCt.addEventListener('click', e => {
 
 faqCt.addEventListener('click', e => {
    const target = e.target
-   if (target.matches('.faq_btn'))
+   if (target.matches('.faq_btn')) {
+      const arrow = target.children[target.children.length - 1]
+      arrow.src.includes('56d7c493')
+         ? (arrow.src = '/icon-arrow-close.91ded9a2.svg')
+         : (arrow.src = '/icon-arrow.56d7c493.svg')
+      classList(arrow, 'toggle', 'arrow-down')
       classList(target.nextElementSibling, 'toggle', 'hidden')
+   }
 })
 
 // TODO:

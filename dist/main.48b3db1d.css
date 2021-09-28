@@ -223,7 +223,7 @@ body {
 
 .hero-wrapper {
   position: relative;
-  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat -45% 15%/150%;
+  background: url("/fabbc7df567b5714686fdfc38a0569c6.svg") no-repeat -45% 15%/150%;
 }
 
 .hero_cnt-ct {
@@ -270,7 +270,7 @@ body {
 }
 
 .feat-wrapper {
-  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat 150% 64%/150%;
+  background: url("/fabbc7df567b5714686fdfc38a0569c6.svg") no-repeat 150% 64%/150%;
 }
 
 .crsl-btns-ct {
@@ -337,7 +337,7 @@ body {
   border-bottom-right-radius: 10px;
   min-height: 370px;
   padding: 2.7rem 0 1.5rem;
-  background: white url("/bg-dots.f4618aa9.svg") no-repeat center 74%/100%;
+  background: white url("/f519f0eabf94774208a8e086f4618aa9.svg") no-repeat center 74%/100%;
 }
 
 .logo-brwsr {
@@ -443,7 +443,7 @@ body {
   margin-bottom: 2.3em;
   outline: none;
   box-shadow: 0 30px 0 0 #fa5757;
-  background: white url("/icon-error.7540ea9a.svg") no-repeat 95% center/7%;
+  background: white url("/3d50e505eb6f2a0fae07ee627540ea9a.svg") no-repeat 95% center/7%;
 }
 
 .error-msg {
@@ -544,6 +544,9 @@ main {
 }
 .ftr_nav a {
   color: white;
+}
+.ftr_nav a:hover {
+  text-decoration: underline;
 }
 .ftr_svgs-ct {
   display: flex;
