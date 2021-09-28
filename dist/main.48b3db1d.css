@@ -520,7 +520,47 @@ main {
 }
 
 .ftr {
-  background-color: lightgray;
+  background-color: #252b46;
+  padding-block: 2rem;
+}
+.ftr_cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+.ftr_nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+.ftr_nav li {
+  margin-block: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+}
+.ftr_nav a {
+  color: white;
+}
+.ftr_svgs-ct {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fb-svg {
+  margin-right: 2rem;
+}
+.fb-svg:hover {
+  fill: #fa5757;
+}
+
+.tw-svg:hover {
+  fill: #5368df;
 }
 
 /*# sourceMappingURL=/main.48b3db1d.css.map */
