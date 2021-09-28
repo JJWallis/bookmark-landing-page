@@ -130,6 +130,7 @@ var carouselBtns = document.querySelectorAll('.crsl-btn');
 var carouselCt = document.querySelector('.crsl-btns-ct');
 var carouselCnt = document.querySelectorAll('.feat_dynamic');
 var carouselImgs = document.querySelectorAll('.feat_illustration');
+var faqCt = document.querySelector('.faq_qstns-ct');
 
 var classList = function classList(el, act, val) {
   return el.classList[act](val);
@@ -153,6 +154,53 @@ var carouselMethods = {
     isVisible(cntTr);
   }
 };
+
+function isVisible(els) {
+  if (classList(els[0], 'contains', 'hidden')) {
+    var _iterator = _createForOfIteratorHelper(carouselImgs),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var img = _step.value;
+        classList(img, 'add', 'hidden');
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+
+    var _iterator2 = _createForOfIteratorHelper(carouselCnt),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var cnt = _step2.value;
+        classList(cnt, 'add', 'hidden');
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+
+    var _iterator3 = _createForOfIteratorHelper(els),
+        _step3;
+
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var _cnt = _step3.value;
+        classList(_cnt, 'remove', 'hidden');
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+  }
+}
+
 header.addEventListener('click', function (e) {
   var target = e.target;
 
@@ -168,74 +216,35 @@ carouselCt.addEventListener('click', function (e) {
   var target = e.target;
 
   if (target.matches('.crsl-btn')) {
-    var _iterator = _createForOfIteratorHelper(carouselBtns),
-        _step;
-
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var btn = _step.value;
-        classList(btn, 'remove', 'active');
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-
-    classList(target, 'add', 'active');
-    carouselMethods[target.id]();
-  }
-});
-
-function isVisible(els) {
-  if (classList(els[0], 'contains', 'hidden')) {
-    var _iterator2 = _createForOfIteratorHelper(carouselImgs),
-        _step2;
-
-    try {
-      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var img = _step2.value;
-        classList(img, 'add', 'hidden');
-      }
-    } catch (err) {
-      _iterator2.e(err);
-    } finally {
-      _iterator2.f();
-    }
-
-    var _iterator3 = _createForOfIteratorHelper(carouselCnt),
-        _step3;
-
-    try {
-      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-        var cnt = _step3.value;
-        classList(cnt, 'add', 'hidden');
-      }
-    } catch (err) {
-      _iterator3.e(err);
-    } finally {
-      _iterator3.f();
-    }
-
-    var _iterator4 = _createForOfIteratorHelper(els),
+    var _iterator4 = _createForOfIteratorHelper(carouselBtns),
         _step4;
 
     try {
       for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-        var _cnt = _step4.value;
-        classList(_cnt, 'remove', 'hidden');
+        var btn = _step4.value;
+        classList(btn, 'remove', 'active');
       }
     } catch (err) {
       _iterator4.e(err);
     } finally {
       _iterator4.f();
     }
+
+    classList(target, 'add', 'active');
+    carouselMethods[target.id]();
   }
-} // Opactity for hamburger + logo vs hidden class
-// Match viewport size to CSS breakpoints
-// target.matches() re-factored arrow func
-// Re-factored querySelectr + ... all arrow funcs
-// Re-factor - sep func to run loops for carousel (use params for diff)
+});
+faqCt.addEventListener('click', function (e) {
+  var target = e.target;
+  if (target.matches('.faq_btn')) classList(target.nextElementSibling, 'toggle', 'hidden');
+}); // TODO:
+//    Opactity for hamburger + logo vs hidden class
+//    Add event listeners for FAQ content
+//    Match viewport size to CSS breakpoints
+// REFACTOR:
+//    target.matches() re-factored arrow func
+//    Re-factored querySelectr + ... all arrow funcs
+//    Re-factor - sep func to run loops for carousel (use params for diff)
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
