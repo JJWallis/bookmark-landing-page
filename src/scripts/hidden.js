@@ -52,8 +52,11 @@ carouselCt.addEventListener('click', e => {
 
 faqCt.addEventListener('click', e => {
    const target = e.target
-   if (target.matches('.faq_btn'))
+   if (target.matches('.faq_btn')) {
+      const arrow = target.children[target.children.length - 1]
       classList(target.nextElementSibling, 'toggle', 'hidden')
+      classList(arrow, 'toggle', 'arrow')
+   }
 })
 
 // TODO:

@@ -283,7 +283,7 @@
                      <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">What is Bookmark?</p>
-                           <svg class="arrow" width="18" height="12">
+                           <svg width="18" height="12">
                               <use href="#arrow"></use>
                            </svg>
                         </button>
@@ -298,7 +298,7 @@
                            <p class="faq_qstn">
                               How can I request a new browser?
                            </p>
-                           <svg class="arrow" width="18" height="12">
+                           <svg width="18" height="12">
                               <use href="#arrow"></use>
                            </svg>
                         </button>
@@ -315,7 +315,7 @@
                      <aside class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">Is there a mobile app?</p>
-                           <svg class="arrow" width="18" height="12">
+                           <svg width="18" height="12">
                               <use href="#arrow"></use>
                            </svg>
                         </button>
@@ -332,7 +332,7 @@
                            <p class="faq_qstn">
                               What about other Chromium browsers?
                            </p>
-                           <svg class="arrow" width="18" height="12">
+                           <svg width="18" height="12">
                               <use href="#arrow"></use>
                            </svg>
                         </button>
@@ -398,24 +398,28 @@
                   <li><a href="/">Contact</a></li>
                </ul>
             </nav>
-            <div class="ftr_svgs-ct">
-               <a
-                  href="/"
-                  aria-label="Facebook's logo directing to Facebook's home page."
-               >
-                  <svg class="fb-svg" width="24" height="24">
-                     <use href="#fb"></use>
-                  </svg>
-               </a>
-               <a
-                  href="/"
-                  aria-label="Twitter's logo directing to Twitter's home page."
-               >
-                  <svg class="tw-svg" width="24" height="20">
-                     <use href="#tw"></use>
-                  </svg>
-               </a>
-            </div>
+            <ul role="list" class="ftr_svgs-ct">
+               <li>
+                  <a
+                     href="/"
+                     aria-label="Facebook's logo directing to Facebook's home page."
+                  >
+                     <svg class="fb-svg" width="24" height="24">
+                        <use href="#fb"></use>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a
+                     href="/"
+                     aria-label="Twitter's logo directing to Twitter's home page."
+                  >
+                     <svg class="tw-svg" width="24" height="20">
+                        <use href="#tw"></use>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
          </div>
       </footer>
 
@@ -462,7 +466,6 @@
                   stroke="#5267DF"
                   stroke-width="3"
                   d="M1 1l8 8 8-8"
-                  class="arrow"
                />
             </symbol>
          </svg>

@@ -1,3 +1,38 @@
+@use 'abstracts' as *;
+
 .ftr {
-   background-color: lightgray;
+   background-color: $fcPm;
+   padding-block: 2rem;
+   &_cnt {
+      @include flexParent(column, unset, center);
+   }
+   &_nav {
+      & ul {
+         @include flexParent(column, unset, center);
+         margin-bottom: 1.6rem;
+      }
+      & li {
+         margin-block: 1rem;
+         text-transform: uppercase;
+         font-size: 1rem;
+         letter-spacing: 0.1ch;
+      }
+      & a {
+         color: $fcTr;
+      }
+   }
+   &_svgs-ct {
+      @include flexParent(row, center, center);
+   }
+}
+
+.fb-svg {
+   margin-right: 2rem;
+   &:hover {
+      fill: $softRed;
+   }
+}
+
+.tw-svg:hover {
+   fill: $softBlue;
 }
