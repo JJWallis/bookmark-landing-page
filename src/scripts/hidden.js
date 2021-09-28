@@ -55,7 +55,7 @@ faqCt.addEventListener('click', e => {
    if (target.matches('.faq_btn')) {
       const arrow = target.children[target.children.length - 1]
       classList(target.nextElementSibling, 'toggle', 'hidden')
-      classList(arrow, 'toggle', 'arrow')
+      classList(arrow, 'toggle', 'arrow-down')
    }
 })
 

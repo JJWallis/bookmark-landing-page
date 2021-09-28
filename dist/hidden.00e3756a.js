@@ -240,7 +240,7 @@ faqCt.addEventListener('click', function (e) {
   if (target.matches('.faq_btn')) {
     var arrow = target.children[target.children.length - 1];
     classList(target.nextElementSibling, 'toggle', 'hidden');
-    classList(arrow, 'toggle', 'arrow');
+    classList(arrow, 'toggle', 'arrow-down');
   }
 }); // TODO:
 //    Opactity for hamburger + logo vs hidden class
