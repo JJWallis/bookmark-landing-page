@@ -1,7 +1,5 @@
 @use 'abstracts' as *;
 
-// mobile
-
 .hdr_mobile-nav-ct {
    @include position(absolute, unset, unset, 0, 0);
    min-width: 100%;
