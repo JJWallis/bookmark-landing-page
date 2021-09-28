@@ -1,11 +1,8 @@
 @use 'abstracts' as *;
 
 .faq_qstns-ct {
-   margin-bottom: 2.7rem;
-}
-
-.faq_sctn {
-   @include flexParent(column, unset, center);
+   margin: 0 auto 2.7rem;
+   width: 95%;
 }
 
 .faq_aside {
@@ -27,4 +24,9 @@
    margin-bottom: 2rem;
    width: 95%;
    line-height: 1.9;
+}
+
+.faq_lnk-ct {
+   display: flex;
+   justify-content: center;
 }
