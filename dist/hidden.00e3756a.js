@@ -239,8 +239,9 @@ faqCt.addEventListener('click', function (e) {
 
   if (target.matches('.faq_btn')) {
     var arrow = target.children[target.children.length - 1];
-    classList(target.nextElementSibling, 'toggle', 'hidden');
+    arrow.src.includes('56d7c493') ? arrow.src = '/icon-arrow-close.91ded9a2.svg' : arrow.src = '/icon-arrow.56d7c493.svg';
     classList(arrow, 'toggle', 'arrow-down');
+    classList(target.nextElementSibling, 'toggle', 'hidden');
   }
 }); // TODO:
 //    Opactity for hamburger + logo vs hidden class
