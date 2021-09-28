@@ -19,6 +19,9 @@
       }
       & a {
          color: $fcTr;
+         &:hover {
+            text-decoration: underline;
+         }
       }
    }
    &_svgs-ct {

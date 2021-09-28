@@ -549,6 +549,9 @@ main {
 .ftr_nav a {
   color: white;
 }
+.ftr_nav a:hover {
+  text-decoration: underline;
+}
 .ftr_svgs-ct {
   display: flex;
   flex-direction: row;
