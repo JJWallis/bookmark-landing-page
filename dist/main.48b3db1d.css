@@ -485,6 +485,40 @@ main {
   align-items: center;
 }
 
+.faq_qstns-ct {
+  margin: 0 auto 2.7rem;
+  width: 95%;
+}
+
+.faq_aside {
+  border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
+}
+
+.faq_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.7rem 0 2.1rem;
+}
+
+.faq_qstn,
+.faq_answr {
+  font-size: 1rem;
+}
+
+.faq_answr {
+  margin-bottom: 2rem;
+  width: 95%;
+  line-height: 1.9;
+}
+
+.faq_lnk-ct {
+  display: flex;
+  justify-content: center;
+}
+
 .ftr {
   background-color: lightgray;
 }

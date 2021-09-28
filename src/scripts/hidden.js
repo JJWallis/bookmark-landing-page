@@ -4,6 +4,7 @@ const carouselBtns = document.querySelectorAll('.crsl-btn')
 const carouselCt = document.querySelector('.crsl-btns-ct')
 const carouselCnt = document.querySelectorAll('.feat_dynamic')
 const carouselImgs = document.querySelectorAll('.feat_illustration')
+const faqCt = document.querySelector('.faq_qstns-ct')
 const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
 const carouselMethods = {
@@ -19,6 +20,14 @@ const carouselMethods = {
       const cntTr = document.querySelectorAll('.feat_tr')
       isVisible(cntTr)
    },
+}
+
+function isVisible(els) {
+   if (classList(els[0], 'contains', 'hidden')) {
+      for (const img of carouselImgs) classList(img, 'add', 'hidden')
+      for (const cnt of carouselCnt) classList(cnt, 'add', 'hidden')
+      for (const cnt of els) classList(cnt, 'remove', 'hidden')
+   }
 }
 
 header.addEventListener('click', e => {
@@ -41,16 +50,18 @@ carouselCt.addEventListener('click', e => {
    }
 })
 
-function isVisible(els) {
-   if (classList(els[0], 'contains', 'hidden')) {
-      for (const img of carouselImgs) classList(img, 'add', 'hidden')
-      for (const cnt of carouselCnt) classList(cnt, 'add', 'hidden')
-      for (const cnt of els) classList(cnt, 'remove', 'hidden')
-   }
-}
+faqCt.addEventListener('click', e => {
+   const target = e.target
+   if (target.matches('.faq_btn'))
+      classList(target.nextElementSibling, 'toggle', 'hidden')
+})
 
-// Opactity for hamburger + logo vs hidden class
-// Match viewport size to CSS breakpoints
-// target.matches() re-factored arrow func
-// Re-factored querySelectr + ... all arrow funcs
-// Re-factor - sep func to run loops for carousel (use params for diff)
+// TODO:
+//    Opactity for hamburger + logo vs hidden class
+//    Add event listeners for FAQ content
+//    Match viewport size to CSS breakpoints
+
+// REFACTOR:
+//    target.matches() re-factored arrow func
+//    Re-factored querySelectr + ... all arrow funcs
+//    Re-factor - sep func to run loops for carousel (use params for diff)
