@@ -21,10 +21,16 @@ input {
    outline: 1px solid;
 }
 
+// Hidden
+
 .hidden {
    display: none;
 }
 
 .svg-refs {
    display: none;
+}
+
+.overflow {
+   overflow-y: hidden;
 }

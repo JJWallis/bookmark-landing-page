@@ -44,7 +44,7 @@
 }
 
 @mixin transition($amount) {
-   transition: $amount ease-in-out;
+   transition: $amount linear;
 }
 
 @mixin mq($key) {
