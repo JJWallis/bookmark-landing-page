@@ -1,15 +1,25 @@
 @use 'abstracts' as *;
 
-.feat-wrapper {
-   background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
+.feat {
+   &-wrapper {
+      background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
+   }
+   &_crsl-cnt-ct {
+      padding-top: 2rem;
+      // uneven column sizes - hero img alignment for fix!
+   }
+   &_crsl-cnt {
+      width: 90%;
+      @include flexParent(column, unset, center);
+      margin: 0 auto;
+   }
 }
 
 .crsl-btns-ct {
    margin-bottom: 4rem;
-}
-
-.crsl-btns-ct > * {
-   @include flexChild(1, 300px);
+   & > * {
+      @include flexChild(1, 300px);
+   }
 }
 
 .crsl-btn {
@@ -33,15 +43,4 @@
       height: 4px;
       background-color: $softRed;
    }
-}
-
-.feat_crsl-cnt-ct {
-   padding-top: 2rem;
-   // uneven column sizes - hero img alignment for fix!
-}
-
-.feat_crsl-cnt {
-   width: 90%;
-   @include flexParent(column, unset, center);
-   margin: 0 auto;
 }
