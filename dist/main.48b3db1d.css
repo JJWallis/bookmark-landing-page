@@ -104,6 +104,10 @@ input {
   display: none;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 .svg-refs {
   display: none;
 }
