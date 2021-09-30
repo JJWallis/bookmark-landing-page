@@ -29,22 +29,12 @@
    margin: 0 auto;
 }
 
-@mixin btnLink($bgColor, $color, $borderColor, $hoverColor) {
-   padding: 0.5em;
-   background-color: $bgColor;
-   color: $color;
-   border-radius: 0.4rem;
-   box-shadow: 0 0 0.4rem 0 rgba(black, 0.5);
-
-   &:hover {
-      background-color: white;
-      border: 0.2rem solid $borderColor;
-      color: $hoverColor;
-   }
+@mixin lightBorder($position) {
+   border-#{$position}: 0.1px solid rgba($fcSd, 0.5);
 }
 
 @mixin transition($amount) {
-   transition: $amount ease-in-out;
+   transition: $amount linear;
 }
 
 @mixin mq($key) {

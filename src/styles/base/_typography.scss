@@ -1,5 +1,7 @@
-@use "abstracts" as a;
+@use 'abstracts' as a;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 body {
-   font: 1.2rem 'Rubik', sans-serif;
+   font: 1.2rem/1.5 'Rubik', sans-serif;
 }

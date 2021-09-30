@@ -1,33 +1,36 @@
 @use 'abstracts' as *;
 
-.card-brwsr-ct {
-   gap: 4rem;
-   width: 80%;
-   margin: 0 auto;
-}
-
-.card-brwsr-ct > * {
-   @include flexChild(1, 230px);
-   // change width of flex container - 3 row at wider screens
-}
-
 .card-brwsr {
    @include flexParent(column, unset, center);
-   box-shadow: 0 10px 15px 0 rgba(black, 0.1);
-   border-bottom-left-radius: 10px;
-   border-bottom-right-radius: 10px;
    min-height: 370px;
    padding: 2.7rem 0 1.5rem;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
    background: white url('/images/bg-dots.svg') no-repeat center 74% / 100%;
+   box-shadow: 0 10px 15px 0 rgba(black, 0.1);
+   &-ct {
+      width: 80%;
+      margin: 0 auto;
+      gap: 4rem;
+      & > * {
+         @include flexChild(1, 230px);
+         // change width of flex container - 3 row at wider screens
+      }
+   }
 }
 
 .logo-brwsr {
    margin-bottom: 2rem;
 }
 
-.brwsr-title {
-   letter-spacing: 0.05ch;
-   margin-bottom: 0.4em;
+.brwsr {
+   &-logo {
+      margin-bottom: 2rem;
+   }
+   &-title {
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05ch;
+   }
 }
 
 .min-version {

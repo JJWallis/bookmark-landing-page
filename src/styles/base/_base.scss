@@ -1,7 +1,13 @@
+@use 'abstracts' as *;
+
 ul,
 li {
    margin: 0;
    padding: 0;
+}
+
+li {
+   list-style-type: none;
 }
 
 a {
@@ -9,8 +15,8 @@ a {
 }
 
 button {
-   background-color: transparent;
    border: none;
+   background-color: transparent;
    &:hover {
       cursor: pointer;
    }
@@ -21,10 +27,23 @@ input {
    outline: 1px solid;
 }
 
+// Hidden
+
 .hidden {
    display: none;
 }
 
 .svg-refs {
    display: none;
+}
+
+.overflow {
+   overflow-y: hidden;
+}
+
+// Accessibility
+
+:focus {
+   @include transition(100ms);
+   outline: 3px dotted $softBlue;
 }

@@ -10,13 +10,15 @@
          href="./images/favicon-32x32.png"
       />
       <title>Bookmark landing page</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"
-         rel="stylesheet"
-      />
       <link rel="stylesheet" href="./styles/main.scss" type="text/css" />
+      <script
+         defer
+         src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"
+      ></script>
+      <script
+         defer
+         src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
+      ></script>
       <script defer src="./scripts/main.js"></script>
       <script defer src="./scripts/hidden.js"></script>
       <script defer src="./scripts/validation.js"></script>
@@ -76,21 +78,25 @@
                         href="/"
                         aria-label="Facebook's logo directing to Facebook's home page."
                      >
-                        <img
-                           src="./images/icon-facebook.svg"
-                           alt="Facebook's logo directing to Facebook's home page."
-                           class="logo-mb logo"
-                        />
+                        <i
+                           class="
+                              fab
+                              fa-facebook-square
+                              social-icon social-icon-fb
+                           "
+                        ></i>
                      </a>
                      <a
                         href="/"
                         aria-label="Twitter's logo directing to Twitter's home page."
                      >
-                        <img
-                           src="./images/icon-twitter.svg"
-                           alt="Twitter's logo directing to Twitter's home page."
-                           class="logo-mb logo"
-                        />
+                        <i
+                           class="
+                              fab
+                              fa-twitter-square
+                              social-icon social-icon-tw
+                           "
+                        ></i>
                      </a>
                   </div>
                </div>
@@ -117,7 +123,7 @@
                   />
                </div>
                <div class="split hero_cnt-ct">
-                  <section class="hero_cnt">
+                  <article class="hero_cnt">
                      <h1 class="hero_title">A Simple Bookmark Manager</h1>
                      <p class="dsc dsc-lft">
                         A clean and simple interface to organize your favourite
@@ -132,14 +138,14 @@
                            >Get it on Firefox</a
                         >
                      </div>
-                  </section>
+                  </article>
                </div>
             </div>
          </div>
 
          <div class="feat-wrapper alignment-pt spacing">
             <div class="alignment">
-               <section class="feat_cnt">
+               <article class="feat_cnt">
                   <h2 class="feat_title sub-title">Features</h2>
                   <p class="dsc">
                      Our aim is to make it quick and easy for you to access your
@@ -155,7 +161,7 @@
                      </button>
                      <button class="crsl-btn" id="easy">Easy Sharing</button>
                   </div>
-               </section>
+               </article>
                <div class="flex-parent">
                   <div class="feat_illustration-ct split">
                      <img
@@ -221,19 +227,19 @@
 
          <div class="ext-wrapper alignment-pt spacing">
             <div class="alignment">
-               <section class="ext_cnt">
+               <article class="ext_cnt">
                   <h2 class="ext_title sub-title">Download the extension</h2>
                   <p class="dsc">
                      We’ve got more browsers in the pipeline. Please do let us
                      know if you’ve got a favourite you’d like us to prioritize.
                   </p>
-               </section>
+               </article>
                <div class="flex-parent-wp card-brwsr-ct">
                   <div class="card-brwsr">
                      <img
                         src="./images/logo-chrome.svg"
                         alt="Google Chrome browser logo."
-                        class="logo-brwsr"
+                        class="brwsr-logo"
                      />
                      <h3 class="brwsr-title">Add to Chrome</h3>
                      <small class="min-version">Minimum version 62</small>
@@ -245,7 +251,7 @@
                      <img
                         src="./images/logo-firefox.svg"
                         alt="Firefox browser logo."
-                        class="logo-brwsr"
+                        class="brwsr-logo"
                      />
                      <h3 class="brwsr-title">Add to Firefox</h3>
                      <small class="min-version">Minimum version 55</small>
@@ -257,7 +263,7 @@
                      <img
                         src="./images/logo-opera.svg"
                         alt="Opera browser logo."
-                        class="logo-brwsr"
+                        class="brwsr-logo"
                      />
                      <h3 class="brwsr-title">Add to Opera</h3>
                      <small class="min-version">Minimum version 46</small>
@@ -271,7 +277,7 @@
 
          <div class="faq-wrapper alignment-pt spacing">
             <div class="faq_cnt alignment">
-               <section class="faq_sctn">
+               <aside class="faq_sctn">
                   <h2 class="faq_title sub-title">
                      Frequently Asked Questions
                   </h2>
@@ -279,8 +285,8 @@
                      Here are some of our FAQs. If you have any other questions
                      you’d like answered please feel free to email us.
                   </p>
-                  <div class="faq_qstns-ct">
-                     <aside class="faq_aside">
+                  <ul class="faq_qstns-ct">
+                     <li class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">What is Bookmark?</p>
                            <img
@@ -294,8 +300,8 @@
                            elit. Fusce tincidunt justo eget ultricies fringilla.
                            Phasellus blandit ipsum quis quam ornare mattis.
                         </p>
-                     </aside>
-                     <aside class="faq_aside">
+                     </li>
+                     <li class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">
                               How can I request a new browser?
@@ -315,8 +321,8 @@
                            convallis ultricies. Mauris augue massa, ultricies
                            non ligula. Suspendisse imperdiet.
                         </p>
-                     </aside>
-                     <aside class="faq_aside">
+                     </li>
+                     <li class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">Is there a mobile app?</p>
                            <img
@@ -332,8 +338,8 @@
                            mattis sit amet pharetra purus. Sed sollicitudin ex
                            et ultricies bibendum.
                         </p>
-                     </aside>
-                     <aside class="faq_aside">
+                     </li>
+                     <li class="faq_aside">
                         <button class="faq_btn">
                            <p class="faq_qstn">
                               What about other Chromium browsers?
@@ -351,18 +357,18 @@
                            More Info 35,000+ already joined Stay up-to-date with
                            what we’re doing Contact Us Features Pricing Contact
                         </p>
-                     </aside>
-                  </div>
+                     </li>
+                  </ul>
                   <div class="faq_lnk-ct">
                      <a href="/" class="btn-lnk lnk-blue lnk-faq">More Info</a>
                   </div>
-               </section>
+               </aside>
             </div>
          </div>
 
          <div class="contact-wrapper alignment-pt">
             <div class="contact_cnt alignment">
-               <section class="contact_sctn">
+               <aside class="contact_sctn">
                   <h4 class="already-joined">35,000 + Already Joined</h4>
                   <h2 class="contact_title sub-title">
                      Stay up-to-date with what we're doing
@@ -383,7 +389,7 @@
                         Contact Us
                      </button>
                   </form>
-               </section>
+               </aside>
             </div>
          </div>
       </main>
@@ -412,9 +418,13 @@
                      href="/"
                      aria-label="Facebook's logo directing to Facebook's home page."
                   >
-                     <svg class="fb-svg" width="24" height="24">
-                        <use href="#fb"></use>
-                     </svg>
+                     <i
+                        class="
+                           fab
+                           fa-facebook-square
+                           social-icon social-icon-fb social-icon-fb-ft
+                        "
+                     ></i>
                   </a>
                </li>
                <li>
@@ -422,46 +432,13 @@
                      href="/"
                      aria-label="Twitter's logo directing to Twitter's home page."
                   >
-                     <svg class="tw-svg" width="24" height="20">
-                        <use href="#tw"></use>
-                     </svg>
+                     <i
+                        class="fab fa-twitter-square social-icon social-icon-tw"
+                     ></i>
                   </a>
                </li>
             </ul>
          </div>
       </footer>
-
-      <div class="svg-refs">
-         <svg
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-         >
-            <symbol id="fb">
-               <path
-                  fill="#FFF"
-                  fill-rule="evenodd"
-                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
-                  class="fb-svg"
-               />
-            </symbol>
-         </svg>
-         <svg
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-         >
-            <symbol id="tw">
-               <path
-                  fill="#FFF"
-                  fill-rule="evenodd"
-                  d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
-                  class="tw-svg"
-               />
-            </symbol>
-         </svg>
-      </div>
    </body>
 </html>

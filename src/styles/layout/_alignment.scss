@@ -1,27 +1,25 @@
 @use 'abstracts' as *;
 
-.alignment-pt {
-   @include flexParent(column, center, center);
-}
-
 .alignment {
    width: 90%;
    max-width: 60rem;
    outline: 1px solid red;
+   &-pt {
+      @include flexParent(column, center, center);
+   }
 }
 
 .flex-parent {
    @include flexParent(column, unset, center);
    gap: 2.5rem;
+   &-wp {
+      @include flexParent(row, unset, unset);
+      flex-wrap: wrap;
+   }
 }
 
 .split {
    flex-grow: 1;
-}
-
-.flex-parent-wp {
-   @include flexParent(row, unset, unset);
-   flex-wrap: wrap;
 }
 
 .spacing {

@@ -1,13 +1,26 @@
 @use 'abstracts' as *;
 .sm-mb {
    @include flexParent(row, center, center);
-   gap: 2.5rem;
    margin-top: auto;
+   gap: 2.5rem;
 }
 
-.logo {
-   @include transition(300ms);
-   &-mb:hover {
-      transform: scale(1.3);
+.social-icon {
+   color: white;
+   font-size: 2rem;
+   @include transition(200ms);
+   &:hover {
+      transform: scale(1.2);
+   }
+   &-fb {
+      &-ft {
+         margin-right: 2.8rem;
+      }
+      &:hover {
+         color: $softRed;
+      }
+   }
+   &-tw:hover {
+      color: $softBlue;
    }
 }

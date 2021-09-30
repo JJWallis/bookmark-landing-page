@@ -1,16 +1,21 @@
 @use 'abstracts' as *;
 
-.contact-wrapper {
-   background-color: $softBlue;
-   padding: 5rem 0 3rem;
-}
-
-.contact_cnt {
-   @include flexParent(column, unset, center);
-}
-
-.contact_sctn {
-   @include flexParent(column, unset, center);
+.contact {
+   &-wrapper {
+      padding: 5rem 0 3rem;
+      background-color: $softBlue;
+   }
+   &_cnt {
+      @include flexParent(column, unset, center);
+   }
+   &_sctn {
+      @include flexParent(column, unset, center);
+   }
+   &_title {
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+      color: $fcTr;
+   }
 }
 
 .already-joined {
@@ -19,9 +24,4 @@
    font-size: 1.1rem;
    font-weight: 400;
    text-transform: uppercase;
-}
-
-.contact_title {
-   color: $fcTr;
-   margin-bottom: 1.2em;
 }

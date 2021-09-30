@@ -2,8 +2,7 @@
 
 .hdr {
    padding-block: 2rem;
-}
-
-.hdr_cnt {
-   @include flexParent(row, space-between, center);
+   &_cnt {
+      @include flexParent(row, space-between, center);
+   }
 }

@@ -1,8 +1,8 @@
 @use 'abstracts' as *;
 
 .ftr {
-   background-color: $fcPm;
    padding-block: 2rem;
+   background-color: $fcPm;
    &_cnt {
       @include flexParent(column, unset, center);
    }
@@ -27,15 +27,4 @@
    &_svgs-ct {
       @include flexParent(row, center, center);
    }
-}
-
-.fb-svg {
-   margin-right: 2rem;
-   &:hover {
-      fill: $softRed;
-   }
-}
-
-.tw-svg:hover {
-   fill: $softBlue;
 }
