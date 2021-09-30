@@ -7,8 +7,6 @@
    padding: 0.8rem;
 }
 
-// refactor - mixin!
-
 .btn-lnk {
    border-radius: 5px;
    padding: 0.8em;
@@ -20,30 +18,30 @@
    }
 }
 
-.lnk-blue {
-   background-color: $softBlue;
-   color: white;
-   &:hover {
-      border: 2px solid $softBlue;
-      color: $softBlue;
+.lnk {
+   &-blue {
+      background-color: $softBlue;
+      color: white;
+      &:hover {
+         border: 2px solid $softBlue;
+         color: $softBlue;
+      }
    }
-}
-
-.lnk-firefox {
-   color: $fcFx;
-   background-color: #f5f5f5;
-   &:hover {
-      border: 2px solid $fcFx;
+   &-red {
+      background-color: $softRed;
+      color: $fcTr;
+      width: 100%;
+      &:hover {
+         border: 2px solid $softRed;
+         color: $softRed;
+      }
+   }
+   &-firefox {
       color: $fcFx;
-   }
-}
-
-.lnk-red {
-   background-color: $softRed;
-   color: $fcTr;
-   width: 100%;
-   &:hover {
-      border: 2px solid $softRed;
-      color: $softRed;
+      background-color: #f5f5f5;
+      &:hover {
+         border: 2px solid $fcFx;
+         color: $fcFx;
+      }
    }
 }
