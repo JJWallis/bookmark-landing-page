@@ -7,7 +7,6 @@
    }
    &_aside {
       @include lightBorder(bottom);
-      list-style-type: none;
    }
    &_btn {
       @include flexParent(row, space-between, center);

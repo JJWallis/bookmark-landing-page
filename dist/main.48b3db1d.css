@@ -79,6 +79,10 @@ li {
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -223,6 +227,24 @@ body {
   transform: scale(1.3);
 }
 
+.social-icon {
+  color: white;
+  font-size: 2rem;
+  transition: 200ms linear;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+.social-icon-fb {
+  margin-right: 2.8rem;
+}
+.social-icon-fb:hover {
+  color: #fa5757;
+}
+.social-icon-tw:hover {
+  color: #5368df;
+}
+
 .hero-wrapper {
   position: relative;
   background: url("/bg-blue-shape.8a0569c6.svg") no-repeat -45% 15%/150%;
@@ -359,7 +381,6 @@ body {
 }
 .faq_aside {
   border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
-  list-style-type: none;
 }
 .faq_btn {
   display: flex;
@@ -546,16 +567,6 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.svg-fb {
-  margin-right: 2rem;
-}
-.svg-fb:hover {
-  fill: #fa5757;
-}
-.svg-tw:hover {
-  fill: #5368df;
 }
 
 /*# sourceMappingURL=/main.48b3db1d.css.map */

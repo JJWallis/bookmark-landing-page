@@ -28,15 +28,3 @@
       @include flexParent(row, center, center);
    }
 }
-
-.svg {
-   &-fb {
-      margin-right: 2rem;
-      &:hover {
-         fill: $softRed;
-      }
-   }
-   &-tw:hover {
-      fill: $softBlue;
-   }
-}
