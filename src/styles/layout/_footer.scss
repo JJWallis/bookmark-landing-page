@@ -29,13 +29,14 @@
    }
 }
 
-.fb-svg {
-   margin-right: 2rem;
-   &:hover {
-      fill: $softRed;
+.svg {
+   &-fb {
+      margin-right: 2rem;
+      &:hover {
+         fill: $softRed;
+      }
    }
-}
-
-.tw-svg:hover {
-   fill: $softBlue;
+   &-tw:hover {
+      fill: $softBlue;
+   }
 }

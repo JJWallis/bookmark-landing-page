@@ -14,10 +14,10 @@
 
 .crsl-btn {
    padding: 1rem;
-   border-bottom: 0.1px solid rgba($fcSd, 0.5);
+   @include lightBorder(bottom);
    position: relative;
    &:first-child {
-      border-top: 0.1px solid rgba($fcSd, 0.5);
+      @include lightBorder(top);
    }
 }
 

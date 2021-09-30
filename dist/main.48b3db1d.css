@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -483,17 +484,16 @@ main {
   flex-grow: 1;
 }
 
+.alignment {
+  width: 90%;
+  max-width: 60rem;
+  outline: 1px solid red;
+}
 .alignment-pt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.alignment {
-  width: 90%;
-  max-width: 60rem;
-  outline: 1px solid red;
 }
 
 .flex-parent {
@@ -503,17 +503,16 @@ main {
   align-items: center;
   gap: 2.5rem;
 }
-
-.split {
-  flex-grow: 1;
-}
-
 .flex-parent-wp {
   display: flex;
   flex-direction: row;
   justify-content: unset;
   align-items: unset;
   flex-wrap: wrap;
+}
+
+.split {
+  flex-grow: 1;
 }
 
 .spacing {
@@ -523,7 +522,6 @@ main {
 .hdr {
   padding-block: 2rem;
 }
-
 .hdr_cnt {
   display: flex;
   flex-direction: row;
@@ -567,14 +565,13 @@ main {
   align-items: center;
 }
 
-.fb-svg {
+.svg-fb {
   margin-right: 2rem;
 }
-.fb-svg:hover {
+.svg-fb:hover {
   fill: #fa5757;
 }
-
-.tw-svg:hover {
+.svg-tw:hover {
   fill: #5368df;
 }
 

@@ -43,6 +43,10 @@
    }
 }
 
+@mixin lightBorder($position) {
+   border-#{$position}: 0.1px solid rgba($fcSd, 0.5);
+}
+
 @mixin transition($amount) {
    transition: $amount linear;
 }

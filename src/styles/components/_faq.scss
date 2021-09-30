@@ -6,7 +6,7 @@
 }
 
 .faq_aside {
-   border-bottom: 0.1px solid rgba($fcSd, 0.5);
+   @include lightBorder(bottom);
 }
 
 .faq_btn {
