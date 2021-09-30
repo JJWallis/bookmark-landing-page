@@ -12,7 +12,8 @@
       @include flexParent(column, unset, center);
    }
    &_title {
-      margin-bottom: 1.2em;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
       color: $fcTr;
    }
 }

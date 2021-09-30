@@ -6,8 +6,8 @@
 
 .input {
    width: 100%;
-   margin-bottom: 1em;
-   padding: 1em;
+   margin-bottom: 1.3rem;
+   padding: 1rem;
    border-radius: 5px;
    font-size: 1.1rem;
    &::placeholder {
@@ -16,7 +16,7 @@
 }
 
 .error {
-   margin-bottom: 2.3em;
+   margin-bottom: 2.5rem;
    border: 2px solid $softRed;
    outline: none;
    box-shadow: 0 30px 0 0 $softRed;

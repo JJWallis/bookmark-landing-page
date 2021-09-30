@@ -112,8 +112,13 @@ input {
   overflow-y: hidden;
 }
 
+:focus {
+  transition: 100ms linear;
+  outline: 3px dotted #5368df;
+}
+
 body {
-  font: 1.2rem "Rubik", sans-serif;
+  font: 1.2rem/1.5 "Rubik", sans-serif;
 }
 
 .hdr_mobile-nav-ct {
@@ -271,13 +276,13 @@ body {
 }
 
 .dsc {
-  margin: 1.2em 0 2em;
+  margin: 1.2rem 0 2rem;
   text-align: center;
   color: #9194a1;
 }
 
 .sub-title {
-  margin-top: 0.5em;
+  margin-bottom: 0.8rem;
   text-align: center;
   letter-spacing: 0.01ch;
 }
@@ -356,7 +361,7 @@ body {
   margin-bottom: 2rem;
 }
 .brwsr-title {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.05ch;
 }
 
@@ -421,7 +426,8 @@ body {
   align-items: center;
 }
 .contact_title {
-  margin-bottom: 1.2em;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   color: white;
 }
 
@@ -439,8 +445,8 @@ body {
 
 .input {
   width: 100%;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
   border-radius: 5px;
   font-size: 1.1rem;
 }
@@ -449,7 +455,7 @@ body {
 }
 
 .error {
-  margin-bottom: 2.3em;
+  margin-bottom: 2.5rem;
   border: 2px solid #fa5757;
   outline: none;
   box-shadow: 0 30px 0 0 #fa5757;
