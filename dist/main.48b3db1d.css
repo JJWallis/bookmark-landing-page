@@ -359,6 +359,7 @@ body {
 }
 .faq_aside {
   border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
+  list-style-type: none;
 }
 .faq_btn {
   display: flex;
