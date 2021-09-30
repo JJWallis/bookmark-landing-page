@@ -13,6 +13,9 @@
    &::placeholder {
       color: rgba($fcSd, 0.8);
    }
+   &:focus {
+      outline: 2px solid;
+   }
 }
 
 .error {

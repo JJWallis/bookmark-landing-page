@@ -460,6 +460,9 @@ body {
 .input::placeholder {
   color: rgba(145, 148, 161, 0.8);
 }
+.input:focus {
+  outline: 2px solid;
+}
 
 .error {
   margin-bottom: 2.5rem;
