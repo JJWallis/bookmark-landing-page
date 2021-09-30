@@ -1,32 +1,29 @@
 @use 'abstracts' as *;
 
-.faq_qstns-ct {
-   margin: 0 auto 2.7rem;
-   width: 95%;
-}
-
-.faq_aside {
-   @include lightBorder(bottom);
-}
-
-.faq_btn {
-   @include flexParent(row, space-between, center);
-   width: 100%;
-   padding: 1.7rem 0 2.1rem;
-}
-
-.faq_qstn,
-.faq_answr {
-   font-size: 1rem;
-}
-
-.faq_answr {
-   margin-bottom: 2rem;
-   width: 95%;
-   line-height: 1.9;
-}
-
-.faq_lnk-ct {
-   display: flex;
-   justify-content: center;
+.faq {
+   &_qstns-ct {
+      margin: 0 auto 2.7rem;
+      width: 95%;
+   }
+   &_aside {
+      @include lightBorder(bottom);
+   }
+   &_btn {
+      @include flexParent(row, space-between, center);
+      width: 100%;
+      padding: 1.7rem 0 2.1rem;
+   }
+   &_qstn,
+   &_answr {
+      font-size: 1rem;
+   }
+   &_answr {
+      margin-bottom: 2rem;
+      width: 95%;
+      line-height: 1.9;
+   }
+   &_lnk-ct {
+      display: flex;
+      justify-content: center;
+   }
 }
