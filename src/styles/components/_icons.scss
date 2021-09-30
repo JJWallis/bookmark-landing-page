@@ -1,8 +1,8 @@
 @use 'abstracts' as *;
 .sm-mb {
    @include flexParent(row, center, center);
-   gap: 2.5rem;
    margin-top: auto;
+   gap: 2.5rem;
 }
 
 .social-icon {

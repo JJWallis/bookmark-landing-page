@@ -1,8 +1,8 @@
 @use 'abstracts' as *;
 
 .ftr {
-   background-color: $fcPm;
    padding-block: 2rem;
+   background-color: $fcPm;
    &_cnt {
       @include flexParent(column, unset, center);
    }

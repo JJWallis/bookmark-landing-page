@@ -7,17 +7,17 @@
 .input {
    width: 100%;
    margin-bottom: 1em;
-   font-size: 1.1rem;
    padding: 1em;
    border-radius: 5px;
+   font-size: 1.1rem;
    &::placeholder {
       color: rgba($fcSd, 0.8);
    }
 }
 
 .error {
-   border: 2px solid $softRed;
    margin-bottom: 2.3em;
+   border: 2px solid $softRed;
    outline: none;
    box-shadow: 0 30px 0 0 $softRed;
    background: white url('/images/icon-error.svg') no-repeat 95% center / 7%;
@@ -25,12 +25,12 @@
 
 .error-msg {
    display: block;
-   position: absolute;
-   z-index: 2;
    width: 100%;
    height: auto;
+   position: absolute;
    bottom: 64px;
    left: 6px;
+   z-index: 2;
    font-size: 0.8rem;
    font-weight: 700;
    color: $fcTr;

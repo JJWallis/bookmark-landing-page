@@ -2,8 +2,8 @@
 
 .contact {
    &-wrapper {
-      background-color: $softBlue;
       padding: 5rem 0 3rem;
+      background-color: $softBlue;
    }
    &_cnt {
       @include flexParent(column, unset, center);
@@ -12,8 +12,8 @@
       @include flexParent(column, unset, center);
    }
    &_title {
-      color: $fcTr;
       margin-bottom: 1.2em;
+      color: $fcTr;
    }
 }
 

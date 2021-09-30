@@ -2,8 +2,8 @@
 
 .faq {
    &_qstns-ct {
-      margin: 0 auto 2.7rem;
       width: 95%;
+      margin: 0 auto 2.7rem;
    }
    &_aside {
       @include lightBorder(bottom);

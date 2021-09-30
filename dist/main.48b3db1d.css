@@ -88,8 +88,8 @@ a {
 }
 
 button {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 button:hover {
   cursor: pointer;
@@ -122,11 +122,11 @@ body {
   height: unset;
   top: 0;
   left: 0;
+  z-index: 100;
   min-width: 100%;
   min-height: 100%;
-  background-color: rgba(37, 43, 70, 0.95);
   padding-top: 2rem;
-  z-index: 100;
+  background-color: rgba(37, 43, 70, 0.95);
 }
 .hdr_mobile-nav {
   display: flex;
@@ -168,17 +168,17 @@ body {
 }
 
 .login-mb {
-  border: 2px solid white;
-  border-radius: 0.4rem;
   margin-top: 1.7rem;
   padding: 0.8rem;
+  border: 2px solid white;
+  border-radius: 0.4rem;
 }
 
 .btn-lnk {
-  border-radius: 5px;
   padding: 0.8em;
-  font-size: 1rem;
+  border-radius: 5px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
   transition: 200ms linear;
 }
 .btn-lnk:hover {
@@ -194,9 +194,9 @@ body {
   color: #5368df;
 }
 .lnk-red {
+  width: 100%;
   background-color: #fa5757;
   color: white;
-  width: 100%;
 }
 .lnk-red:hover {
   border: 2px solid #fa5757;
@@ -216,8 +216,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
   margin-top: auto;
+  gap: 2.5rem;
 }
 
 .social-icon {
@@ -271,9 +271,9 @@ body {
 }
 
 .dsc {
+  margin: 1.2em 0 2em;
   text-align: center;
   color: #9194a1;
-  margin: 1.2em 0 2em;
 }
 
 .sub-title {
@@ -331,17 +331,17 @@ body {
   flex-direction: column;
   justify-content: unset;
   align-items: center;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   min-height: 370px;
   padding: 2.7rem 0 1.5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background: white url("/bg-dots.f4618aa9.svg") no-repeat center 74%/100%;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
 }
 .card-brwsr-ct {
-  gap: 4rem;
   width: 80%;
   margin: 0 auto;
+  gap: 4rem;
 }
 .card-brwsr-ct > * {
   flex-grow: 1;
@@ -356,8 +356,8 @@ body {
   margin-bottom: 2rem;
 }
 .brwsr-title {
-  letter-spacing: 0.05ch;
   margin-bottom: 0.4em;
+  letter-spacing: 0.05ch;
 }
 
 .min-version {
@@ -369,8 +369,8 @@ body {
 }
 
 .faq_qstns-ct {
-  margin: 0 auto 2.7rem;
   width: 95%;
+  margin: 0 auto 2.7rem;
 }
 .faq_aside {
   border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
@@ -405,8 +405,8 @@ body {
 }
 
 .contact-wrapper {
-  background-color: #5368df;
   padding: 5rem 0 3rem;
+  background-color: #5368df;
 }
 .contact_cnt {
   display: flex;
@@ -421,8 +421,8 @@ body {
   align-items: center;
 }
 .contact_title {
-  color: white;
   margin-bottom: 1.2em;
+  color: white;
 }
 
 .already-joined {
@@ -440,17 +440,17 @@ body {
 .input {
   width: 100%;
   margin-bottom: 1em;
-  font-size: 1.1rem;
   padding: 1em;
   border-radius: 5px;
+  font-size: 1.1rem;
 }
 .input::placeholder {
   color: rgba(145, 148, 161, 0.8);
 }
 
 .error {
-  border: 2px solid #fa5757;
   margin-bottom: 2.3em;
+  border: 2px solid #fa5757;
   outline: none;
   box-shadow: 0 30px 0 0 #fa5757;
   background: white url("/icon-error.7540ea9a.svg") no-repeat 95% center/7%;
@@ -458,12 +458,12 @@ body {
 
 .error-msg {
   display: block;
-  position: absolute;
-  z-index: 2;
   width: 100%;
   height: auto;
+  position: absolute;
   bottom: 64px;
   left: 6px;
+  z-index: 2;
   font-size: 0.8rem;
   font-weight: 700;
   color: white;
@@ -527,8 +527,8 @@ main {
 }
 
 .ftr {
-  background-color: #252b46;
   padding-block: 2rem;
+  background-color: #252b46;
 }
 .ftr_cnt {
   display: flex;
