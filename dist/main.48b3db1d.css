@@ -321,17 +321,6 @@ body {
   margin: 0 auto;
 }
 
-.card-brwsr-ct {
-  gap: 4rem;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.card-brwsr-ct > * {
-  flex-grow: 1;
-  flex-basis: 230px;
-}
-
 .card-brwsr {
   display: flex;
   flex-direction: column;
@@ -344,11 +333,23 @@ body {
   padding: 2.7rem 0 1.5rem;
   background: white url("/bg-dots.f4618aa9.svg") no-repeat center 74%/100%;
 }
+.card-brwsr-ct {
+  gap: 4rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-brwsr-ct > * {
+  flex-grow: 1;
+  flex-basis: 230px;
+}
 
 .logo-brwsr {
   margin-bottom: 2rem;
 }
 
+.brwsr-logo {
+  margin-bottom: 2rem;
+}
 .brwsr-title {
   letter-spacing: 0.05ch;
   margin-bottom: 0.4em;
@@ -408,19 +409,21 @@ body {
   background-color: #5368df;
   padding: 5rem 0 3rem;
 }
-
 .contact_cnt {
   display: flex;
   flex-direction: column;
   justify-content: unset;
   align-items: center;
 }
-
 .contact_sctn {
   display: flex;
   flex-direction: column;
   justify-content: unset;
   align-items: center;
+}
+.contact_title {
+  color: white;
+  margin-bottom: 1.2em;
 }
 
 .already-joined {
@@ -429,11 +432,6 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-.contact_title {
-  color: white;
-  margin-bottom: 1.2em;
 }
 
 .form {
