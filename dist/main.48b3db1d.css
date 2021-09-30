@@ -113,7 +113,7 @@ body {
 }
 
 .hdr_mobile-nav-ct {
-  position: absolute;
+  position: fixed;
   width: unset;
   height: unset;
   top: 0;
@@ -124,7 +124,6 @@ body {
   padding-top: 2rem;
   z-index: 100;
 }
-
 .hdr_mobile-nav {
   display: flex;
   flex-direction: column;
