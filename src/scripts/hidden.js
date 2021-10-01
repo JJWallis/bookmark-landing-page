@@ -37,12 +37,12 @@ header.addEventListener('click', e => {
    const target = e.target
    if (viewport() < 800) {
       if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
-         classList(mobileNav, 'remove', 'hidden')
+         classList(header, 'add', 'nav-open')
          classList(body, 'add', 'overflow')
          classList(hamburger, 'add', 'invisible')
          classList(logo, 'add', 'invisible')
       } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
-         classList(mobileNav, 'add', 'hidden')
+         classList(header, 'remove', 'nav-open')
          classList(body, 'remove', 'overflow')
          classList(hamburger, 'remove', 'invisible')
          classList(logo, 'remove', 'invisible')

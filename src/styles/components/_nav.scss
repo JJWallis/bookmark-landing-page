@@ -8,7 +8,11 @@
       min-height: 100%;
       padding-top: 2rem;
       background-color: rgba($fcPm, 0.95);
-      animation: top-bottom 700ms ease-in-out forwards;
+      @include transition(300ms);
+      transform: translateY(-100%);
+      .nav-open & {
+         transform: translateY(0);
+      }
    }
    &_mobile-nav {
       @include flexParent(column, unset, unset);
@@ -16,6 +20,9 @@
       min-height: calc(100vh - 80px);
       margin: 0 auto;
    }
+}
+
+.nav-open {
 }
 
 .mb-nav-hdr {
