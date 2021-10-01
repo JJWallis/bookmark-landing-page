@@ -125,6 +125,14 @@ body {
   font: 1.2rem/1.5 "Rubik", sans-serif;
 }
 
+@keyframes mb-nav {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .hdr_mobile-nav-ct {
   position: fixed;
   width: unset;
@@ -136,6 +144,7 @@ body {
   min-height: 100%;
   padding-top: 2rem;
   background-color: rgba(37, 43, 70, 0.95);
+  animation: mb-nav 1s ease-in-out forwards;
 }
 .hdr_mobile-nav {
   display: flex;
