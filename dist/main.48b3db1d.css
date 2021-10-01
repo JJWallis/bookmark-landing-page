@@ -104,10 +104,6 @@ input {
   display: none;
 }
 
-.invisible {
-  opacity: 0;
-}
-
 .svg-refs {
   display: none;
 }
@@ -144,7 +140,7 @@ body {
   min-height: 100%;
   padding-top: 2rem;
   background-color: rgba(37, 43, 70, 0.95);
-  transition: 300ms linear;
+  transition: 400ms linear;
   transform: translateY(-100%);
 }
 .nav-open .hdr_mobile-nav-ct {
@@ -158,6 +154,18 @@ body {
   width: 90%;
   min-height: calc(100vh - 80px);
   margin: 0 auto;
+}
+
+.hdr_logo-bm {
+  transition: 400ms linear;
+}
+
+.btn-hmb {
+  transition: 400ms linear;
+}
+
+.nav-open .btn-hmb, .nav-open .hdr_logo-bm {
+  opacity: 0;
 }
 
 .mb-nav-hdr {

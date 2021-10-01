@@ -8,7 +8,7 @@
       min-height: 100%;
       padding-top: 2rem;
       background-color: rgba($fcPm, 0.95);
-      @include transition(300ms);
+      @include transition(400ms);
       transform: translateY(-100%);
       .nav-open & {
          transform: translateY(0);
@@ -22,7 +22,19 @@
    }
 }
 
+.hdr_logo-bm {
+   @include transition(400ms);
+}
+
+.btn-hmb {
+   @include transition(400ms);
+}
+
 .nav-open {
+   & .btn-hmb,
+   & .hdr_logo-bm {
+      opacity: 0;
+   }
 }
 
 .mb-nav-hdr {
