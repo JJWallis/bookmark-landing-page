@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const header = document.querySelector('.hdr_cnt')
+const logo = document.querySelector('#hdr_logo-bm')
 const hamburger = document.querySelector('.btn-hmb')
 const mobileNav = document.querySelector('.hdr_mobile-nav-ct')
 const carouselBtns = document.querySelectorAll('.crsl-btn')
@@ -39,10 +40,12 @@ header.addEventListener('click', e => {
          classList(mobileNav, 'remove', 'hidden')
          classList(body, 'add', 'overflow')
          classList(hamburger, 'add', 'invisible')
+         classList(logo, 'add', 'invisible')
       } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
          classList(mobileNav, 'add', 'hidden')
          classList(body, 'remove', 'overflow')
          classList(hamburger, 'remove', 'invisible')
+         classList(logo, 'remove', 'invisible')
       }
    }
 })

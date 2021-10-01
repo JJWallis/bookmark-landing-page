@@ -126,6 +126,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 var body = document.querySelector('body');
 var header = document.querySelector('.hdr_cnt');
+var logo = document.querySelector('#hdr_logo-bm');
 var hamburger = document.querySelector('.btn-hmb');
 var mobileNav = document.querySelector('.hdr_mobile-nav-ct');
 var carouselBtns = document.querySelectorAll('.crsl-btn');
@@ -211,10 +212,12 @@ header.addEventListener('click', function (e) {
       classList(mobileNav, 'remove', 'hidden');
       classList(body, 'add', 'overflow');
       classList(hamburger, 'add', 'invisible');
+      classList(logo, 'add', 'invisible');
     } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
       classList(mobileNav, 'add', 'hidden');
       classList(body, 'remove', 'overflow');
       classList(hamburger, 'remove', 'invisible');
+      classList(logo, 'remove', 'invisible');
     }
   }
 });
@@ -285,7 +288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55454" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49893" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
