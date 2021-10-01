@@ -20,10 +20,9 @@
       min-height: calc(100vh - 80px);
       margin: 0 auto;
    }
-}
-
-.hdr_logo-bm {
-   @include transition(400ms);
+   &_logo-bm {
+      @include transition(400ms);
+   }
 }
 
 .btn-hmb {

@@ -4,7 +4,11 @@
    margin-top: 1.7rem;
    padding: 0.8rem;
    border: 2px solid white;
-   border-radius: 0.4rem;
+   outline: 2px solid white;
+   outline-offset: -2px;
+   &:hover {
+      outline-offset: 4px;
+   }
 }
 
 .btn-lnk {

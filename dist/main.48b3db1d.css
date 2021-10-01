@@ -155,7 +155,6 @@ body {
   min-height: calc(100vh - 80px);
   margin: 0 auto;
 }
-
 .hdr_logo-bm {
   transition: 400ms linear;
 }
@@ -201,7 +200,11 @@ body {
   margin-top: 1.7rem;
   padding: 0.8rem;
   border: 2px solid white;
-  border-radius: 0.4rem;
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+.login-mb:hover {
+  outline-offset: 4px;
 }
 
 .btn-lnk {
@@ -289,6 +292,7 @@ body {
   width: 90%;
 }
 .hero_title {
+  position: relative;
   text-align: center;
   line-height: 1.4;
   letter-spacing: 0.05ch;
@@ -522,7 +526,6 @@ main {
 .alignment {
   width: 90%;
   max-width: 60rem;
-  outline: 1px solid red;
 }
 .alignment-pt {
   display: flex;
@@ -589,14 +592,22 @@ main {
 }
 .ftr_nav a {
   color: white;
-  transition: 150ms linear;
-  background-image: linear-gradient(#5368df, #5368df);
-  background-size: 0% 3px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
+  position: relative;
 }
-.ftr_nav a:hover {
-  background-size: 100% 3px;
+.ftr_nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 150ms linear;
+}
+.ftr_nav a:hover::after {
+  transform: scaleX(1);
 }
 .ftr_svgs-ct {
   display: flex;
