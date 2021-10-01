@@ -125,12 +125,20 @@ body {
   font: 1.2rem/1.5 "Rubik", sans-serif;
 }
 
-@keyframes mb-nav {
+@keyframes top-bottom {
   from {
     transform: translateY(-100%);
   }
   to {
     transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .hdr_mobile-nav-ct {
@@ -144,7 +152,7 @@ body {
   min-height: 100%;
   padding-top: 2rem;
   background-color: rgba(37, 43, 70, 0.95);
-  animation: mb-nav 1s ease-in-out forwards;
+  animation: top-bottom 700ms ease-in-out forwards;
 }
 .hdr_mobile-nav {
   display: flex;
@@ -336,6 +344,7 @@ body {
 }
 
 .active::after {
+  animation: fade-in 500ms ease-in-out forwards;
   content: "";
   display: block;
   position: absolute;

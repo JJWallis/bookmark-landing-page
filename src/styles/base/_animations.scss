@@ -1,10 +1,19 @@
 @use 'abstracts' as *;
 
-@keyframes mb-nav {
+@keyframes top-bottom {
    from {
       transform: translateY(-100%);
    }
    to {
       transform: translateY(0);
+   }
+}
+
+@keyframes fade-in {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
    }
 }
