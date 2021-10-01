@@ -585,9 +585,14 @@ main {
 }
 .ftr_nav a {
   color: white;
+  transition: 150ms linear;
+  background-image: linear-gradient(#5368df, #5368df);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 .ftr_nav a:hover {
-  text-decoration: underline;
+  background-size: 100% 3px;
 }
 .ftr_svgs-ct {
   display: flex;

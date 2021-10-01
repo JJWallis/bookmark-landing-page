@@ -19,8 +19,13 @@
       }
       & a {
          color: $fcTr;
+         @include transition(150ms);
+         background-image: linear-gradient($softBlue, $softBlue);
+         background-size: 0% 3px;
+         background-repeat: no-repeat;
+         background-position: left bottom;
          &:hover {
-            text-decoration: underline;
+            background-size: 100% 3px;
          }
       }
    }
