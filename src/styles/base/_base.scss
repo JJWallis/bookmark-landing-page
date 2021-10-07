@@ -44,6 +44,6 @@ input {
 // Accessibility
 
 :focus {
-   @include transition(100ms);
+   @include transition(50ms);
    outline: 3px dotted $softBlue;
 }

@@ -113,7 +113,7 @@ input {
 }
 
 :focus {
-  transition: 100ms linear;
+  transition: 50ms linear;
   outline: 3px dotted #5368df;
 }
 
