@@ -8,7 +8,7 @@
       min-height: 100%;
       padding-top: 2rem;
       background-color: rgba($fcPm, 0.95);
-      @include transition(400ms);
+      transition: transform 400ms ease-in-out;
       transform: translateY(-100%);
       .nav-open & {
          transform: translateY(0);
@@ -21,12 +21,12 @@
       margin: 0 auto;
    }
    &_logo-bm {
-      @include transition(400ms);
+      transition: opacity 400ms ease-in-out;
    }
 }
 
 .btn-hmb {
-   @include transition(400ms);
+   transition: opacity 400ms ease-in-out;
 }
 
 .nav-open {
@@ -53,7 +53,8 @@
       text-transform: uppercase;
       letter-spacing: 0.2ch;
       text-align: center;
-      @include transition(300ms);
+      transition: background-color 300ms linear, color 300ms linear,
+         outline-offset 300ms linear;
       &:first-child {
          border-top: 0.1px solid rgba(white, 0.2);
       }

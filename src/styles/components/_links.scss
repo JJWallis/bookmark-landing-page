@@ -16,7 +16,8 @@
    border-radius: 5px;
    box-shadow: 0 2px 3px 0 rgba(black, 0.3);
    font-size: 1rem;
-   @include transition(200ms);
+   transition: background-color 200ms linear, border 200ms linear,
+      color 200ms linear;
    &:hover {
       background-color: white;
    }

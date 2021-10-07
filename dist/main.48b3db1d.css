@@ -113,7 +113,7 @@ input {
 }
 
 :focus {
-  transition: 50ms linear;
+  transition: outline 50ms ease-in-out;
   outline: 3px dotted #5368df;
 }
 
@@ -140,7 +140,7 @@ body {
   min-height: 100%;
   padding-top: 2rem;
   background-color: rgba(37, 43, 70, 0.95);
-  transition: 400ms linear;
+  transition: transform 400ms ease-in-out;
   transform: translateY(-100%);
 }
 .nav-open .hdr_mobile-nav-ct {
@@ -156,11 +156,11 @@ body {
   margin: 0 auto;
 }
 .hdr_logo-bm {
-  transition: 400ms linear;
+  transition: opacity 400ms ease-in-out;
 }
 
 .btn-hmb {
-  transition: 400ms linear;
+  transition: opacity 400ms ease-in-out;
 }
 
 .nav-open .btn-hmb, .nav-open .hdr_logo-bm {
@@ -186,7 +186,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   text-align: center;
-  transition: 300ms linear;
+  transition: background-color 300ms linear, color 300ms linear, outline-offset 300ms linear;
 }
 .hdr_nav-mb a:first-child {
   border-top: 0.1px solid rgba(255, 255, 255, 0.2);
@@ -212,7 +212,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
   font-size: 1rem;
-  transition: 200ms linear;
+  transition: background-color 200ms linear, border 200ms linear, color 200ms linear;
 }
 .btn-lnk:hover {
   background-color: white;
@@ -259,7 +259,7 @@ body {
 .social-icon {
   color: white;
   font-size: 2rem;
-  transition: 200ms linear;
+  transition: transform 200ms linear, color 200ms linear;
 }
 .social-icon:hover {
   transform: scale(1.2);
@@ -435,11 +435,10 @@ body {
 }
 
 .arrow {
-  transition: 200ms linear;
+  transition: transform 200ms linear;
 }
 .arrow-down {
   transform: rotateX(180deg);
-  transition: 200ms linear;
 }
 
 .contact-wrapper {
@@ -604,7 +603,7 @@ main {
   background-color: white;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 150ms linear;
+  transition: transform 150ms ease-in-out;
 }
 .ftr_nav a:hover::after {
   transform: scaleX(1);

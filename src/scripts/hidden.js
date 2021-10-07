@@ -33,7 +33,7 @@ function isVisible(els) {
    }
 }
 
-header.addEventListener('click', e => {
+header.addEventListener('click', (e) => {
    const target = e.target
    if (viewport() < 800) {
       if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
@@ -46,7 +46,7 @@ header.addEventListener('click', e => {
    }
 })
 
-carouselCt.addEventListener('click', e => {
+carouselCt.addEventListener('click', (e) => {
    const target = e.target
    if (target.matches('.crsl-btn')) {
       for (const btn of carouselBtns) classList(btn, 'remove', 'active')
@@ -55,7 +55,7 @@ carouselCt.addEventListener('click', e => {
    }
 })
 
-faqCt.addEventListener('click', e => {
+faqCt.addEventListener('click', (e) => {
    const target = e.target
    if (target.matches('.faq_btn')) {
       const arrow = target.children[target.children.length - 1]

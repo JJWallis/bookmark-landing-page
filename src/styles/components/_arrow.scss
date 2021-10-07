@@ -1,9 +1,8 @@
 @use 'abstracts' as *;
 
 .arrow {
-   @include transition(200ms);
+   transition: transform 200ms linear;
    &-down {
       transform: rotateX(180deg);
-      @include transition(200ms);
    }
 }

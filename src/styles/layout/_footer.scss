@@ -30,7 +30,7 @@
             background-color: $fcTr;
             transform: scaleX(0);
             transform-origin: left;
-            @include transition(150ms);
+            transition: transform 150ms ease-in-out;
          }
          &:hover::after {
             transform: scaleX(1);
