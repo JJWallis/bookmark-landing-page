@@ -10,6 +10,9 @@ const carouselImgs = document.querySelectorAll('.feat_illustration')
 const faqCt = document.querySelector('.faq_qstns-ct')
 const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
+
+// Carousel
+
 const carouselMethods = {
    simple() {
       const cntPm = document.querySelectorAll('.feat_pm')
@@ -33,6 +36,17 @@ function isVisible(els) {
    }
 }
 
+carouselCt.addEventListener('click', (e) => {
+   const target = e.target
+   if (target.matches('.crsl-btn')) {
+      for (const btn of carouselBtns) classList(btn, 'remove', 'active')
+      classList(target, 'add', 'active')
+      carouselMethods[target.id]()
+   }
+})
+
+// Nav
+
 header.addEventListener('click', (e) => {
    const target = e.target
    if (viewport() < 800) {
@@ -46,14 +60,7 @@ header.addEventListener('click', (e) => {
    }
 })
 
-carouselCt.addEventListener('click', (e) => {
-   const target = e.target
-   if (target.matches('.crsl-btn')) {
-      for (const btn of carouselBtns) classList(btn, 'remove', 'active')
-      classList(target, 'add', 'active')
-      carouselMethods[target.id]()
-   }
-})
+// FAQ
 
 faqCt.addEventListener('click', (e) => {
    const target = e.target
@@ -68,11 +75,10 @@ faqCt.addEventListener('click', (e) => {
 })
 
 // TODO:
-//    Opactity for hamburger + logo vs hidden class
-//    Add event listeners for FAQ content
+//    Carousel btns:
+//       don't need obj methods | use class for speedy, easy + simply vs id
+//       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
+//       rest is same
+//    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
+//    Re-factor - sep func to run for...of loops (use params for diff)
 //    Match viewport size to CSS breakpoints
-
-// REFACTOR:
-//    target.matches() re-factored arrow func
-//    Re-factored querySelectr + ... all arrow funcs
-//    Re-factor - sep func to run loops for carousel (use params for diff)
