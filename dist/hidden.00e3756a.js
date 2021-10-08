@@ -256,6 +256,7 @@ faqCt.addEventListener('click', function (e) {
 //       don't need obj methods | use class for speedy, easy + simply vs id
 //       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
 //       rest is same
+//    Modules - import arrow imgs
 //    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
 //    Re-factor - sep func to run for...of loops (use params for diff)
 //    Match viewport size to CSS breakpoints
@@ -287,7 +288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49655" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56595" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

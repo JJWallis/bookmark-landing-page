@@ -79,6 +79,7 @@ faqCt.addEventListener('click', (e) => {
 //       don't need obj methods | use class for speedy, easy + simply vs id
 //       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
 //       rest is same
+//    Modules - import arrow imgs
 //    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
 //    Re-factor - sep func to run for...of loops (use params for diff)
 //    Match viewport size to CSS breakpoints
