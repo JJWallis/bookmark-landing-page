@@ -1,13 +1,19 @@
 @use 'abstracts' as *;
 
-.login-mb {
-   margin-top: 1.7rem;
-   padding: 0.8rem;
-   border: 2px solid white;
-   outline: 2px solid white;
-   outline-offset: -2px;
-   &:hover {
-      outline-offset: 4px;
+.login {
+   &-mb {
+      margin-top: 1.7rem;
+      padding: 0.8rem;
+      border: 2px solid white;
+      outline: 2px solid white;
+      outline-offset: -2px;
+      &:hover {
+         outline-offset: 4px;
+      }
+   }
+   &-wd {
+      font-size: inherit;
+      text-transform: uppercase;
    }
 }
 

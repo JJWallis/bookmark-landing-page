@@ -142,6 +142,11 @@ body {
 .nav-open .hdr_mobile-nav-ct {
   transform: translateY(0);
 }
+@media (min-width: 800px) {
+  .hdr_mobile-nav-ct {
+    display: none;
+  }
+}
 .hdr_mobile-nav {
   display: flex;
   flex-direction: column;
@@ -157,6 +162,11 @@ body {
 
 .btn-hmb {
   transition: opacity 400ms ease-in-out;
+}
+@media (min-width: 800px) {
+  .btn-hmb {
+    display: none;
+  }
 }
 
 .nav-open .btn-hmb, .nav-open .hdr_logo-bm {
@@ -192,6 +202,34 @@ body {
   color: #252b46;
 }
 
+.hdr_nav-wd {
+  display: none;
+}
+@media (min-width: 800px) {
+  .hdr_nav-wd {
+    display: block;
+  }
+}
+.hdr_nav-wd ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hdr_nav-wd li:not(:last-child) {
+  margin-right: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #252b46;
+}
+.hdr_nav-wd a {
+  color: #252b46;
+  letter-spacing: 0.1ch;
+}
+.hdr_nav-wd a:hover {
+  color: #fa5757;
+}
+
 .login-mb {
   margin-top: 1.7rem;
   padding: 0.8rem;
@@ -201,6 +239,10 @@ body {
 }
 .login-mb:hover {
   outline-offset: 4px;
+}
+.login-wd {
+  font-size: inherit;
+  text-transform: uppercase;
 }
 
 .btn-lnk {
@@ -518,6 +560,10 @@ main {
   flex-grow: 1;
 }
 
+body {
+  min-width: 320px;
+}
+
 .alignment {
   width: 90%;
   max-width: 60rem;
@@ -554,6 +600,7 @@ main {
 }
 
 .hdr {
+  margin-bottom: 1.5rem;
   padding-block: 2rem;
 }
 .hdr_cnt {

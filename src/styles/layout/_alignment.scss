@@ -1,5 +1,9 @@
 @use 'abstracts' as *;
 
+body {
+   min-width: 320px;
+}
+
 .alignment {
    width: 90%;
    max-width: 60rem;

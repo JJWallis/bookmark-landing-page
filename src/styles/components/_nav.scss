@@ -1,5 +1,7 @@
 @use 'abstracts' as *;
 
+// MOBILE
+
 .hdr {
    &_mobile-nav-ct {
       @include position(fixed, unset, unset, 0, 0);
@@ -12,6 +14,9 @@
       transform: translateY(-100%);
       .nav-open & {
          transform: translateY(0);
+      }
+      @include mq(header) {
+         display: none;
       }
    }
    &_mobile-nav {
@@ -27,6 +32,9 @@
 
 .btn-hmb {
    transition: opacity 400ms ease-in-out;
+   @include mq(header) {
+      display: none;
+   }
 }
 
 .nav-open {
@@ -61,6 +69,31 @@
       &:hover {
          background-color: white;
          color: $fcPm;
+      }
+   }
+}
+
+// WIDE
+
+.hdr_nav-wd {
+   display: none;
+   @include mq(header) {
+      display: block;
+   }
+   & ul {
+      @include flexParent(row, center, center);
+   }
+   & li:not(:last-child) {
+      margin-right: 2rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: $fcPm;
+   }
+   & a {
+      color: $fcPm;
+      letter-spacing: 0.1ch;
+      &:hover {
+         color: $softRed;
       }
    }
 }

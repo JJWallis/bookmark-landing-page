@@ -11,6 +11,8 @@ const faqCt = document.querySelector('.faq_qstns-ct')
 const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
 
+window.addEventListener('resize', () => console.log(viewport()))
+
 // Carousel
 
 const carouselMethods = {
@@ -83,3 +85,5 @@ faqCt.addEventListener('click', (e) => {
 //    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
 //    Re-factor - sep func to run for...of loops (use params for diff)
 //    Match viewport size to CSS breakpoints
+//    const domSelect = el => document.querySelector(el)
+//    const domSelectAll = el => document.querySelectorAll(el)
