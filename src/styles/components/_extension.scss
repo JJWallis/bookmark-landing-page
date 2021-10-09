@@ -9,12 +9,13 @@
    background: white url('/images/bg-dots.svg') no-repeat center 74% / 100%;
    box-shadow: 0 10px 15px 0 rgba(black, 0.1);
    &-ct {
-      width: 80%;
-      margin: 0 auto;
+      outline: 1px solid;
+      @include flexParent(row, center, unset);
+      flex-wrap: wrap;
       gap: 4rem;
       & > * {
-         @include flexChild(1, 230px);
-         // change width of flex container - 3 row at wider screens
+         flex-basis: 260px;
+         // flew-grow for later!
       }
    }
 }

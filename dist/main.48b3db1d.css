@@ -420,13 +420,16 @@ body {
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
 }
 .card-brwsr-ct {
-  width: 80%;
-  margin: 0 auto;
+  outline: 1px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 .card-brwsr-ct > * {
-  flex-grow: 1;
-  flex-basis: 230px;
+  flex-basis: 260px;
 }
 
 .logo-brwsr {
