@@ -5,17 +5,35 @@
    background-color: $fcPm;
    &_cnt {
       @include flexParent(column, unset, center);
+      @include mq(footer) {
+         flex-direction: row;
+         justify-content: space-between;
+      }
    }
    &_nav {
       & ul {
          @include flexParent(column, unset, center);
          margin-bottom: 1.6rem;
+         @include mq(footer) {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 0;
+         }
       }
       & li {
          margin-block: 1rem;
          text-transform: uppercase;
-         font-size: 1rem;
+         font-size: 0.9rem;
          letter-spacing: 0.1ch;
+         @include mq(footer) {
+            margin-block: 0;
+            &:not(:first-child) {
+               margin-right: 1.5rem;
+            }
+            &:first-child {
+               margin-right: 3.3rem;
+            }
+         }
       }
       & a {
          color: $fcTr;

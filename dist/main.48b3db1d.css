@@ -305,6 +305,11 @@ body {
 .social-icon-fb-ft {
   margin-right: 2.8rem;
 }
+@media (min-width: 800px) {
+  .social-icon-fb-ft {
+    margin-right: 2.3rem;
+  }
+}
 .social-icon-fb:hover {
   color: #fa5757;
 }
@@ -676,6 +681,12 @@ body {
   justify-content: unset;
   align-items: center;
 }
+@media (min-width: 800px) {
+  .ftr_cnt {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .ftr_nav ul {
   display: flex;
   flex-direction: column;
@@ -683,11 +694,29 @@ body {
   align-items: center;
   margin-bottom: 1.6rem;
 }
+@media (min-width: 800px) {
+  .ftr_nav ul {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
 .ftr_nav li {
   margin-block: 1rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1ch;
+}
+@media (min-width: 800px) {
+  .ftr_nav li {
+    margin-block: 0;
+  }
+  .ftr_nav li:not(:first-child) {
+    margin-right: 1.5rem;
+  }
+  .ftr_nav li:first-child {
+    margin-right: 3.3rem;
+  }
 }
 .ftr_nav a {
   color: white;
