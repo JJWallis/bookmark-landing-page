@@ -33,6 +33,7 @@
 
 .active {
    &::after {
+      animation: fade-in 400ms ease-in-out forwards;
       content: '';
       display: block;
       position: absolute;

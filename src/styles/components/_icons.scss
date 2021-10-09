@@ -8,13 +8,16 @@
 .social-icon {
    color: white;
    font-size: 2rem;
-   @include transition(200ms);
+   transition: transform 200ms linear, color 200ms linear;
    &:hover {
       transform: scale(1.2);
    }
    &-fb {
       &-ft {
          margin-right: 2.8rem;
+         @include mq(footer) {
+            margin-right: 2.3rem;
+         }
       }
       &:hover {
          color: $softRed;

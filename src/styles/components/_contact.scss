@@ -10,11 +10,15 @@
    }
    &_sctn {
       @include flexParent(column, unset, center);
+      @include mq(contact) {
+         align-items: unset;
+      }
    }
    &_title {
       margin-top: 1.2rem;
       margin-bottom: 1.2rem;
       color: $fcTr;
+      max-width: 450px;
    }
 }
 
@@ -24,4 +28,16 @@
    font-size: 1.1rem;
    font-weight: 400;
    text-transform: uppercase;
+   @include mq(contact) {
+      margin: 0 auto;
+   }
+}
+
+.fieldset {
+   border: none;
+   padding: 0;
+   margin: 0;
+   @include mq(contact) {
+      @include flexParent(row, center, center);
+   }
 }

@@ -31,12 +31,12 @@
                <img
                   src="./images/logo-bookmark.svg"
                   alt="Logo directing to homepage."
-                  class="logo-bm logo"
+                  class="logo-bm logo hdr_logo-bm"
                />
             </a>
             <button
                aria-label="Interactive hamburger icon to display mobile navigation menu."
-               class="hamburger-btn"
+               class="btn-hmb"
             >
                <img
                   src="./images/icon-hamburger.svg"
@@ -44,7 +44,7 @@
                   class="btn-hmb"
                />
             </button>
-            <div class="hdr_mobile-nav-ct hidden">
+            <div class="hdr_mobile-nav-ct">
                <div class="hdr_mobile-nav">
                   <div class="mb-nav-hdr">
                      <a href="/" aria-label="Logo directing to homepage.">
@@ -101,19 +101,21 @@
                   </div>
                </div>
             </div>
-            <nav class="hdr_nav-wd hidden">
+            <nav class="hdr_nav-wd">
                <ul role="list">
                   <li><a href="/">Features</a></li>
                   <li><a href="/">Pricing</a></li>
                   <li><a href="/">Contact</a></li>
-                  <li><a href="/" class="btn-lnk lnk-red">Login</a></li>
+                  <li>
+                     <a href="/" class="btn-lnk lnk-red login-wd">Login</a>
+                  </li>
                </ul>
             </nav>
          </div>
       </header>
 
       <main class="main">
-         <div class="hero-wrapper alignment-pt spacing">
+         <div class="hero-wrapper alignment-pt">
             <div class="flex-parent alignment">
                <div class="hero_illustration-ct split">
                   <img
@@ -225,7 +227,7 @@
             </div>
          </div>
 
-         <div class="ext-wrapper alignment-pt spacing">
+         <div class="ext-wrapper alignment-pt">
             <div class="alignment">
                <article class="ext_cnt">
                   <h2 class="ext_title sub-title">Download the extension</h2>
@@ -374,20 +376,22 @@
                      Stay up-to-date with what we're doing
                   </h2>
                   <form action="/" class="form">
-                     <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        class="input"
-                        id="email"
-                        name="email"
-                     />
-                     <button
-                        type="submit"
-                        class="btn-lnk lnk-red"
-                        id="btn-contact"
-                     >
-                        Contact Us
-                     </button>
+                     <fieldset class="fieldset">
+                        <input
+                           type="email"
+                           placeholder="Enter your email address"
+                           class="input"
+                           id="email"
+                           name="email"
+                        />
+                        <button
+                           type="submit"
+                           class="btn-lnk lnk-red"
+                           id="btn-contact"
+                        >
+                           Contact Us
+                        </button>
+                     </fieldset>
                   </form>
                </aside>
             </div>

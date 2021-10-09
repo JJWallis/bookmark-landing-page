@@ -33,10 +33,6 @@ input {
    display: none;
 }
 
-.svg-refs {
-   display: none;
-}
-
 .overflow {
    overflow-y: hidden;
 }
@@ -44,6 +40,6 @@ input {
 // Accessibility
 
 :focus {
-   @include transition(100ms);
+   transition: outline 50ms ease-in-out;
    outline: 3px dotted $softBlue;
 }

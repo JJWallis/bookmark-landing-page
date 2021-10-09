@@ -1,6 +1,7 @@
 @use 'abstracts' as *;
 
 .hdr {
+   margin-bottom: 1.5rem;
    padding-block: 2rem;
    &_cnt {
       @include flexParent(row, space-between, center);

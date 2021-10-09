@@ -1,5 +1,7 @@
 const body = document.querySelector('body')
 const header = document.querySelector('.hdr_cnt')
+const logo = document.querySelector('.hdr_logo-bm')
+const hamburger = document.querySelector('.btn-hmb')
 const mobileNav = document.querySelector('.hdr_mobile-nav-ct')
 const carouselBtns = document.querySelectorAll('.crsl-btn')
 const carouselCt = document.querySelector('.crsl-btns-ct')
@@ -8,6 +10,11 @@ const carouselImgs = document.querySelectorAll('.feat_illustration')
 const faqCt = document.querySelector('.faq_qstns-ct')
 const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
+
+window.addEventListener('resize', () => console.log(viewport()))
+
+// Carousel
+
 const carouselMethods = {
    simple() {
       const cntPm = document.querySelectorAll('.feat_pm')
@@ -31,20 +38,7 @@ function isVisible(els) {
    }
 }
 
-header.addEventListener('click', e => {
-   const target = e.target
-   if (viewport() < 800) {
-      if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
-         classList(mobileNav, 'remove', 'hidden')
-         classList(body, 'add', 'overflow')
-      } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
-         classList(mobileNav, 'add', 'hidden')
-         classList(body, 'remove', 'overflow')
-      }
-   }
-})
-
-carouselCt.addEventListener('click', e => {
+carouselCt.addEventListener('click', (e) => {
    const target = e.target
    if (target.matches('.crsl-btn')) {
       for (const btn of carouselBtns) classList(btn, 'remove', 'active')
@@ -53,7 +47,24 @@ carouselCt.addEventListener('click', e => {
    }
 })
 
-faqCt.addEventListener('click', e => {
+// Nav
+
+header.addEventListener('click', (e) => {
+   const target = e.target
+   if (viewport() < 800) {
+      if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
+         classList(header, 'add', 'nav-open')
+         classList(body, 'add', 'overflow')
+      } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
+         classList(header, 'remove', 'nav-open')
+         classList(body, 'remove', 'overflow')
+      }
+   }
+})
+
+// FAQ
+
+faqCt.addEventListener('click', (e) => {
    const target = e.target
    if (target.matches('.faq_btn')) {
       const arrow = target.children[target.children.length - 1]
@@ -66,11 +77,13 @@ faqCt.addEventListener('click', e => {
 })
 
 // TODO:
-//    Opactity for hamburger + logo vs hidden class
-//    Add event listeners for FAQ content
+//    Carousel btns:
+//       don't need obj methods | use class for speedy, easy + simply vs id
+//       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
+//       rest is same
+//    Modules - import arrow imgs
+//    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
+//    Re-factor - sep func to run for...of loops (use params for diff)
 //    Match viewport size to CSS breakpoints
-
-// REFACTOR:
-//    target.matches() re-factored arrow func
-//    Re-factored querySelectr + ... all arrow funcs
-//    Re-factor - sep func to run loops for carousel (use params for diff)
+//    const domSelect = el => document.querySelector(el)
+//    const domSelectAll = el => document.querySelectorAll(el)

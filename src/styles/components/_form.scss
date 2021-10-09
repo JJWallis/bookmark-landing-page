@@ -6,12 +6,19 @@
 
 .input {
    width: 100%;
-   margin-bottom: 1.3rem;
+   margin-bottom: 1.5rem;
    padding: 1rem;
    border-radius: 5px;
    font-size: 1.1rem;
    &::placeholder {
       color: rgba($fcSd, 0.8);
+   }
+   &:focus {
+      outline: 2px solid;
+   }
+   @include mq(contact) {
+      width: 240%;
+      margin: 0 1.5rem 0 0;
    }
 }
 
@@ -21,6 +28,9 @@
    outline: none;
    box-shadow: 0 30px 0 0 $softRed;
    background: white url('/images/icon-error.svg') no-repeat 95% center / 7%;
+   @include mq(contact) {
+      margin-bottom: 0;
+   }
 }
 
 .error-msg {
@@ -28,10 +38,13 @@
    width: 100%;
    height: auto;
    position: absolute;
-   bottom: 64px;
+   bottom: 70px;
    left: 6px;
    z-index: 2;
    font-size: 0.8rem;
    font-weight: 700;
    color: $fcTr;
+   @include mq(contact) {
+      bottom: -23px;
+   }
 }
