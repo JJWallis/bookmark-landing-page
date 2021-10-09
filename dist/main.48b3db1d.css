@@ -510,10 +510,16 @@ body {
   justify-content: unset;
   align-items: center;
 }
+@media (min-width: 600px) {
+  .contact_sctn {
+    align-items: unset;
+  }
+}
 .contact_title {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   color: white;
+  max-width: 450px;
 }
 
 .already-joined {
@@ -523,12 +529,24 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (min-width: 600px) {
+  .already-joined {
+    margin: 0 auto;
+  }
+}
 
 .fieldset {
   border: none;
-  outline: 1px solid white;
   padding: 0;
   margin: 0;
+}
+@media (min-width: 600px) {
+  .fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .form {
@@ -537,7 +555,7 @@ body {
 
 .input {
   width: 100%;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
   font-size: 1.1rem;
@@ -548,6 +566,12 @@ body {
 .input:focus {
   outline: 2px solid;
 }
+@media (min-width: 600px) {
+  .input {
+    width: 240%;
+    margin: 0 1.5rem 0 0;
+  }
+}
 
 .error {
   margin-bottom: 2.5rem;
@@ -555,6 +579,11 @@ body {
   outline: none;
   box-shadow: 0 30px 0 0 #fa5757;
   background: white url("/icon-error.7540ea9a.svg") no-repeat 95% center/7%;
+}
+@media (min-width: 600px) {
+  .error {
+    margin-bottom: 0;
+  }
 }
 
 .error-msg {
@@ -568,6 +597,11 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
   color: white;
+}
+@media (min-width: 600px) {
+  .error-msg {
+    bottom: -23px;
+  }
 }
 
 body {
