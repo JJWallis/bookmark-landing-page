@@ -444,12 +444,27 @@ body {
   margin-top: auto;
 }
 
+.faq_sctn {
+  margin: 0 auto;
+  max-width: 600px;
+}
+@media (min-width: 600px) {
+  .faq_sctn .dsc {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .faq_qstns-ct {
   width: 95%;
   margin: 0 auto 2.7rem;
 }
 .faq_aside {
   border-bottom: 0.1px solid rgba(145, 148, 161, 0.5);
+}
+@media (min-width: 600px) {
+  .faq_aside:first-child {
+    border-top: 0.1px solid rgba(145, 148, 161, 0.5);
+  }
 }
 .faq_btn {
   display: flex;

@@ -1,27 +1,48 @@
 @use 'abstracts' as *;
 
 .faq {
+   &_sctn {
+      margin: 0 auto;
+      max-width: 600px;
+      & .dsc {
+         @include mq(faq) {
+            width: 90%;
+            margin: 0 auto;
+         }
+      }
+   }
+
    &_qstns-ct {
       width: 95%;
       margin: 0 auto 2.7rem;
    }
+
    &_aside {
       @include lightBorder(bottom);
+      &:first-child {
+         @include mq(faq) {
+            @include lightBorder(top);
+         }
+      }
    }
+
    &_btn {
       @include flexParent(row, space-between, center);
       width: 100%;
       padding: 1.7rem 0 2.1rem;
    }
+
    &_qstn,
    &_answr {
       font-size: 1rem;
    }
+
    &_answr {
       margin-bottom: 2rem;
       width: 95%;
       line-height: 1.9;
    }
+
    &_lnk-ct {
       display: flex;
       justify-content: center;
