@@ -9,13 +9,26 @@
    background: white url('/images/bg-dots.svg') no-repeat center 74% / 100%;
    box-shadow: 0 10px 15px 0 rgba(black, 0.1);
    &-ct {
-      outline: 1px solid;
+      // outline: 1px solid;
       @include flexParent(row, center, unset);
       flex-wrap: wrap;
       gap: 4rem;
       & > * {
-         flex-basis: 260px;
-         // flew-grow for later!
+         // flex-grow at beginning to solve empty space b4 wrap?
+         flex-basis: 340px;
+         @include mq(extension) {
+            flex-basis: 265px;
+            &:nth-child(1) {
+               margin-bottom: 2.5rem;
+            }
+            &:nth-child(2) {
+               margin-top: 1.5rem;
+               margin-bottom: 1rem;
+            }
+            &:nth-child(3) {
+               margin-top: 2.5rem;
+            }
+         }
       }
    }
 }
@@ -40,4 +53,6 @@
 
 .lnk-install {
    margin-top: auto;
+   width: 85%;
+   text-align: center;
 }
