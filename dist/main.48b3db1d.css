@@ -104,10 +104,6 @@ input {
   display: none;
 }
 
-.svg-refs {
-  display: none;
-}
-
 .overflow {
   overflow-y: hidden;
 }
@@ -525,6 +521,7 @@ main {
 .alignment {
   width: 90%;
   max-width: 60rem;
+  outline: 1px solid red;
 }
 .alignment-pt {
   display: flex;
@@ -553,7 +550,7 @@ main {
 }
 
 .spacing {
-  margin-block: 2rem;
+  margin-block: 7.5rem;
 }
 
 .hdr {

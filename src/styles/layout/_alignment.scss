@@ -3,7 +3,7 @@
 .alignment {
    width: 90%;
    max-width: 60rem;
-   // outline: 1px solid red;
+   outline: 1px solid red;
    &-pt {
       @include flexParent(column, center, center);
    }
@@ -23,5 +23,5 @@
 }
 
 .spacing {
-   margin-block: 2rem;
+   margin-block: 7.5rem;
 }
