@@ -33,8 +33,14 @@
    &:first-child {
       @include lightBorder(top);
    }
-   @include mq(featured-btns) {
+   @include mq(featured-btns-small) {
       &:nth-child(2) {
+         @include lightBorder(top);
+         @include lightBorder(left);
+      }
+   }
+   @include mq(featured-btns-large) {
+      &:nth-child(3) {
          @include lightBorder(top);
          @include lightBorder(left);
       }
