@@ -13,3 +13,9 @@
       max-width: 595px;
    }
 }
+
+.dsc-lft {
+   @include mq(hero) {
+      text-align: left;
+   }
+}

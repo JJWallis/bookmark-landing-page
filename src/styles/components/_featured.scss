@@ -16,6 +16,9 @@
       width: 90%;
       @include flexParent(column, unset, center);
       margin: 0 auto;
+      @include mq(hero) {
+         align-items: start;
+      }
    }
 }
 

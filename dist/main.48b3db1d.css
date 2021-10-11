@@ -344,6 +344,11 @@ body {
   justify-content: unset;
   align-items: center;
 }
+@media (min-width: 879px) {
+  .hero_illustration-ct {
+    order: 2;
+  }
+}
 .hero_cnt {
   display: flex;
   flex-direction: column;
@@ -356,6 +361,11 @@ body {
   text-align: center;
   line-height: 1.4;
   letter-spacing: 0.05ch;
+}
+@media (min-width: 879px) {
+  .hero_title {
+    text-align: left;
+  }
 }
 .hero_lnks {
   display: flex;
@@ -379,6 +389,12 @@ body {
 @media (min-width: 879px) {
   .dsc {
     max-width: 595px;
+  }
+}
+
+@media (min-width: 879px) {
+  .dsc-lft {
+    text-align: left;
   }
 }
 
@@ -406,6 +422,11 @@ body {
   justify-content: unset;
   align-items: center;
   margin: 0 auto;
+}
+@media (min-width: 879px) {
+  .feat_crsl-cnt {
+    align-items: start;
+  }
 }
 
 .crsl-btns-ct {
@@ -520,7 +541,7 @@ body {
 
 .faq_sctn {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 550px;
 }
 .faq_title {
   font-size: 1.7rem;

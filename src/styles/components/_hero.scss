@@ -14,6 +14,12 @@
       @include flexParent(column, unset, center);
    }
 
+   &_illustration-ct {
+      @include mq(hero) {
+         order: 2;
+      }
+   }
+
    // &_illustration {
    //    // @include position(absolute, unset, auto, 7px, 50%);
    //    //    z-index: 2;
@@ -30,6 +36,9 @@
       text-align: center;
       line-height: 1.4;
       letter-spacing: 0.05ch;
+      @include mq(hero) {
+         text-align: left;
+      }
    }
 
    &_lnks {
