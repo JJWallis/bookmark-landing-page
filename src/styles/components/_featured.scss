@@ -3,6 +3,10 @@
 .feat {
    &-wrapper {
       background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
+      @include mq(featured-illustration) {
+         background-position: -435px 63%;
+         background-size: 1000px;
+      }
    }
    &_crsl-cnt-ct {
       padding-top: 2rem;
@@ -28,6 +32,12 @@
    position: relative;
    &:first-child {
       @include lightBorder(top);
+   }
+   @include mq(featured-btns) {
+      &:nth-child(2) {
+         @include lightBorder(top);
+         @include lightBorder(left);
+      }
    }
 }
 

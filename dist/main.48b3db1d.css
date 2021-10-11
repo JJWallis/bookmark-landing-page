@@ -121,8 +121,12 @@ body {
   font-size: clamp(2.2rem, 4vw + 1rem, 2.4rem);
 }
 
+.sub-title {
+  font-size: clamp(1.8rem, 3vw + 1rem, 2.1rem);
+}
+
 .dsc {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 @keyframes fade-in {
@@ -387,6 +391,12 @@ body {
 .feat-wrapper {
   background: url("/bg-blue-shape.8a0569c6.svg") no-repeat 150% 64%/150%;
 }
+@media (min-width: 595px) {
+  .feat-wrapper {
+    background-position: -435px 63%;
+    background-size: 1000px;
+  }
+}
 .feat_crsl-cnt-ct {
   padding-top: 2rem;
 }
@@ -414,6 +424,12 @@ body {
 }
 .crsl-btn:first-child {
   border-top: 0.1px solid rgba(145, 148, 161, 0.5);
+}
+@media (min-width: 665px) {
+  .crsl-btn:nth-child(2) {
+    border-top: 0.1px solid rgba(145, 148, 161, 0.5);
+    border-left: 0.1px solid rgba(145, 148, 161, 0.5);
+  }
 }
 
 .active::after {
@@ -566,7 +582,7 @@ body {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   color: white;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 .already-joined {
@@ -751,11 +767,12 @@ body {
 .ftr_nav li {
   margin-block: 1rem;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.1ch;
 }
 @media (min-width: 800px) {
   .ftr_nav li {
+    font-size: 0.9rem;
     margin-block: 0;
   }
   .ftr_nav li:not(:first-child) {
