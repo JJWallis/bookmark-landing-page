@@ -5,8 +5,11 @@
 }
 
 .dsc {
-   max-width: 595px;
+   max-width: 650px;
    margin: 1.2rem 0 2rem;
    text-align: center;
    color: $fcSd;
+   @include mq(hero) {
+      max-width: 595px;
+   }
 }
