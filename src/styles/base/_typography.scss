@@ -1,3 +1,4 @@
+@use 'abstracts' as *;
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 body {
@@ -6,12 +7,11 @@ body {
 
 .hero_title {
    font-size: clamp(2.2rem, 4vw + 1rem, 2.4rem);
+   @include mq(hero) {
+      font-size: clamp(2.1rem, 2vw + 1rem, 2.7rem);
+   }
 }
 
 .sub-title {
    font-size: clamp(1.8rem, 3vw + 1rem, 1.9rem);
-}
-
-.dsc {
-   font-size: 1.25rem;
 }

@@ -8,6 +8,10 @@
          background-position: 200px 15%;
          background-size: 1100px;
       }
+      @include mq(hero) {
+         background-position: 550px 100%;
+         background-size: 800px;
+      }
    }
 
    &_cnt-ct {
@@ -29,6 +33,9 @@
    &_cnt {
       @include flexParent(column, unset, center);
       width: 90%;
+      @include mq(hero) {
+         width: unset;
+      }
    }
 
    &_title {
@@ -45,6 +52,9 @@
       @include flexParent(row, center, unset);
       width: 100%;
       gap: 1rem;
+      @include mq(hero) {
+         justify-content: flex-start;
+      }
    }
 }
 

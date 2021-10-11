@@ -12,6 +12,10 @@
    @include mq(hero) {
       max-width: 595px;
    }
+   font-size: 1.25rem;
+   @include mq(hero) {
+      font-size: 1.15rem;
+   }
 }
 
 .dsc-lft {

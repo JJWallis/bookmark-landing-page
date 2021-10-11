@@ -7,10 +7,23 @@
          background-position: -435px 63%;
          background-size: 1000px;
       }
+      @include mq(hero) {
+         background-position: -300px 95%;
+         background-size: 70%;
+      }
+      @include mq(featured-illustration-large) {
+      }
+      & .flex-parent {
+         @include mq(hero) {
+            padding-bottom: 3rem;
+         }
+      }
    }
    &_crsl-cnt-ct {
       padding-top: 2rem;
-      // uneven column sizes - hero img alignment for fix!
+      @include mq(hero) {
+         padding-top: 0;
+      }
    }
    &_crsl-cnt {
       width: 90%;
@@ -43,9 +56,11 @@
       }
    }
    @include mq(featured-btns-large) {
-      &:nth-child(3) {
-         @include lightBorder(top);
-         @include lightBorder(left);
+      &,
+      &:nth-child(2),
+      &:first-child {
+         border-top: none;
+         border-left: none;
       }
    }
 }
@@ -62,5 +77,8 @@
       width: 155px;
       height: 4px;
       background-color: $softRed;
+      @include mq(featured-btns-large) {
+         width: 300px;
+      }
    }
 }

@@ -2,8 +2,11 @@
 
 .hdr {
    margin-bottom: 1.5rem;
-   padding-block: 2rem;
+   padding-block: 3rem;
    &_cnt {
       @include flexParent(row, space-between, center);
+   }
+   @include mq(hero) {
+      margin-bottom: 3rem;
    }
 }

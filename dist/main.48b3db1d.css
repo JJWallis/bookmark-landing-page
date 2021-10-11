@@ -119,13 +119,14 @@ body {
 .hero_title {
   font-size: clamp(2.2rem, 4vw + 1rem, 2.4rem);
 }
+@media (min-width: 879px) {
+  .hero_title {
+    font-size: clamp(2.1rem, 2vw + 1rem, 2.7rem);
+  }
+}
 
 .sub-title {
   font-size: clamp(1.8rem, 3vw + 1rem, 1.9rem);
-}
-
-.dsc {
-  font-size: 1.25rem;
 }
 
 @keyframes fade-in {
@@ -338,6 +339,12 @@ body {
     background-size: 1100px;
   }
 }
+@media (min-width: 879px) {
+  .hero-wrapper {
+    background-position: 550px 100%;
+    background-size: 800px;
+  }
+}
 .hero_cnt-ct {
   display: flex;
   flex-direction: column;
@@ -355,6 +362,11 @@ body {
   justify-content: unset;
   align-items: center;
   width: 90%;
+}
+@media (min-width: 879px) {
+  .hero_cnt {
+    width: unset;
+  }
 }
 .hero_title {
   position: relative;
@@ -375,6 +387,11 @@ body {
   width: 100%;
   gap: 1rem;
 }
+@media (min-width: 879px) {
+  .hero_lnks {
+    justify-content: flex-start;
+  }
+}
 
 .feat_cnt .dsc {
   margin: 1.2rem auto 2rem;
@@ -385,10 +402,16 @@ body {
   margin: 1.3rem 0 2.2rem;
   text-align: center;
   color: #9194a1;
+  font-size: 1.25rem;
 }
 @media (min-width: 879px) {
   .dsc {
     max-width: 595px;
+  }
+}
+@media (min-width: 879px) {
+  .dsc {
+    font-size: 1.15rem;
   }
 }
 
@@ -412,8 +435,24 @@ body {
     background-size: 1000px;
   }
 }
+@media (min-width: 879px) {
+  .feat-wrapper {
+    background-position: -300px 95%;
+    background-size: 70%;
+  }
+}
+@media (min-width: 879px) {
+  .feat-wrapper .flex-parent {
+    padding-bottom: 3rem;
+  }
+}
 .feat_crsl-cnt-ct {
   padding-top: 2rem;
+}
+@media (min-width: 879px) {
+  .feat_crsl-cnt-ct {
+    padding-top: 0;
+  }
 }
 .feat_crsl-cnt {
   width: 90%;
@@ -452,9 +491,9 @@ body {
   }
 }
 @media (min-width: 1000px) {
-  .crsl-btn:nth-child(3) {
-    border-top: 0.1px solid rgba(145, 148, 161, 0.5);
-    border-left: 0.1px solid rgba(145, 148, 161, 0.5);
+  .crsl-btn, .crsl-btn:nth-child(2), .crsl-btn:first-child {
+    border-top: none;
+    border-left: none;
   }
 }
 
@@ -469,6 +508,11 @@ body {
   width: 155px;
   height: 4px;
   background-color: #fa5757;
+}
+@media (min-width: 1000px) {
+  .active::after {
+    width: 300px;
+  }
 }
 
 .ext_cnt {
@@ -546,6 +590,11 @@ body {
 .faq_title {
   font-size: 1.7rem;
 }
+@media (min-width: 879px) {
+  .faq_title {
+    font-size: 1.9rem;
+  }
+}
 .faq_qstns-ct {
   width: 95%;
   margin: 0 auto 2.7rem;
@@ -587,7 +636,7 @@ body {
 }
 
 .contact-wrapper {
-  padding: 5rem 0 3rem;
+  padding: 5rem 0 4rem;
   background-color: #5368df;
 }
 .contact_cnt {
@@ -754,13 +803,18 @@ body {
 
 .hdr {
   margin-bottom: 1.5rem;
-  padding-block: 2rem;
+  padding-block: 3rem;
 }
 .hdr_cnt {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 879px) {
+  .hdr {
+    margin-bottom: 3rem;
+  }
 }
 
 .ftr {
