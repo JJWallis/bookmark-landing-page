@@ -1,6 +1,11 @@
 @use 'abstracts' as *;
 
+.feat_cnt .dsc {
+   margin: 1.2rem auto 2rem;
+}
+
 .dsc {
+   max-width: 595px;
    margin: 1.2rem 0 2rem;
    text-align: center;
    color: $fcSd;

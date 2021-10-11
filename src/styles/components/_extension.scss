@@ -1,5 +1,9 @@
 @use 'abstracts' as *;
 
+.ext_cnt {
+   @include flexParent(column, unset, center);
+}
+
 .card-brwsr {
    @include flexParent(column, unset, center);
    min-height: 370px;

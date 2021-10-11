@@ -321,6 +321,12 @@ body {
   position: relative;
   background: url("/bg-blue-shape.8a0569c6.svg") no-repeat -45% 15%/150%;
 }
+@media (min-width: 735px) {
+  .hero-wrapper {
+    background-position: -85% 15%;
+    background-size: 1100px;
+  }
+}
 .hero_cnt-ct {
   display: flex;
   flex-direction: column;
@@ -350,14 +356,18 @@ body {
   gap: 1rem;
 }
 
+.feat_cnt .dsc {
+  margin: 1.2rem auto 2rem;
+}
+
 .dsc {
+  max-width: 595px;
   margin: 1.2rem 0 2rem;
   text-align: center;
   color: #9194a1;
 }
 
 .sub-title {
-  margin-bottom: 0.8rem;
   text-align: center;
   letter-spacing: 0.01ch;
 }
@@ -405,6 +415,13 @@ body {
   width: 155px;
   height: 4px;
   background-color: #fa5757;
+}
+
+.ext_cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
 }
 
 .card-brwsr {
@@ -471,12 +488,6 @@ body {
 .faq_sctn {
   margin: 0 auto;
   max-width: 600px;
-}
-@media (min-width: 600px) {
-  .faq_sctn .dsc {
-    width: 90%;
-    margin: 0 auto;
-  }
 }
 .faq_qstns-ct {
   width: 95%;
@@ -662,6 +673,12 @@ body {
   justify-content: unset;
   align-items: center;
   gap: 2.5rem;
+}
+@media (min-width: 879px) {
+  .flex-parent {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .flex-parent-wp {
   display: flex;

@@ -4,12 +4,6 @@
    &_sctn {
       margin: 0 auto;
       max-width: 600px;
-      & .dsc {
-         @include mq(faq) {
-            width: 90%;
-            margin: 0 auto;
-         }
-      }
    }
 
    &_qstns-ct {
