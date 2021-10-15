@@ -445,23 +445,17 @@ body {
 }
 
 .feat-wrapper {
-  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat 150% 520px/150%;
-}
-@media (min-width: 595px) {
-  .feat-wrapper {
-    background-position: -335px 520px;
-    background-size: 800px;
-  }
+  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat calc(0% - 400px) 65%/760px;
 }
 @media (min-width: 879px) {
   .feat-wrapper {
-    background-position: -300px 550px;
+    background-position: -300px 88%;
     background-size: 70%;
   }
 }
 @media (min-width: 1070px) {
   .feat-wrapper {
-    background-position: calc(100% - 720px) 400px;
+    background-position: -100% 410px;
     background-size: 800px;
   }
 }
@@ -479,6 +473,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: unset;
   }
 }
 .feat_crsl-cnt {
@@ -495,7 +490,6 @@ body {
   }
 }
 .feat_illustration-ct {
-  outline: 2px solid purple;
   position: relative;
   min-height: 300px;
   width: 100%;
@@ -508,7 +502,17 @@ body {
 }
 .feat_illustration {
   position: absolute;
-  z-index: 4;
+  width: 100%;
+  max-width: 410px;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+@media (min-width: 879px) {
+  .feat_illustration {
+    max-width: 110%;
+    width: unset;
+  }
 }
 
 .crsl-btns-ct {
@@ -560,7 +564,7 @@ body {
 }
 @media (min-width: 665px) {
   .active::after {
-    width: 280px;
+    width: 225px;
   }
 }
 @media (min-width: 1000px) {
@@ -838,6 +842,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: unset;
+    gap: 3.5rem;
   }
 }
 .flex-parent-wp {

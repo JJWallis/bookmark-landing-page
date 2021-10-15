@@ -2,17 +2,14 @@
 
 .feat {
    &-wrapper {
-      background: url('/images/bg-blue-shape.svg') no-repeat 150% 520px / 150%;
-      @include mq(featured-illustration) {
-         background-position: -335px 520px;
-         background-size: 800px;
-      }
+      background: url('/images/bg-blue-shape.svg') no-repeat calc(0% - 400px)
+         65% / 760px;
       @include mq(hero) {
-         background-position: -300px 550px;
+         background-position: -300px 88%;
          background-size: 70%;
       }
       @include mq(featured-illustration-large) {
-         background-position: calc(100% - 720px) 400px;
+         background-position: calc(0% - 100%) 410px;
          background-size: 800px;
       }
       & .flex-parent {
@@ -25,9 +22,7 @@
       padding-top: 2rem;
       @include mq(hero) {
          padding-top: 0;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
+         @include flexParent(column, center, unset);
       }
    }
    &_crsl-cnt {
@@ -39,7 +34,7 @@
       }
    }
    &_illustration-ct {
-      outline: 2px solid purple;
+      // outline: 2px solid purple;
       position: relative;
       min-height: 300px;
       width: 100%;
@@ -50,10 +45,17 @@
    }
    &_illustration {
       position: absolute;
-      z-index: 4;
+      width: 100%;
+      max-width: 410px;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      @include mq(hero) {
+         max-width: 110%;
+         width: unset;
+      }
    }
 }
-
 .crsl-btns-ct {
    margin-bottom: 4rem;
    & > * {
@@ -103,7 +105,7 @@
       height: 4px;
       background-color: $softRed;
       @include mq(featured-btns-small) {
-         width: 280px;
+         width: 225px;
       }
       @include mq(featured-btns-large) {
          width: 100%;
