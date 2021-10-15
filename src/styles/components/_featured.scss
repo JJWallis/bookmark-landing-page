@@ -2,20 +2,22 @@
 
 .feat {
    &-wrapper {
-      background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
+      background: url('/images/bg-blue-shape.svg') no-repeat 150% 520px / 150%;
       @include mq(featured-illustration) {
-         background-position: -435px 63%;
-         background-size: 1000px;
+         background-position: -335px 520px;
+         background-size: 800px;
       }
       @include mq(hero) {
-         background-position: -300px 95%;
+         background-position: -300px 550px;
          background-size: 70%;
       }
       @include mq(featured-illustration-large) {
+         background-position: calc(100% - 720px) 400px;
+         background-size: 800px;
       }
       & .flex-parent {
          @include mq(hero) {
-            padding-bottom: 3rem;
+            padding-bottom: 6rem;
          }
       }
    }
@@ -23,6 +25,9 @@
       padding-top: 2rem;
       @include mq(hero) {
          padding-top: 0;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
       }
    }
    &_crsl-cnt {
@@ -32,6 +37,20 @@
       @include mq(hero) {
          align-items: start;
       }
+   }
+   &_illustration-ct {
+      outline: 2px solid purple;
+      position: relative;
+      min-height: 300px;
+      width: 100%;
+      @include mq(hero) {
+         min-height: 400px;
+         width: unset;
+      }
+   }
+   &_illustration {
+      position: absolute;
+      z-index: 4;
    }
 }
 
