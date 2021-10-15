@@ -9,8 +9,7 @@
          background-size: 70%;
       }
       @include mq(featured-illustration-large) {
-         background-position: calc(0% - 100%) 410px;
-         background-size: 800px;
+         background: none;
       }
       & .flex-parent {
          @include mq(hero) {
@@ -34,13 +33,23 @@
       }
    }
    &_illustration-ct {
-      // outline: 2px solid purple;
       position: relative;
       min-height: 300px;
       width: 100%;
       @include mq(hero) {
          min-height: 400px;
          width: unset;
+      }
+      @include mq(featured-illustration-large) {
+         &::after {
+            content: url('/images/bg-blue-shape.svg');
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 40%;
+            left: -65%;
+            z-index: -1;
+         }
       }
    }
    &_illustration {

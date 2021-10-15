@@ -455,8 +455,7 @@ body {
 }
 @media (min-width: 1070px) {
   .feat-wrapper {
-    background-position: -100% 410px;
-    background-size: 800px;
+    background: none;
   }
 }
 @media (min-width: 879px) {
@@ -498,6 +497,17 @@ body {
   .feat_illustration-ct {
     min-height: 400px;
     width: unset;
+  }
+}
+@media (min-width: 1070px) {
+  .feat_illustration-ct::after {
+    content: url("/bg-blue-shape.8a0569c6.svg");
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 40%;
+    left: -65%;
+    z-index: -1;
   }
 }
 .feat_illustration {
