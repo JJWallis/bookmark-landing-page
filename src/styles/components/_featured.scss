@@ -42,6 +42,12 @@
    }
 }
 
+.crsl-title {
+   @include mq(hero) {
+      white-space: nowrap;
+   }
+}
+
 .crsl-btn {
    padding: 1rem;
    @include lightBorder(bottom);

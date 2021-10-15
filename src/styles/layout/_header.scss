@@ -7,6 +7,6 @@
       @include flexParent(row, space-between, center);
    }
    @include mq(hero) {
-      margin-bottom: 3rem;
+      margin-bottom: 0;
    }
 }

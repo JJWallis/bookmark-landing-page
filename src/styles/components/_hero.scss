@@ -2,17 +2,21 @@
 
 .hero {
    &-wrapper {
-      outline: 3px solid;
+      // outline: 3px solid;
       background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
       @include mq(hero-illustration) {
-         background-position: 200px 15%;
+         background-position: calc(100% + 520px) 20%;
          background-size: 1100px;
       }
       @include mq(hero) {
-         background-position: 550px 80%;
-         background-size: 800px;
+         background-position: calc(100% + 430px) 80%;
+         background-size: 80%;
          position: relative;
-         padding-block: 4rem;
+         padding-block: 7rem;
+      }
+      @include mq(hero-illustration-large) {
+         background-position: calc(100% + 320px) 100%;
+         background-size: 850px;
       }
    }
 
@@ -24,6 +28,7 @@
       @include mq(hero) {
          order: 2;
          // outline: 2px solid red;
+         // make relative to this when max-width on img hits!
       }
    }
 

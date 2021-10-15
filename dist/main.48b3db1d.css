@@ -330,21 +330,26 @@ body {
 }
 
 .hero-wrapper {
-  outline: 3px solid;
   background: url("/bg-blue-shape.8a0569c6.svg") no-repeat -45% 15%/150%;
 }
 @media (min-width: 735px) {
   .hero-wrapper {
-    background-position: 200px 15%;
+    background-position: calc(100% + 520px) 20%;
     background-size: 1100px;
   }
 }
 @media (min-width: 879px) {
   .hero-wrapper {
-    background-position: 550px 80%;
-    background-size: 800px;
+    background-position: calc(100% + 430px) 80%;
+    background-size: 80%;
     position: relative;
-    padding-block: 4rem;
+    padding-block: 7rem;
+  }
+}
+@media (min-width: 1340px) {
+  .hero-wrapper {
+    background-position: calc(100% + 320px) 100%;
+    background-size: 850px;
   }
 }
 .hero_cnt-ct {
@@ -487,6 +492,12 @@ body {
 .crsl-btns-ct > * {
   flex-grow: 1;
   flex-basis: 300px;
+}
+
+@media (min-width: 879px) {
+  .crsl-title {
+    white-space: nowrap;
+  }
 }
 
 .crsl-btn {
@@ -832,7 +843,7 @@ body {
 }
 @media (min-width: 879px) {
   .hdr {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
   }
 }
 
