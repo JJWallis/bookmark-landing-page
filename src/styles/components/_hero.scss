@@ -2,15 +2,17 @@
 
 .hero {
    &-wrapper {
-      position: relative;
+      outline: 3px solid;
       background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
       @include mq(hero-illustration) {
          background-position: 200px 15%;
          background-size: 1100px;
       }
       @include mq(hero) {
-         background-position: 550px 100%;
+         background-position: 550px 80%;
          background-size: 800px;
+         position: relative;
+         padding-block: 4rem;
       }
    }
 
@@ -21,14 +23,21 @@
    &_illustration-ct {
       @include mq(hero) {
          order: 2;
+         // outline: 2px solid red;
       }
    }
 
-   // &_illustration {
-   //    // @include position(absolute, unset, auto, 7px, 50%);
-   //    //    z-index: 2;
-   //    //    transform: translateX(-50%);
-   // }
+   &_illustration {
+      @include mq(hero) {
+         position: absolute;
+         top: 55%;
+         transform: translateY(-50%);
+         right: 2%;
+         width: 50%;
+         max-width: 670px;
+         z-index: 3;
+      }
+   }
 
    &_cnt {
       @include flexParent(column, unset, center);
@@ -57,8 +66,3 @@
       }
    }
 }
-
-// .hero_illustration-ct {
-//    min-height: 300px;
-//    width: 100%;
-// }

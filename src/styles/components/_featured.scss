@@ -77,8 +77,11 @@
       width: 155px;
       height: 4px;
       background-color: $softRed;
+      @include mq(featured-btns-small) {
+         width: 280px;
+      }
       @include mq(featured-btns-large) {
-         width: 300px;
+         width: 100%;
       }
    }
 }

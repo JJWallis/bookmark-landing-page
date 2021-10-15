@@ -19,6 +19,7 @@ body {
    @include mq(hero) {
       flex-direction: row;
       justify-content: center;
+      align-items: unset;
    }
    &-wp {
       @include flexParent(row, unset, unset);
@@ -27,7 +28,7 @@ body {
 }
 
 .split {
-   flex-grow: 1;
+   flex: 1 100%;
 }
 
 .spacing {
