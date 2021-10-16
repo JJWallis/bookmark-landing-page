@@ -100,7 +100,6 @@
 
 .active {
    &::after {
-      animation: fade-in 300ms ease-in-out forwards;
       content: '';
       display: block;
       @include position(absolute, 155px, 4px, unset, 50%, 2);
