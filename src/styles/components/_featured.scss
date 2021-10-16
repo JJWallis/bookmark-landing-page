@@ -2,8 +2,7 @@
 
 .feat {
    &-wrapper {
-      background: url('/images/bg-blue-shape.svg') no-repeat calc(0% - 400px)
-         65% / 760px;
+      background: url('/images/bg-blue-shape.svg') no-repeat -80px 65% / 79% 240px;
       @include mq(hero) {
          background-position: -300px 88%;
          background-size: 70%;
@@ -42,12 +41,12 @@
       }
       @include mq(featured-illustration-large) {
          &::after {
-            content: url('/images/bg-blue-shape.svg');
+            content: url('/images/bg-blue-shape-long.svg');
             position: absolute;
             display: block;
             width: 100%;
-            top: 40%;
-            left: -65%;
+            top: 43%;
+            left: -350%;
             z-index: -1;
          }
       }
@@ -55,7 +54,7 @@
    &_illustration {
       position: absolute;
       width: 100%;
-      max-width: 410px;
+      max-width: 440px;
       left: 50%;
       top: 50%;
       transform: translateY(-50%) translateX(-50%);

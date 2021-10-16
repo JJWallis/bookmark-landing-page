@@ -5,8 +5,9 @@
       // outline: 3px solid;
       background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
       @include mq(hero-illustration) {
-         background-position: calc(100% + 520px) 20%;
-         background-size: 1100px;
+         // background-position: calc(100% + 520px) 20%;
+         background-position: calc(100% + 100px) 15%;
+         background-size: 80% 400px;
       }
       @include mq(hero) {
          background-position: calc(100% + 430px) 80%;

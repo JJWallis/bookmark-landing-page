@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="260">
+    <rect
+       x="0"
+       y="0"
+       height="260"
+       width="2000"
+       fill="hsl(231, 69%, 60%)"
+       stroke="hsl(231, 69%, 60%)"
+       ry="100"
+    />
+ </svg>

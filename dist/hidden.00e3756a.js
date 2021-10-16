@@ -162,29 +162,31 @@ var carouselMethods = {
   }
 };
 
+var loop = function loop(list, action) {
+  var _iterator = _createForOfIteratorHelper(list),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var el = _step.value;
+      classList(el, action, 'hidden');
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+};
+
 function isVisible(els) {
   if (classList(els[0], 'contains', 'hidden')) {
-    var _iterator = _createForOfIteratorHelper(carouselImgs),
-        _step;
-
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var img = _step.value;
-        classList(img, 'add', 'hidden');
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-
-    var _iterator2 = _createForOfIteratorHelper(carouselCnt),
+    var _iterator2 = _createForOfIteratorHelper(carouselImgs),
         _step2;
 
     try {
       for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var cnt = _step2.value;
-        classList(cnt, 'add', 'hidden');
+        var img = _step2.value;
+        classList(img, 'add', 'hidden');
       }
     } catch (err) {
       _iterator2.e(err);
@@ -192,18 +194,32 @@ function isVisible(els) {
       _iterator2.f();
     }
 
-    var _iterator3 = _createForOfIteratorHelper(els),
+    var _iterator3 = _createForOfIteratorHelper(carouselCnt),
         _step3;
 
     try {
       for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-        var _cnt = _step3.value;
-        classList(_cnt, 'remove', 'hidden');
+        var cnt = _step3.value;
+        classList(cnt, 'add', 'hidden');
       }
     } catch (err) {
       _iterator3.e(err);
     } finally {
       _iterator3.f();
+    }
+
+    var _iterator4 = _createForOfIteratorHelper(els),
+        _step4;
+
+    try {
+      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+        var _cnt = _step4.value;
+        classList(_cnt, 'remove', 'hidden');
+      }
+    } catch (err) {
+      _iterator4.e(err);
+    } finally {
+      _iterator4.f();
     }
   }
 }
@@ -212,18 +228,18 @@ carouselCt.addEventListener('click', function (e) {
   var target = e.target;
 
   if (target.matches('.crsl-btn')) {
-    var _iterator4 = _createForOfIteratorHelper(carouselBtns),
-        _step4;
+    var _iterator5 = _createForOfIteratorHelper(carouselBtns),
+        _step5;
 
     try {
-      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-        var btn = _step4.value;
+      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+        var btn = _step5.value;
         classList(btn, 'remove', 'active');
       }
     } catch (err) {
-      _iterator4.e(err);
+      _iterator5.e(err);
     } finally {
-      _iterator4.f();
+      _iterator5.f();
     }
 
     classList(target, 'add', 'active');
@@ -293,7 +309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49811" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49473" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

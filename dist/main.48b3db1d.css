@@ -334,8 +334,8 @@ body {
 }
 @media (min-width: 735px) {
   .hero-wrapper {
-    background-position: calc(100% + 520px) 20%;
-    background-size: 1100px;
+    background-position: calc(100% + 100px) 15%;
+    background-size: 80% 400px;
   }
 }
 @media (min-width: 879px) {
@@ -445,7 +445,7 @@ body {
 }
 
 .feat-wrapper {
-  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat calc(0% - 400px) 65%/760px;
+  background: url("/bg-blue-shape.8a0569c6.svg") no-repeat -80px 65%/79% 240px;
 }
 @media (min-width: 879px) {
   .feat-wrapper {
@@ -501,19 +501,19 @@ body {
 }
 @media (min-width: 1070px) {
   .feat_illustration-ct::after {
-    content: url("/bg-blue-shape.8a0569c6.svg");
+    content: url("/bg-blue-shape-long.3734bed2.svg");
     position: absolute;
     display: block;
     width: 100%;
-    top: 40%;
-    left: -65%;
+    top: 43%;
+    left: -350%;
     z-index: -1;
   }
 }
 .feat_illustration {
   position: absolute;
   width: 100%;
-  max-width: 410px;
+  max-width: 440px;
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);

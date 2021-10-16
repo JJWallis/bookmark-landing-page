@@ -30,6 +30,10 @@ const carouselMethods = {
    },
 }
 
+const loop = (list, action) => {
+   for (const el of list) classList(el, action, 'hidden')
+}
+
 function isVisible(els) {
    if (classList(els[0], 'contains', 'hidden')) {
       for (const img of carouselImgs) classList(img, 'add', 'hidden')
