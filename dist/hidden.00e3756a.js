@@ -117,7 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"scripts/hidden.js":[function(require,module,exports) {
+})({"images/icon-arrow.svg":[function(require,module,exports) {
+module.exports = "/icon-arrow.56d7c493.svg";
+},{}],"images/icon-arrow-close.svg":[function(require,module,exports) {
+module.exports = "/icon-arrow-close.91ded9a2.svg";
+},{}],"scripts/hidden.js":[function(require,module,exports) {
+"use strict";
+
+var _iconArrow = _interopRequireDefault(require("../images/icon-arrow.svg"));
+
+var _iconArrowClose = _interopRequireDefault(require("../images/icon-arrow-close.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -126,9 +138,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 var body = document.querySelector('body');
 var header = document.querySelector('.hdr_cnt');
-var logo = document.querySelector('.hdr_logo-bm');
-var hamburger = document.querySelector('.btn-hmb');
-var mobileNav = document.querySelector('.hdr_mobile-nav-ct');
 var carouselBtns = document.querySelectorAll('.crsl-btn');
 var carouselCt = document.querySelector('.crsl-btns-ct');
 var carouselCnt = document.querySelectorAll('.feat_dynamic');
@@ -143,50 +152,56 @@ var viewport = function viewport() {
   return window.innerWidth;
 };
 
-window.addEventListener('resize', function () {
-  return console.log(viewport());
-}); // Carousel
-
-var carouselMethods = {
-  simple: function simple() {
-    var cntPm = document.querySelectorAll('.feat_pm');
-    isVisible(cntPm);
-  },
-  speedy: function speedy() {
-    var cntSd = document.querySelectorAll('.feat_sd');
-    isVisible(cntSd);
-  },
-  easy: function easy() {
-    var cntTr = document.querySelectorAll('.feat_tr');
-    isVisible(cntTr);
-  }
-};
-
-var loop = function loop(list, action) {
+var resetStyles = function resetStyles(list, action, className) {
   var _iterator = _createForOfIteratorHelper(list),
       _step;
 
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var el = _step.value;
-      classList(el, action, 'hidden');
+      classList(el, action, className);
     }
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
-};
+}; // Carousel
 
-function isVisible(els) {
-  if (classList(els[0], 'contains', 'hidden')) {
-    var _iterator2 = _createForOfIteratorHelper(carouselImgs),
+
+var carouselMethods = {
+  action: function action(id) {
+    var cnt;
+
+    if (id === 'simple ') {
+      cnt = '.feat_pm';
+    } else if (id === 'speedy') {
+      cnt = '.feat_sd';
+    } else {
+      cnt = '.feat_tr';
+    }
+
+    this.isVisible(document.querySelectorAll(cnt));
+  },
+  isVisible: function isVisible(els) {
+    if (classList(els[0], 'contains', 'hidden')) {
+      resetStyles(carouselImgs, 'add', 'hidden');
+      resetStyles(carouselCnt, 'add', 'hidden');
+      resetStyles(els, 'remove', 'hidden');
+    }
+  }
+};
+carouselCt.addEventListener('click', function (e) {
+  var target = e.target;
+
+  if (target.matches('.crsl-btn')) {
+    var _iterator2 = _createForOfIteratorHelper(carouselBtns),
         _step2;
 
     try {
       for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var img = _step2.value;
-        classList(img, 'add', 'hidden');
+        var btn = _step2.value;
+        classList(btn, 'remove', 'active');
       }
     } catch (err) {
       _iterator2.e(err);
@@ -194,56 +209,8 @@ function isVisible(els) {
       _iterator2.f();
     }
 
-    var _iterator3 = _createForOfIteratorHelper(carouselCnt),
-        _step3;
-
-    try {
-      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-        var cnt = _step3.value;
-        classList(cnt, 'add', 'hidden');
-      }
-    } catch (err) {
-      _iterator3.e(err);
-    } finally {
-      _iterator3.f();
-    }
-
-    var _iterator4 = _createForOfIteratorHelper(els),
-        _step4;
-
-    try {
-      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-        var _cnt = _step4.value;
-        classList(_cnt, 'remove', 'hidden');
-      }
-    } catch (err) {
-      _iterator4.e(err);
-    } finally {
-      _iterator4.f();
-    }
-  }
-}
-
-carouselCt.addEventListener('click', function (e) {
-  var target = e.target;
-
-  if (target.matches('.crsl-btn')) {
-    var _iterator5 = _createForOfIteratorHelper(carouselBtns),
-        _step5;
-
-    try {
-      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-        var btn = _step5.value;
-        classList(btn, 'remove', 'active');
-      }
-    } catch (err) {
-      _iterator5.e(err);
-    } finally {
-      _iterator5.f();
-    }
-
     classList(target, 'add', 'active');
-    carouselMethods[target.id]();
+    carouselMethods.action(target.id);
   }
 }); // Nav
 
@@ -266,22 +233,12 @@ faqCt.addEventListener('click', function (e) {
 
   if (target.matches('.faq_btn')) {
     var arrow = target.children[target.children.length - 1];
-    arrow.src.includes('56d7c493') ? arrow.src = '/icon-arrow-close.91ded9a2.svg' : arrow.src = '/icon-arrow.56d7c493.svg';
+    arrow.src.includes(_iconArrow.default) ? arrow.src = _iconArrowClose.default : arrow.src = _iconArrow.default;
     classList(arrow, 'toggle', 'arrow-down');
     classList(target.nextElementSibling, 'toggle', 'hidden');
   }
-}); // TODO:
-//    Carousel btns:
-//       don't need obj methods | use class for speedy, easy + simply vs id
-//       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
-//       rest is same
-//    Modules - import arrow imgs
-//    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
-//    Re-factor - sep func to run for...of loops (use params for diff)
-//    Match viewport size to CSS breakpoints
-//    const domSelect = el => document.querySelector(el)
-//    const domSelectAll = el => document.querySelectorAll(el)
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+});
+},{"../images/icon-arrow.svg":"images/icon-arrow.svg","../images/icon-arrow-close.svg":"images/icon-arrow-close.svg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

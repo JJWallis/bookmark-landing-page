@@ -1,45 +1,39 @@
 const body = document.querySelector('body')
 const header = document.querySelector('.hdr_cnt')
-const logo = document.querySelector('.hdr_logo-bm')
-const hamburger = document.querySelector('.btn-hmb')
-const mobileNav = document.querySelector('.hdr_mobile-nav-ct')
 const carouselBtns = document.querySelectorAll('.crsl-btn')
 const carouselCt = document.querySelector('.crsl-btns-ct')
 const carouselCnt = document.querySelectorAll('.feat_dynamic')
 const carouselImgs = document.querySelectorAll('.feat_illustration')
 const faqCt = document.querySelector('.faq_qstns-ct')
+import Arrow from '../images/icon-arrow.svg'
+import ArrowClose from '../images/icon-arrow-close.svg'
 const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
-
-window.addEventListener('resize', () => console.log(viewport()))
+const resetStyles = (list, action, className) => {
+   for (const el of list) classList(el, action, className)
+}
 
 // Carousel
 
 const carouselMethods = {
-   simple() {
-      const cntPm = document.querySelectorAll('.feat_pm')
-      isVisible(cntPm)
+   action(id) {
+      let cnt
+      if (id === 'simple ') {
+         cnt = '.feat_pm'
+      } else if (id === 'speedy') {
+         cnt = '.feat_sd'
+      } else {
+         cnt = '.feat_tr'
+      }
+      this.isVisible(document.querySelectorAll(cnt))
    },
-   speedy() {
-      const cntSd = document.querySelectorAll('.feat_sd')
-      isVisible(cntSd)
+   isVisible(els) {
+      if (classList(els[0], 'contains', 'hidden')) {
+         resetStyles(carouselImgs, 'add', 'hidden')
+         resetStyles(carouselCnt, 'add', 'hidden')
+         resetStyles(els, 'remove', 'hidden')
+      }
    },
-   easy() {
-      const cntTr = document.querySelectorAll('.feat_tr')
-      isVisible(cntTr)
-   },
-}
-
-const loop = (list, action) => {
-   for (const el of list) classList(el, action, 'hidden')
-}
-
-function isVisible(els) {
-   if (classList(els[0], 'contains', 'hidden')) {
-      for (const img of carouselImgs) classList(img, 'add', 'hidden')
-      for (const cnt of carouselCnt) classList(cnt, 'add', 'hidden')
-      for (const cnt of els) classList(cnt, 'remove', 'hidden')
-   }
 }
 
 carouselCt.addEventListener('click', (e) => {
@@ -47,7 +41,7 @@ carouselCt.addEventListener('click', (e) => {
    if (target.matches('.crsl-btn')) {
       for (const btn of carouselBtns) classList(btn, 'remove', 'active')
       classList(target, 'add', 'active')
-      carouselMethods[target.id]()
+      carouselMethods.action(target.id)
    }
 })
 
@@ -72,22 +66,8 @@ faqCt.addEventListener('click', (e) => {
    const target = e.target
    if (target.matches('.faq_btn')) {
       const arrow = target.children[target.children.length - 1]
-      arrow.src.includes('56d7c493')
-         ? (arrow.src = '/icon-arrow-close.91ded9a2.svg')
-         : (arrow.src = '/icon-arrow.56d7c493.svg')
+      arrow.src.includes(Arrow) ? (arrow.src = ArrowClose) : (arrow.src = Arrow)
       classList(arrow, 'toggle', 'arrow-down')
       classList(target.nextElementSibling, 'toggle', 'hidden')
    }
 })
-
-// TODO:
-//    Carousel btns:
-//       don't need obj methods | use class for speedy, easy + simply vs id
-//       isVisible ran with node list of that class + create arr from it removes 1st el (btn)
-//       rest is same
-//    Modules - import arrow imgs
-//    Add event listeners for FAQ content - longer conditional but traverse (closest()) to nearest btn parent to determine arrow
-//    Re-factor - sep func to run for...of loops (use params for diff)
-//    Match viewport size to CSS breakpoints
-//    const domSelect = el => document.querySelector(el)
-//    const domSelectAll = el => document.querySelectorAll(el)
