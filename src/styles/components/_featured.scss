@@ -45,7 +45,7 @@
       @include mq(featured-illustration-large) {
          &::after {
             content: url('/images/bg-blue-shape-long.svg');
-            @include position(absolute, 100%, auto, 43%, -350%, -1);
+            @include position(absolute, 100%, auto, 43%, -367%, -1);
             display: block;
          }
       }

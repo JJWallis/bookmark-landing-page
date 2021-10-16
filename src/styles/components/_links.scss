@@ -12,6 +12,27 @@
    }
 }
 
+.login {
+   &-mb {
+      margin-top: 1.7rem;
+      padding: 0.8rem;
+      border: 2px solid white;
+      outline: 2px solid white;
+      outline-offset: -2px;
+      &:hover {
+         outline-offset: 4px;
+      }
+   }
+   .hdr_nav-wd &-wd {
+      padding: 0.7em 1.6em;
+      text-transform: uppercase;
+      color: white;
+      &::after {
+         display: none;
+      }
+   }
+}
+
 .lnk {
    &-blue {
       border: 2px solid transparent;
@@ -26,7 +47,7 @@
       width: 100%;
       border: 2px solid transparent;
       background-color: $softRed;
-      color: $fcTr;
+      color: white;
       &:hover {
          border: 2px solid $softRed;
          color: $softRed;
@@ -39,26 +60,6 @@
       &:hover {
          border: 2px solid $fcFx;
          color: $fcFx;
-      }
-   }
-}
-
-.login {
-   &-mb {
-      margin-top: 1.7rem;
-      padding: 0.8rem;
-      border: 2px solid white;
-      outline: 2px solid white;
-      outline-offset: -2px;
-      &:hover {
-         outline-offset: 4px;
-      }
-   }
-   &-wd {
-      padding: 0.7em 1.6em;
-      text-transform: uppercase;
-      &::after {
-         display: none;
       }
    }
 }

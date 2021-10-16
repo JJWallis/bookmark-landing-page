@@ -39,8 +39,9 @@
       & a {
          color: $fcTr;
          position: relative;
+         transition: color 150ms linear;
          &:hover {
-            text-decoration: underline;
+            color: $softRed;
          }
       }
    }

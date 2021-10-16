@@ -16,7 +16,7 @@
    }
    &_title {
       margin-top: 1.2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 2.2rem;
       color: $fcTr;
       max-width: 500px;
    }
@@ -29,7 +29,7 @@
    font-weight: 400;
    text-transform: uppercase;
    @include mq(contact) {
-      margin: 0 auto;
+      margin: 1rem auto;
    }
 }
 
