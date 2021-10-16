@@ -4,8 +4,8 @@
 
 .hdr {
    &_mobile-nav-ct {
-      @include position(fixed, unset, unset, 0, 0);
-      z-index: 100;
+      @include position(fixed, unset, unset, 0, 0, 100);
+      display: block;
       min-width: 100%;
       min-height: 100%;
       padding-top: 3rem;
@@ -15,7 +15,7 @@
       .nav-open & {
          transform: translateY(0);
       }
-      @include mq(header) {
+      @include mq(hero) {
          display: none;
       }
    }
@@ -32,7 +32,7 @@
 
 .btn-hmb {
    transition: opacity 400ms ease-in-out;
-   @include mq(header) {
+   @include mq(hero) {
       display: none;
    }
 }
@@ -77,23 +77,35 @@
 
 .hdr_nav-wd {
    display: none;
-   @include mq(header) {
+   @include mq(hero) {
       display: block;
    }
    & ul {
       @include flexParent(row, center, center);
    }
    & li:not(:last-child) {
-      margin-right: 2rem;
+      margin-right: 2.5rem;
       text-transform: uppercase;
       font-size: 1rem;
       color: $fcPm;
    }
    & a {
+      position: relative;
       color: $fcPm;
       letter-spacing: 0.1ch;
-      &:hover {
-         color: $softRed;
+      &::after {
+         content: '';
+         @include position(absolute, 100%, 4px, unset, 0, 1);
+         border-radius: 50px;
+         bottom: -3px;
+         background-color: $softRed;
+         transform: scaleX(0);
+         transform-origin: right;
+         transition: transform 230ms ease-in-out;
+      }
+      &:hover::after {
+         transform: scaleX(1);
+         transform-origin: left;
       }
    }
 }

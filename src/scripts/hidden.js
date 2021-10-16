@@ -55,7 +55,7 @@ carouselCt.addEventListener('click', (e) => {
 
 header.addEventListener('click', (e) => {
    const target = e.target
-   if (viewport() < 800) {
+   if (viewport() < 879) {
       if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
          classList(header, 'add', 'nav-open')
          classList(body, 'add', 'overflow')

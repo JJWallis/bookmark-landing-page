@@ -1,22 +1,5 @@
 @use 'abstracts' as *;
 
-.login {
-   &-mb {
-      margin-top: 1.7rem;
-      padding: 0.8rem;
-      border: 2px solid white;
-      outline: 2px solid white;
-      outline-offset: -2px;
-      &:hover {
-         outline-offset: 4px;
-      }
-   }
-   &-wd {
-      font-size: inherit;
-      text-transform: uppercase;
-   }
-}
-
 .btn-lnk {
    padding: 0.8em;
    border-radius: 5px;
@@ -56,6 +39,26 @@
       &:hover {
          border: 2px solid $fcFx;
          color: $fcFx;
+      }
+   }
+}
+
+.login {
+   &-mb {
+      margin-top: 1.7rem;
+      padding: 0.8rem;
+      border: 2px solid white;
+      outline: 2px solid white;
+      outline-offset: -2px;
+      &:hover {
+         outline-offset: 4px;
+      }
+   }
+   &-wd {
+      padding: 0.7em 1.6em;
+      text-transform: uppercase;
+      &::after {
+         display: none;
       }
    }
 }

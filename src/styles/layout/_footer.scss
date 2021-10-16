@@ -39,20 +39,8 @@
       & a {
          color: $fcTr;
          position: relative;
-         &::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $fcTr;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 150ms ease-in-out;
-         }
-         &:hover::after {
-            transform: scaleX(1);
+         &:hover {
+            text-decoration: underline;
          }
       }
    }

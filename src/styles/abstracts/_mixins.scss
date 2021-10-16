@@ -8,25 +8,13 @@
    align-items: $align;
 }
 
-@mixin flexChild($grow, $basis) {
-   flex-grow: $grow;
-   flex-basis: $basis;
-}
-
-@mixin position($position, $width, $height, $top, $left) {
+@mixin position($position, $width, $height, $top, $left, $z-index) {
    position: $position;
    width: $width;
    height: $height;
    top: $top;
    left: $left;
-}
-
-@mixin positionCentered($width, $height) {
-   position: absolute;
-   width: $width;
-   height: $height;
-   inset: 0;
-   margin: 0 auto;
+   z-index: $z-index;
 }
 
 @mixin lightBorder($position) {
