@@ -182,7 +182,7 @@ var carouselMethods = {
   action: function action(id) {
     var cnt;
 
-    if (id === 'simple ') {
+    if (id === 'simple') {
       cnt = '.feat_pm';
     } else if (id === 'speedy') {
       cnt = '.feat_sd';
