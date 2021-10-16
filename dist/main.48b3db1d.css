@@ -894,6 +894,7 @@ body {
 .alignment {
   width: 90%;
   max-width: 60rem;
+  margin: 0 auto;
 }
 .alignment-pt {
   display: flex;
