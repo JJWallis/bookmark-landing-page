@@ -28,7 +28,7 @@
 }
 
 @mixin fq() {
-   @supports (font-size: clamp) {
+   @supports (font-size: clamp(1.8rem, 3vw + 1rem, 1.9rem)) {
       @content;
    }
 }
