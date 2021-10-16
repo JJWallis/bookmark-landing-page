@@ -18,11 +18,11 @@ const resetStyles = (list, action, className) => {
 const carouselMethods = {
    action(id) {
       let cnt
-      if (id === 'simple ') {
+      if (id === 'simple') {
          cnt = '.feat_pm'
       } else if (id === 'speedy') {
          cnt = '.feat_sd'
-      } else {
+      } else if (id === 'easy') {
          cnt = '.feat_tr'
       }
       this.isVisible(document.querySelectorAll(cnt))

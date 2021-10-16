@@ -173,11 +173,11 @@ var carouselMethods = {
   action: function action(id) {
     var cnt;
 
-    if (id === 'simple ') {
+    if (id === 'simple') {
       cnt = '.feat_pm';
     } else if (id === 'speedy') {
       cnt = '.feat_sd';
-    } else {
+    } else if (id === 'easy') {
       cnt = '.feat_tr';
     }
 
@@ -266,7 +266,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49473" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
