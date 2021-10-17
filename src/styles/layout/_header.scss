@@ -1,8 +1,13 @@
 @use 'abstracts' as *;
 
 .hdr {
+   position: sticky;
+   width: 100%;
+   top: 0;
+   z-index: 100;
    margin-bottom: 1.5rem;
    padding-block: 3rem;
+   transition: background-color 150ms ease-in, box-shadow 200ms ease-in;
    &_cnt {
       @include flexParent(row, space-between, center);
    }

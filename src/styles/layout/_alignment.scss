@@ -42,5 +42,6 @@ body {
 }
 
 .test {
-   background-color: $softRed;
+   background-color: rgba(white, 0.95);
+   box-shadow: 0 0 15px 0 rgba(black, 0.1);
 }
