@@ -361,7 +361,7 @@ body {
     padding-block: 7rem;
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1240px) {
   .hero-wrapper {
     background-position: 300% 100%;
     background-size: 80% 330px;
@@ -378,7 +378,7 @@ body {
     order: 2;
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1240px) {
   .hero_illustration-ct {
     position: relative;
   }
@@ -395,7 +395,7 @@ body {
     z-index: 3;
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1240px) {
   .hero_illustration {
     max-width: unset;
     width: 140%;
@@ -937,6 +937,10 @@ body {
 
 .spacing {
   margin-block: 7.5rem;
+}
+
+.test {
+  background-color: #fa5757;
 }
 
 .hdr {
