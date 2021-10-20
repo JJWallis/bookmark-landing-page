@@ -634,48 +634,51 @@ body {
   }
 }
 
-.tool {
-  cursor: help;
-  position: relative;
-}
-.tool::before, .tool::after {
-  position: absolute;
-  left: 50%;
-  opacity: 0;
-  z-index: -100;
-}
-.tool:hover::before, .tool:focus::before, .tool:hover:after, .tool:focus::after {
-  opacity: 1;
-  z-index: 99;
-  transform: scale(1) translateY(0);
-}
-.tool:hover::before, .tool:focus::before {
-  transition-delay: 0.2s;
-}
-.tool:hover:after, .tool:focus::after {
-  transition-delay: 0s;
-}
-.tool::before {
-  content: "";
-  border-style: solid;
-  border-width: 1em 0.75em 0 0.75em;
-  border-color: #fa5757 transparent transparent transparent;
-  bottom: 60%;
-  margin-left: 0.5em;
-  transform: scale(0.6) translateY(-90%);
-  transition: all 0.65s cubic-bezier(0.85, -0.18, 0.31, 1.26), opacity 0.65s 0.5s;
-}
-.tool::after {
-  content: attr(data-tip);
-  background-color: #fa5757;
-  border-radius: 0.25em;
-  bottom: 100%;
-  color: white;
-  width: 17.5em;
-  padding: 1em;
-  margin-left: -8.75em;
-  transform: scale(0.6) translateY(50%);
-  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+@media (min-width: 879px) {
+  .tool {
+    cursor: help;
+    position: relative;
+  }
+  .tool::before, .tool::after {
+    position: absolute;
+    left: 63%;
+    opacity: 0;
+    z-index: -100;
+  }
+  .tool:hover::before, .tool:focus::before, .tool:hover:after, .tool:focus::after {
+    opacity: 1;
+    z-index: 99;
+    transform: scale(1) translateY(0);
+  }
+  .tool:hover::before, .tool:focus::before {
+    transition-delay: 0.1s;
+  }
+  .tool:hover:after, .tool:focus::after {
+    transition-delay: 0.1s;
+  }
+  .tool::before {
+    content: "";
+    border-style: solid;
+    border-width: 1em 0.75em 0 0.75em;
+    border-color: #5368df transparent transparent transparent;
+    bottom: 75%;
+    left: 50%;
+    transform: scale(0.6) translateY(-90%);
+    transition: all 0.65s cubic-bezier(0.85, -0.18, 0.31, 1.26);
+    transition-delay: 0.1s;
+  }
+  .tool::after {
+    content: attr(data-tip);
+    background-color: #5368df;
+    border-radius: 0.25em;
+    bottom: 120%;
+    color: white;
+    width: 17.5em;
+    padding: 0.5em;
+    margin-left: -8.75em;
+    transform: scale(0.6) translateY(50%);
+    transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  }
 }
 
 .ext_cnt {
@@ -992,7 +995,7 @@ body {
   position: sticky;
   width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   margin-bottom: 1.5rem;
   padding-block: 3rem;
   transition: background-color 150ms ease-in, box-shadow 200ms ease-in;
