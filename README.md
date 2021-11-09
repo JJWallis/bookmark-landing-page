@@ -48,7 +48,18 @@ Your users should be able to:
 ### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<i class="fab fa-facebook-square social-icon social-icon-fb"></i>
+<!-- FA icons -->
+
+<button class="faq_btn">
+   <p class="faq_qstn">What is Bookmark?</p>
+   <img
+      src="/images/icon-arrow.svg"
+      alt="Downwards facing arrow."
+      class="arrow"
+   />
+</button>
+<!-- FAQ questions -->
 ```
 
 ```css
@@ -74,6 +85,8 @@ const observer = new IntersectionObserver(
 ### Continued development
 
 Sass - Components (in future should create more + split up styles further)
+
+SVG 0 attempted to change fill of arrows on click (unsuccessful)
 
 ### Useful resources
 
@@ -104,9 +117,17 @@ Sass - 1st project | 7 - 1 pattern | basic mixins + Sass vars (compiling for bro
 
 Underline pseudo el trick - not part of design (but sometime nice to experiment with diff ideas to test whether they were appropiate for virtual audience/company) | transform-origin (changing direction it starts + stops)
 
-Animation - mobile nav (transalted default off of screen + transalted back to 100% on hamburger click via descendant class selector) | power of transitions + dynamic 'open' class (solves most of the animation required - unless more complicated than 'to' - 'from') | performant animation - only animating opacity + transform
+Animation - mobile nav (transalted default off of screen + transalted back to 100% on hamburger click via descendant class selector) | power of transitions + dynamic 'open' class (solves most of the animation required - unless more complicated than 'to' - 'from') | performant animation - only animating opacity + transform | animation used for hero illustration (little finess + appropiate for a bookmark company based around modern technology)
 
-Font Awesome - NPM
+Outlines for accessibility - dotted style + on :focus / :hover
+
+FAQ - arrows translating direction on click (new technique) | colour change of arrows - creating a diff asset after modifying fill in code | learnt from 2nd FEM project (FAQ Accordian) - button parent to space-between arrow img + p | no max-height because plently of room for content to breathe within a landing page layout (vs App centered style layout)
+
+Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched bottom flex item but still wrapping behaviour - great to maintain card layout)
+
+Carousel imgs - translateY 50% centre trick to control img changing (assets were diff sizes slightly - keep centre point same position) | could use transform-origin next time
+
+SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + viewport + strokes | made two version - one very long one for wider screens to stay pinned with img + keep scaling horizontally as viewport grows (smaller for mobile-tablet) | fluid size on smaller screens (scales) + fixed vertical with fluid horizontal for wider
 
 JS:
 
