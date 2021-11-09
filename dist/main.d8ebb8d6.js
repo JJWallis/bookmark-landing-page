@@ -262,7 +262,8 @@ var viewport = function viewport() {
 };
 
 window.addEventListener('resize', function () {
-  if (viewport() === 879) logo.style.opacity = 1;
+  var vp = viewport();
+  if (vp >= 879) logo.style.opacity = 1;
 });
 
 function nav(e) {

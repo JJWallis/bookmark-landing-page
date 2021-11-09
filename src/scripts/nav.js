@@ -5,7 +5,8 @@ const classList = (el, act, val) => el.classList[act](val)
 const viewport = () => window.innerWidth
 
 window.addEventListener('resize', () => {
-   if (viewport() === 879) logo.style.opacity = 1
+   const vp = viewport()
+   if (vp >= 879) logo.style.opacity = 1
 })
 
 export default function nav(e) {
