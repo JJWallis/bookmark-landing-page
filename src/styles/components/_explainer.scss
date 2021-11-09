@@ -1,7 +1,25 @@
 @use 'abstracts' as *;
 
+.feat_cnt .dsc {
+   margin: 1.2rem auto 2rem;
+}
+
 .dsc {
-   margin: 1.2rem 0 2rem;
+   max-width: 650px;
+   margin: 1.3rem 0 2.2rem;
    text-align: center;
    color: $fcSd;
+   @include mq(hero) {
+      max-width: 595px;
+   }
+   font-size: 1.25rem;
+   @include mq(hero) {
+      font-size: 1.15rem;
+   }
+}
+
+.dsc-lft {
+   @include mq(hero) {
+      text-align: left;
+   }
 }

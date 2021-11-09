@@ -1,9 +1,9 @@
-const input = document.querySelector('#email')
-const form = document.querySelector('.form')
-const regex =
-   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+export default function isValid(e) {
+   const input = document.querySelector('#email')
+   const form = document.querySelector('.form')
+   const regex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-function isValid(e) {
    if (!regex.test(input.value)) {
       e.preventDefault()
       input.classList.add('error')
@@ -14,5 +14,3 @@ function isValid(e) {
       input.value = null
    }
 }
-
-form.addEventListener('submit', isValid)

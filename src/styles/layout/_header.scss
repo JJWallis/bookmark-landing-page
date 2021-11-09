@@ -1,9 +1,17 @@
 @use 'abstracts' as *;
 
 .hdr {
+   position: sticky;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
    margin-bottom: 1.5rem;
-   padding-block: 2rem;
+   padding-block: 3rem;
+   transition: background-color 150ms ease-in, box-shadow 200ms ease-in;
    &_cnt {
       @include flexParent(row, space-between, center);
+   }
+   @include mq(hero) {
+      margin-bottom: 1rem;
    }
 }

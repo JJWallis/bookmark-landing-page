@@ -3,12 +3,13 @@
 .faq {
    &_sctn {
       margin: 0 auto;
-      max-width: 600px;
-      & .dsc {
-         @include mq(faq) {
-            width: 90%;
-            margin: 0 auto;
-         }
+      max-width: 550px;
+   }
+
+   &_title {
+      font-size: 1.7rem;
+      @include mq(hero) {
+         font-size: 1.9rem;
       }
    }
 
@@ -30,6 +31,10 @@
       @include flexParent(row, space-between, center);
       width: 100%;
       padding: 1.7rem 0 2.1rem;
+      transition: color 200ms linear;
+      &:hover {
+         color: $softRed;
+      }
    }
 
    &_qstn,

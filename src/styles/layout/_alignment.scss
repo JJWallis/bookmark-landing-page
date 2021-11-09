@@ -7,7 +7,7 @@ body {
 .alignment {
    width: 90%;
    max-width: 60rem;
-   outline: 1px solid red;
+   margin: 0 auto;
    &-pt {
       @include flexParent(column, center, center);
    }
@@ -16,16 +16,32 @@ body {
 .flex-parent {
    @include flexParent(column, unset, center);
    gap: 2.5rem;
+   @include mq(hero) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: unset;
+      gap: 5rem;
+   }
    &-wp {
       @include flexParent(row, unset, unset);
       flex-wrap: wrap;
    }
+   &-hero {
+      @include mq(hero) {
+         gap: 3rem;
+      }
+   }
 }
 
 .split {
-   flex-grow: 1;
+   flex: 1 100%;
 }
 
 .spacing {
    margin-block: 7.5rem;
+}
+
+.test {
+   background-color: rgba(white, 0.95);
+   box-shadow: 0 0 15px 0 rgba(black, 0.1);
 }

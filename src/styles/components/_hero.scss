@@ -2,37 +2,87 @@
 
 .hero {
    &-wrapper {
-      position: relative;
       background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
+      @include mq(hero-illustration) {
+         background-position: calc(100% + 100px) 15%;
+         background-size: 80% 400px;
+      }
+      @include mq(hero) {
+         background-position: calc(100% + 430px) 80%;
+         background-size: 80%;
+         position: relative;
+         padding-block: 7rem;
+      }
+      @include mq(hero-illustration-large) {
+         background-position: 300% 100%;
+         background-size: 80% 330px;
+      }
    }
+
    &_cnt-ct {
       @include flexParent(column, unset, center);
    }
+
+   &_illustration-ct {
+      @include mq(hero) {
+         order: 2;
+      }
+      @include mq(hero-illustration-large) {
+         position: relative;
+      }
+   }
+
+   &_illustration {
+      @include mq(hero) {
+         animation: left-right 3000ms linear backwards infinite;
+         position: absolute;
+         top: 55%;
+         transform: translateY(-50%);
+         right: 2%;
+         width: 50%;
+         max-width: 670px;
+         z-index: 3;
+      }
+      @include mq(hero-illustration-large) {
+         max-width: unset;
+         width: 140%;
+         right: -35%;
+      }
+   }
+
    &_cnt {
       @include flexParent(column, unset, center);
       width: 90%;
+      @include mq(hero) {
+         width: unset;
+      }
    }
+
    &_title {
       position: relative;
       text-align: center;
       line-height: 1.4;
       letter-spacing: 0.05ch;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
+      font-weight: 500;
+      @include mq(hero) {
+         font-size: 2.3rem;
+         text-align: left;
+      }
+      @include fq() {
+         font-size: clamp(2.2rem, 4vw + 1rem, 2.4rem);
+         @include mq(hero) {
+            font-size: clamp(2.1rem, 2vw + 1rem, 2.7rem);
+         }
+      }
    }
+
    &_lnks {
       @include flexParent(row, center, unset);
       width: 100%;
       gap: 1rem;
+      @include mq(hero) {
+         justify-content: flex-start;
+      }
    }
 }
-
-// .hero_illustration-ct {
-//    min-height: 300px;
-//    width: 100%;
-// }
-
-// .hero_illustration {
-//    @include position(absolute, unset, auto, 7px, 50%);
-//    z-index: 2;
-//    transform: translateX(-50%);
-// }

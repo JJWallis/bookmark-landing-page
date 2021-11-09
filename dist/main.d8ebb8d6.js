@@ -117,9 +117,198 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"scripts/main.js":[function(require,module,exports) {
+})({"scripts/validation.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = isValid;
+
+function isValid(e) {
+  var input = document.querySelector('#email');
+  var form = document.querySelector('.form');
+  var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (!regex.test(input.value)) {
+    e.preventDefault();
+    input.classList.add('error');
+    var errMsg = document.createElement('p');
+    errMsg.innerText = "Whoops, make sure it's an email";
+    errMsg.classList.add('error-msg');
+    form.append(errMsg);
+    input.value = null;
+  }
+}
+},{}],"scripts/carousel.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = listener;
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var carouselBtns = document.querySelectorAll('.crsl-btn');
+var carouselCnt = document.querySelectorAll('.feat_dynamic');
+var carouselImgs = document.querySelectorAll('.feat_illustration');
+
+var classList = function classList(el, act, val) {
+  return el.classList[act](val);
+};
+
+var resetStyles = function resetStyles(list, action, className) {
+  var _iterator = _createForOfIteratorHelper(list),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var el = _step.value;
+      classList(el, action, className);
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+};
+
+var carouselMethods = {
+  action: function action(id) {
+    var cnt;
+
+    if (id === 'simple') {
+      cnt = '.feat_pm';
+    } else if (id === 'speedy') {
+      cnt = '.feat_sd';
+    } else {
+      cnt = '.feat_tr';
+    }
+
+    this.isVisible(document.querySelectorAll(cnt));
+  },
+  isVisible: function isVisible(els) {
+    if (classList(els[0], 'contains', 'hidden')) {
+      resetStyles(carouselImgs, 'add', 'hidden');
+      resetStyles(carouselCnt, 'add', 'hidden');
+      resetStyles(els, 'remove', 'hidden');
+    }
+  }
+};
+
+function listener(e) {
+  var target = e.target;
+
+  if (target.matches('.crsl-btn')) {
+    resetStyles(carouselBtns, 'remove', 'active');
+    classList(target, 'add', 'active');
+    carouselMethods.action(target.id);
+  }
+}
+},{}],"images/icon-arrow.svg":[function(require,module,exports) {
+module.exports = "/icon-arrow.56d7c493.svg";
+},{}],"images/icon-arrow-close.svg":[function(require,module,exports) {
+module.exports = "/icon-arrow-close.91ded9a2.svg";
+},{}],"scripts/faq.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = faq;
+
+var _iconArrow = _interopRequireDefault(require("../images/icon-arrow.svg"));
+
+var _iconArrowClose = _interopRequireDefault(require("../images/icon-arrow-close.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var classList = function classList(el, act, val) {
+  return el.classList[act](val);
+};
+
+function faq(e) {
+  var target = e.target;
+
+  if (target.matches('.faq_btn')) {
+    var arrow = target.children[target.children.length - 1];
+    arrow.src.includes(_iconArrow.default) ? arrow.src = _iconArrowClose.default : arrow.src = _iconArrow.default;
+    classList(arrow, 'toggle', 'arrow-down');
+    classList(target.nextElementSibling, 'toggle', 'hidden');
+  }
+}
+},{"../images/icon-arrow.svg":"images/icon-arrow.svg","../images/icon-arrow-close.svg":"images/icon-arrow-close.svg"}],"scripts/nav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = nav;
+var body = document.querySelector('body');
+var header = document.querySelector('.hdr_cnt');
+var logo = document.querySelector('.hdr_logo-bm');
+
+var classList = function classList(el, act, val) {
+  return el.classList[act](val);
+};
+
+var viewport = function viewport() {
+  return window.innerWidth;
+};
+
+window.addEventListener('resize', function () {
+  var vp = viewport();
+  if (vp >= 879) logo.style.opacity = 1;
+});
+
+function nav(e) {
+  var target = e.target;
+
+  if (viewport() < 879) {
+    if (target.matches('.hamburger-btn') || target.matches('.btn-hmb')) {
+      classList(header, 'add', 'nav-open');
+      classList(body, 'add', 'overflow');
+    } else if (target.matches('.close-btn') || target.matches('.icn-close')) {
+      classList(header, 'remove', 'nav-open');
+      classList(body, 'remove', 'overflow');
+    }
+  }
+}
+},{}],"scripts/main.js":[function(require,module,exports) {
+"use strict";
+
+var _validation = _interopRequireDefault(require("./validation"));
+
+var _carousel = _interopRequireDefault(require("./carousel"));
+
+var _faq = _interopRequireDefault(require("./faq"));
+
+var _nav = _interopRequireDefault(require("./nav"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.querySelector('.hdr_cnt').addEventListener('click', _nav.default);
+document.querySelector('.crsl-btns-ct').addEventListener('click', _carousel.default);
+document.querySelector('.faq_qstns-ct').addEventListener('click', _faq.default);
+document.querySelector('.form').addEventListener('submit', _validation.default); // Intersection observer:
+
+var header = document.querySelector('.hdr');
+var hero = document.querySelector('.hero-wrapper');
+var headerOptions = {
+  rootMargin: '-200px 0px 0px 0px'
+};
+var observer = new IntersectionObserver(function (entries, observer) {
+  return entries.forEach(function (entry) {
+    !entry.isIntersecting ? header.classList.add('test') : header.classList.remove('test');
+  });
+}, headerOptions);
+observer.observe(hero);
+},{"./validation":"scripts/validation.js","./carousel":"scripts/carousel.js","./faq":"scripts/faq.js","./nav":"scripts/nav.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

@@ -2,46 +2,115 @@
 
 .feat {
    &-wrapper {
-      background: url('/images/bg-blue-shape.svg') no-repeat 150% 64% / 150%;
+      background: url('/images/bg-blue-shape.svg') no-repeat -80px 65% / 79% 240px;
+      @include mq(hero) {
+         background-position: -300px 88%;
+         background-size: 70%;
+      }
+      @include mq(featured-illustration-large) {
+         background: none;
+      }
+      & .flex-parent {
+         @include mq(hero) {
+            padding-bottom: 6rem;
+         }
+      }
    }
+
    &_crsl-cnt-ct {
       padding-top: 2rem;
-      // uneven column sizes - hero img alignment for fix!
+      @include mq(hero) {
+         padding-top: 0;
+         @include flexParent(column, center, unset);
+      }
    }
+
    &_crsl-cnt {
       width: 90%;
       @include flexParent(column, unset, center);
       margin: 0 auto;
+      @include mq(hero) {
+         align-items: start;
+      }
+   }
+
+   &_illustration-ct {
+      position: relative;
+      min-height: 300px;
+      width: 100%;
+      @include mq(hero) {
+         min-height: 400px;
+         width: unset;
+      }
+      @include mq(featured-illustration-large) {
+         &::after {
+            content: url('/images/bg-blue-shape-long.svg');
+            @include position(absolute, 100%, auto, 43%, -367%, -1);
+            display: block;
+         }
+      }
+   }
+
+   &_illustration {
+      @include position(absolute, 100%, auto, 50%, 50%, 2);
+      max-width: 440px;
+      transform: translateY(-50%) translateX(-50%);
+      @include mq(hero) {
+         max-width: 110%;
+         width: unset;
+      }
    }
 }
 
 .crsl-btns-ct {
    margin-bottom: 4rem;
    & > * {
-      @include flexChild(1, 300px);
+      flex: 1 300px;
+   }
+}
+
+.crsl-title {
+   @include mq(hero) {
+      white-space: nowrap;
    }
 }
 
 .crsl-btn {
+   position: relative;
    padding: 1rem;
    @include lightBorder(bottom);
-   position: relative;
    &:first-child {
       @include lightBorder(top);
+   }
+   @include mq(featured-btns-small) {
+      &:nth-child(2) {
+         @include lightBorder(top);
+         @include lightBorder(left);
+      }
+   }
+   @include mq(featured-btns-large) {
+      &,
+      &:nth-child(2),
+      &:first-child {
+         border-top: none;
+         border-left: none;
+      }
    }
 }
 
 .active {
    &::after {
-      animation: fade-in 400ms ease-in-out forwards;
       content: '';
       display: block;
-      position: absolute;
+      @include position(absolute, 155px, 4px, unset, 50%, 2);
       bottom: 0;
-      left: 50%;
       transform: translateX(-50%);
-      width: 155px;
-      height: 4px;
       background-color: $softRed;
+      @include mq(featured-btns-small) {
+         width: 225px;
+      }
+      @include mq(featured-btns-large) {
+         width: 100%;
+      }
    }
 }

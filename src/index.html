@@ -19,9 +19,7 @@
          defer
          src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
       ></script>
-      <script defer src="./scripts/main.js"></script>
-      <script defer src="./scripts/hidden.js"></script>
-      <script defer src="./scripts/validation.js"></script>
+      <script type="module" src="./scripts/main.js"></script>
    </head>
 
    <body>
@@ -116,7 +114,7 @@
 
       <main class="main">
          <div class="hero-wrapper alignment-pt">
-            <div class="flex-parent alignment">
+            <div class="flex-parent flex-parent-hero alignment">
                <div class="hero_illustration-ct split">
                   <img
                      src="./images/illustration-hero.svg"
@@ -164,7 +162,7 @@
                      <button class="crsl-btn" id="easy">Easy Sharing</button>
                   </div>
                </article>
-               <div class="flex-parent">
+               <div id="crsl-wrapper" class="flex-parent crsl-open">
                   <div class="feat_illustration-ct split">
                      <img
                         src="./images/illustration-features-tab-1.svg"
@@ -236,7 +234,7 @@
                      know if you’ve got a favourite you’d like us to prioritize.
                   </p>
                </article>
-               <div class="flex-parent-wp card-brwsr-ct">
+               <div class="card-brwsr-ct">
                   <div class="card-brwsr">
                      <img
                         src="./images/logo-chrome.svg"

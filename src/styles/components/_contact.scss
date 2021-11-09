@@ -2,7 +2,7 @@
 
 .contact {
    &-wrapper {
-      padding: 5rem 0 3rem;
+      padding: 5rem 0 4rem;
       background-color: $softBlue;
    }
    &_cnt {
@@ -16,9 +16,9 @@
    }
    &_title {
       margin-top: 1.2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 2.2rem;
       color: $fcTr;
-      max-width: 450px;
+      max-width: 500px;
    }
 }
 
@@ -29,7 +29,7 @@
    font-weight: 400;
    text-transform: uppercase;
    @include mq(contact) {
-      margin: 0 auto;
+      margin: 1rem auto;
    }
 }
 

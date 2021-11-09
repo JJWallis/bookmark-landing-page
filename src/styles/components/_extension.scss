@@ -1,5 +1,9 @@
 @use 'abstracts' as *;
 
+.ext_cnt {
+   @include flexParent(column, unset, center);
+}
+
 .card-brwsr {
    @include flexParent(column, unset, center);
    min-height: 370px;
@@ -9,12 +13,27 @@
    background: white url('/images/bg-dots.svg') no-repeat center 74% / 100%;
    box-shadow: 0 10px 15px 0 rgba(black, 0.1);
    &-ct {
-      width: 80%;
-      margin: 0 auto;
+      @include flexParent(row, center, unset);
+      flex-wrap: wrap;
       gap: 4rem;
+      @include mq(extension) {
+         margin-top: 2rem;
+      }
       & > * {
-         @include flexChild(1, 230px);
-         // change width of flex container - 3 row at wider screens
+         flex-basis: 340px;
+         @include mq(extension) {
+            flex-basis: 265px;
+            &:nth-child(1) {
+               margin-bottom: 2.7rem;
+            }
+            &:nth-child(2) {
+               margin-top: 1.7rem;
+               margin-bottom: 1.3rem;
+            }
+            &:nth-child(3) {
+               margin-top: 3.5rem;
+            }
+         }
       }
    }
 }
@@ -30,6 +49,8 @@
    &-title {
       margin-bottom: 0.6rem;
       letter-spacing: 0.05ch;
+      font-weight: 500;
+      font-size: 1.3rem;
    }
 }
 
@@ -39,4 +60,6 @@
 
 .lnk-install {
    margin-top: auto;
+   width: 85%;
+   text-align: center;
 }

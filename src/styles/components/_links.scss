@@ -1,5 +1,17 @@
 @use 'abstracts' as *;
 
+.btn-lnk {
+   padding: 0.8em;
+   border-radius: 5px;
+   box-shadow: 0 2px 3px 0 rgba(black, 0.3);
+   font-size: 1rem;
+   transition: background-color 200ms linear, border 200ms linear,
+      color 200ms linear;
+   &:hover {
+      background-color: white;
+   }
+}
+
 .login {
    &-mb {
       margin-top: 1.7rem;
@@ -11,21 +23,13 @@
          outline-offset: 4px;
       }
    }
-   &-wd {
-      font-size: inherit;
+   .hdr_nav-wd &-wd {
+      padding: 0.7em 1.6em;
       text-transform: uppercase;
-   }
-}
-
-.btn-lnk {
-   padding: 0.8em;
-   border-radius: 5px;
-   box-shadow: 0 2px 3px 0 rgba(black, 0.3);
-   font-size: 1rem;
-   transition: background-color 200ms linear, border 200ms linear,
-      color 200ms linear;
-   &:hover {
-      background-color: white;
+      color: white;
+      &::after {
+         display: none;
+      }
    }
 }
 
@@ -43,7 +47,7 @@
       width: 100%;
       border: 2px solid transparent;
       background-color: $softRed;
-      color: $fcTr;
+      color: white;
       &:hover {
          border: 2px solid $softRed;
          color: $softRed;
