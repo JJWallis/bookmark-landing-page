@@ -140,3 +140,5 @@ Modules - 1st time for whole project | much more organised + thinking about how 
 Carousel - 1st time linking sections of content via className (+ toggling visiblity)
 
 Regex - massive pre-built one for email validation | error msg built + appended in JS - originally done in CSS pseudo el on input (can't apply pseudo els to inputs as self-closing) | could next time use a descendant class selector for the msg on a diff el - positioning slightly harder
+
+Testing, testing, testing
