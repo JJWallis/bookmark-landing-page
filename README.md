@@ -44,6 +44,7 @@ Your users should be able to:
 -  Mobile-first workflow
 -  Sass - CSS preprocessor
 -  Vanilla JS
+-  ES6 Modules
 
 ### What I learned
 
@@ -90,11 +91,11 @@ SVG 0 attempted to change fill of arrows on click (unsuccessful)
 
 ### Useful resources
 
--  [Intersection Observer API - Introduction](https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell) - Kevin Powell's video on the basics of the API & best practices/techniques possible with it. Fading/translating content in on scroll is nice, but a more common usecase is styling applied to a sticky header when the viewport reaches a certain section of content.
+-  [Intersection Observer API - Introduction](https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell) - Kevin's video on the basics of the API and best practices/techniques possible with it. Fading or translating content in on scroll is nice, but a more common usecase is styling (box-shadow) applied to a sticky header when the viewport reaches a certain section of content.
 
 -  [CSS Animation - Introduction](https://www.youtube.com/watch?v=YszONjKpgg4&ab_channel=WebDevSimplified) - My first introduction to CSS animation.
 
--  [CSS Performant Animations](https://www.youtube.com/watch?v=4PStxeSIL9I&ab_channel=WebDevSimplified) - Great to learn early on, used to make the mistake of transitioning everything on a class (instead of specifying) + transition not on pseudo class but base class/el itself.
+-  [CSS Performant Animations](https://www.youtube.com/watch?v=4PStxeSIL9I&ab_channel=WebDevSimplified) - Great to learn early on, used to make the mistake of transitioning everything on a class (instead of specifying) & transition not on pseudo class but base class/el itself (+ specific properties).
 
 ## Author
 
@@ -140,7 +141,3 @@ Modules - 1st time for whole project | much more organised + thinking about how 
 Carousel - 1st time linking sections of content via className (+ toggling visiblity)
 
 Regex - massive pre-built one for email validation | error msg built + appended in JS - originally done in CSS pseudo el on input (can't apply pseudo els to inputs as self-closing) | could next time use a descendant class selector for the msg on a diff el - positioning slightly harder
-
-Testing, testing, testing
-
-Testing, testing, testing
