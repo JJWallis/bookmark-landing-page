@@ -50,8 +50,11 @@ Your users should be able to:
 
 ```html
 <i class="fab fa-facebook-square social-icon social-icon-fb"></i>
-<!-- FA icons -->
+```
 
+NPM + packages - Parcel bundler | Font Awesome icons
+
+```html
 <button class="faq_btn">
    <p class="faq_qstn">What is Bookmark?</p>
    <img
@@ -60,18 +63,26 @@ Your users should be able to:
       class="arrow"
    />
 </button>
-<!-- FAQ questions -->
 ```
 
 ```css
-.proud-of-this-css {
-   color: papayawhip;
+@keyframes left-right {
+   0% {
+      transform: translateY(-50%) translateX(0);
+   }
+   33% {
+      transform: translateY(-50%) translateX(10px);
+   }
+   66% {
+      transform: translateY(-50%) translateX(-10px);
+   }
+   100% {
+      transform: translateY(-50%) translateX(0);
+   }
 }
 ```
 
 ```js
-document.querySelector('.form').addEventListener('submit', validate) // validate as module imported - refactored
-
 const observer = new IntersectionObserver(
    (entries, observer) =>
       entries.forEach((entry) => {
@@ -82,6 +93,10 @@ const observer = new IntersectionObserver(
    headerOptions
 )
 ```
+
+Intersection observer API (sticky header box-shadow + opacity 0.9)
+
+Modules - 1st time for whole project | much more organised + thinking about how to model the events within App.js (same way designing an App would do - event is the trigger for whole logic - async logic)
 
 ### Continued development
 
@@ -104,14 +119,6 @@ SVG 0 attempted to change fill of arrows on click (unsuccessful)
 
 ###### TODO
 
-GIT:
-
-Branches - dev branch | tons of merging bugs due to Parcel - within 'dist' folder (doesn't happen on React based projects)
-
-HTML:
-
-Sep container for mobile navigation (not the same one - lesson learned from Bloggr project)
-
 CSS:
 
 Sass - 1st project | 7 - 1 pattern | basic mixins + Sass vars (compiling for browser support) | maps for mq breakpoints | nesting media queries + & selector (BEM) | modern reset for reset.scss (normalise outdated) | @use + @forward vs @import
@@ -129,15 +136,3 @@ Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched
 Carousel imgs - translateY 50% centre trick to control img changing (assets were diff sizes slightly - keep centre point same position) | could use transform-origin next time
 
 SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + viewport + strokes | made two version - one very long one for wider screens to stay pinned with img + keep scaling horizontally as viewport grows (smaller for mobile-tablet) | fluid size on smaller screens (scales) + fixed vertical with fluid horizontal for wider
-
-JS:
-
-NPM + packages - Parcel bundler | Font Awesome icons
-
-Intersection observer API (sticky header box-shadow + opacity 0.9)
-
-Modules - 1st time for whole project | much more organised + thinking about how to model the events within App.js (same way designing an App would do - event is the trigger for whole logic - async logic)
-
-Carousel - 1st time linking sections of content via className (+ toggling visiblity)
-
-Regex - massive pre-built one for email validation | error msg built + appended in JS - originally done in CSS pseudo el on input (can't apply pseudo els to inputs as self-closing) | could next time use a descendant class selector for the msg on a diff el - positioning slightly harder
