@@ -108,39 +108,13 @@ My original solution to controlling the 'browser-extension' cards resolved aroun
 }
 ```
 
-Animation - mobile nav (transalted default off of screen + transalted back to 100% on hamburger click via descendant class selector) | power of transitions + dynamic 'open' class (solves most of the animation required - unless more complicated than 'to' - 'from') | performant animation - only animating opacity + transform | animation used for hero illustration (little finess + appropiate for a bookmark company based around modern technology)
-
-```scss
-:focus {
-   outline: 3px dotted $softBlue;
-}
-```
-
-Outlines for accessibility - dotted style + on :focus / :hover
-
-```js
-const observer = new IntersectionObserver(
-   (entries, observer) =>
-      entries.forEach((entry) => {
-         !entry.isIntersecting
-            ? header.classList.add('test')
-            : header.classList.remove('test')
-      }),
-   headerOptions
-)
-```
-
-Intersection observer API (sticky header box-shadow + opacity 0.9)
-
-Modules - 1st time for whole project | much more organised + thinking about how to model the events within App.js (same way designing an App would do - event is the trigger for whole logic - async logic)
+Alongside experimenting with more complex transitions on the primary navigation links, I decided to implement my first 'official' animation within a project as well. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from the site's appropriateness. However, I do think the animation displayed above was minimal enough to not impact the site's effectiveness, although I look forward to refining my ability and creating more advanced movements, merely to deepen my understanding of the language.
 
 ### Continued development
 
 I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish the project with a much larger components folder.
 
 ### Useful resources
-
--  [Intersection Observer API - Introduction](https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell) - Kevin's video provided an introduction to the basics of the API and some best practices when dealing with it. Fading or translating content in on scroll is nice, but in this situation a more appropiate use was applying dynamic styling (box-shadow) to a sticky header, when the viewport reached a certain section of content.
 
 -  [CSS Animation - Introduction](https://www.youtube.com/watch?v=YszONjKpgg4&ab_channel=WebDevSimplified) - My first introduction to CSS animation, explaining all the fundamental properties and their behaviour.
 
