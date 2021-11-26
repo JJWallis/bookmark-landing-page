@@ -54,7 +54,7 @@ Your users should be able to:
 
 This project was my first time using Node Package Manager through which I was able to install multiple useful technologies to produce this project, including Font Awesome's icon library as demonstrated above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off of user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity efficiency by compiling all of our CSS and JavaScript based technologies (Sass, Typescript, etc) all in one go on every save.
 
-```css
+```scss
 .hero {
    &-wrapper {
       background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
@@ -70,7 +70,7 @@ As mentioned in the previous paragraph, this project was a major step up for me 
 
 I included the above code example specifically to touch upon the blue background SVG which we had to manually create, as well as control in a responsive manner as the design adapted. In order to create this shape, I had to research additional information about the basics of XML code, and the tags we can use to create desired shapes such as the `<cicle>` tag. In order to control the asset, I created two different versions of the SVG shape regarding its width, including one very wide version for desktop viewports. I combined this with a fluid horizontal width to allow it to keep growing for ultra-wide displays, whilst staying pinned to the middle of the hero image which was being centered by the max-width utility class.
 
-```css
+```scss
 &:hover::after {
    transform: scaleX(1);
    transform-origin: left;
@@ -91,7 +91,7 @@ I adapted the original design slightly to play around with more complicated tran
 
 Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched bottom flex item but still wrapping behaviour - great to maintain card layout)
 
-```css
+```scss
 @keyframes left-right {
    0% {
       transform: translateY(-50%) translateX(0);
@@ -110,7 +110,7 @@ Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched
 
 Animation - mobile nav (transalted default off of screen + transalted back to 100% on hamburger click via descendant class selector) | power of transitions + dynamic 'open' class (solves most of the animation required - unless more complicated than 'to' - 'from') | performant animation - only animating opacity + transform | animation used for hero illustration (little finess + appropiate for a bookmark company based around modern technology)
 
-```css
+```scss
 :focus {
    outline: 3px dotted $softBlue;
 }
