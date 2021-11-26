@@ -68,6 +68,22 @@ NPM + packages - Parcel bundler | Font Awesome icons
 FAQ - arrows translating direction on click (new technique) | colour change of arrows - creating a diff asset after modifying fill in code | learnt from 2nd FEM project (FAQ Accordian) - button parent to space-between arrow img + p | no max-height because plently of room for content to breathe within a landing page layout (vs App centered style layout)
 
 ```css
+.hero {
+   &-wrapper {
+      background: url('/images/bg-blue-shape.svg') no-repeat -45% 15% / 150%;
+      @include mq(hero-illustration) {
+         background-position: calc(100% + 100px) 15%;
+         background-size: 80% 400px;
+      }
+   }
+}
+```
+
+Sass - 1st project | 7 - 1 pattern | basic mixins + Sass vars (compiling for browser support) | maps for mq breakpoints | nesting media queries + & selector (BEM) | modern reset for reset.scss (normalise outdated) | @use + @forward vs @import
+
+SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + viewport + strokes | made two version - one very long one for wider screens to stay pinned with img + keep scaling horizontally as viewport grows (smaller for mobile-tablet) | fluid size on smaller screens (scales) + fixed vertical with fluid horizontal for wider
+
+```css
 &:hover::after {
    transform: scaleX(1);
    transform-origin: left;
@@ -75,6 +91,18 @@ FAQ - arrows translating direction on click (new technique) | colour change of a
 ```
 
 Underline pseudo el trick - not part of design (but sometime nice to experiment with diff ideas to test whether they were appropiate for virtual audience/company) | transform-origin (changing direction it starts + stops)
+
+```scss
+.card-brwsr {
+   @include flexParent(row, center, unset);
+   flex-wrap: wrap;
+   & > * {
+      flex-basis: 340px;
+   }
+}
+```
+
+Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched bottom flex item but still wrapping behaviour - great to maintain card layout)
 
 ```css
 @keyframes left-right {
@@ -121,31 +149,17 @@ Modules - 1st time for whole project | much more organised + thinking about how 
 
 ### Continued development
 
-Sass - Components (in future should create more + split up styles further)
-
-SVG 0 attempted to change fill of arrows on click (unsuccessful)
+I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish the project with a much larger components folder.
 
 ### Useful resources
 
--  [Intersection Observer API - Introduction](https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell) - Kevin's video on the basics of the API and best practices/techniques possible with it. Fading or translating content in on scroll is nice, but a more common usecase is styling (box-shadow) applied to a sticky header when the viewport reaches a certain section of content.
+-  [Intersection Observer API - Introduction](https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell) - Kevin's video provided an introduction to the basics of the API and some best practices when dealing with it. Fading or translating content in on scroll is nice, but in this situation a more appropiate use was applying dynamic styling (box-shadow) to a sticky header, when the viewport reached a certain section of content.
 
--  [CSS Animation - Introduction](https://www.youtube.com/watch?v=YszONjKpgg4&ab_channel=WebDevSimplified) - My first introduction to CSS animation.
+-  [CSS Animation - Introduction](https://www.youtube.com/watch?v=YszONjKpgg4&ab_channel=WebDevSimplified) - My first introduction to CSS animation, explaining all the fundamental properties and their behaviour.
 
--  [CSS Performant Animations](https://www.youtube.com/watch?v=4PStxeSIL9I&ab_channel=WebDevSimplified) - Great to learn early on, used to make the mistake of transitioning everything on a class (instead of specifying) & transition not on pseudo class but base class/el itself (+ specific properties).
+-  [CSS Performant Animations](https://www.youtube.com/watch?v=4PStxeSIL9I&ab_channel=WebDevSimplified) - This was great to learn early on since I used to make the mistake of transitioning everything on a class, instead of specifying certain properties to be more performant.
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
 -  Linkedin - [Joshua Jameson-Wallis]()
-
-###### TODO
-
-CSS:
-
-Sass - 1st project | 7 - 1 pattern | basic mixins + Sass vars (compiling for browser support) | maps for mq breakpoints | nesting media queries + & selector (BEM) | modern reset for reset.scss (normalise outdated) | @use + @forward vs @import
-
-Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched bottom flex item but still wrapping behaviour - great to maintain card layout)
-
-Carousel imgs - translateY 50% centre trick to control img changing (assets were diff sizes slightly - keep centre point same position)
-
-SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + viewport + strokes | made two version - one very long one for wider screens to stay pinned with img + keep scaling horizontally as viewport grows (smaller for mobile-tablet) | fluid size on smaller screens (scales) + fixed vertical with fluid horizontal for wider
