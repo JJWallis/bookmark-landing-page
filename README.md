@@ -89,7 +89,7 @@ I adapted the original design slightly to play around with more complicated tran
 }
 ```
 
-Flexbox browser cards - flex-wrap + basis without flex-grow (don't get stretched bottom flex item but still wrapping behaviour - great to maintain card layout)
+My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space within the container. Once I removed the flex-grow value from each child, the wrapping behaviour still occured but without the stretching behaviour attatched to it. Although it did create more whitespace around the viewport edges, I didn't want to sacrifice the width of each card for flex's traditional solution to responsive design.
 
 ```scss
 @keyframes left-right {
