@@ -52,20 +52,7 @@ Your users should be able to:
 <i class="fab fa-facebook-square social-icon social-icon-fb"></i>
 ```
 
-NPM + packages - Parcel bundler | Font Awesome icons
-
-```html
-<button class="faq_btn">
-   <p class="faq_qstn">What is Bookmark?</p>
-   <img
-      src="/images/icon-arrow.svg"
-      alt="Downwards facing arrow."
-      class="arrow"
-   />
-</button>
-```
-
-FAQ - arrows translating direction on click (new technique) | colour change of arrows - creating a diff asset after modifying fill in code | learnt from 2nd FEM project (FAQ Accordian) - button parent to space-between arrow img + p | no max-height because plently of room for content to breathe within a landing page layout (vs App centered style layout)
+This project was my first time using Node Package Manager through which I was able to install multiple useful technologies to produce this project, including Font Awesome's icon library as demonstrated above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off of user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity efficiency by compiling all of our CSS and JavaScript based technologies (Sass, Typescript, etc) all in one go on every save.
 
 ```css
 .hero {
@@ -79,9 +66,9 @@ FAQ - arrows translating direction on click (new technique) | colour change of a
 }
 ```
 
-Sass - 1st project | 7 - 1 pattern | basic mixins + Sass vars (compiling for browser support) | maps for mq breakpoints | nesting media queries + & selector (BEM) | modern reset for reset.scss (normalise outdated) | @use + @forward vs @import
+As mentioned in the previous paragraph, this project was a major step up for me in my whole development process, and as such for this project I used Sass to organise all my CSS. I adopted the 7-1 pattern as described on the official Sass docs, whilst making great use of multiple other features a pre-processor provides us with. These include nesting with the '&' operator to inherit the parent selector (as shown above), as well as basic mixins which are able to dynamically generate re-usable sections of CSS code.
 
-SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + viewport + strokes | made two version - one very long one for wider screens to stay pinned with img + keep scaling horizontally as viewport grows (smaller for mobile-tablet) | fluid size on smaller screens (scales) + fixed vertical with fluid horizontal for wider
+I included the above code example specifically to touch upon the blue background SVG which we had to manually create, as well as control in a responsive manner as the design adapted. In order to create this shape, I had to research additional information about the basics of XML code, and the tags we can use to create desired shapes such as the `<cicle>` tag. In order to control the asset, I created two different versions of the SVG shape regarding its width, including one very wide version for desktop viewports. I combined this with a fluid horizontal width to allow it to keep growing for ultra-wide displays, whilst staying pinned to the middle of the hero image which was being centered by the max-width utility class.
 
 ```css
 &:hover::after {
@@ -90,7 +77,7 @@ SVG Blue bg-img - had to create ourself | learnt loads about SVGS - viewbox + vi
 }
 ```
 
-Underline pseudo el trick - not part of design (but sometime nice to experiment with diff ideas to test whether they were appropiate for virtual audience/company) | transform-origin (changing direction it starts + stops)
+I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links full-width on hover, whilst then performing the same effect but in the opposite direction when that same hover stopped occuring.
 
 ```scss
 .card-brwsr {
