@@ -52,7 +52,7 @@ Your users should be able to:
 <i class="fab fa-facebook-square social-icon social-icon-fb"></i>
 ```
 
-This project was my first time using Node Package Manager through which I was able to install multiple useful technologies to produce this project, including Font Awesome's icon library as demonstrated above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off of user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity efficiency by compiling all of our CSS and JavaScript based technologies (Sass, Typescript, etc) all in one go on every save.
+This project was my first time using NPM through which I was able to install multiple useful technologies to produce this project, including Font Awesome's icon library as demonstrated above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off a user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity efficiency by compiling all of our CSS and JavaScript based technologies (Sass, Typescript, etc) all in one go on every save.
 
 ```scss
 .hero {
@@ -66,9 +66,9 @@ This project was my first time using Node Package Manager through which I was ab
 }
 ```
 
-As mentioned in the previous paragraph, this project was a major step up for me in my whole development process, and as such for this project I used Sass to organise all my CSS. I adopted the 7-1 pattern as described on the official Sass docs, whilst making great use of multiple other features a pre-processor provides us with. These include nesting with the '&' operator to inherit the parent selector (as shown above), as well as basic mixins which are able to dynamically generate re-usable sections of CSS code.
+As mentioned in the previous paragraph, this project was a major step up for me in my whole development process, and as such for this project I used Sass to organise all my CSS. I adopted the 7-1 pattern as described on the official Sass docs, whilst making great use of multiple other features a pre-processor provides us with. These include nesting with the '&' operator to inherit the parent selector, as well as basic mixins which are able to dynamically generate re-usable sections of CSS code based on potential arguments we provide to them in a function like syntax.
 
-I included the above code example specifically to touch upon the blue background SVG which we had to manually create, as well as control in a responsive manner as the design adapted. In order to create this shape, I had to research additional information about the basics of XML code, and the tags we can use to create desired shapes such as the `<cicle>` tag. In order to control the asset, I created two different versions of the SVG shape regarding its width, including one very wide version for desktop viewports. I combined this with a fluid horizontal width to allow it to keep growing for ultra-wide displays, whilst staying pinned to the middle of the hero image which was being centered by the max-width utility class.
+I included the above code example specifically to touch upon the blue background SVG which we had to manually create, as well as control in a responsive manner as the design responded. In order to create this shape, I had to research additional information about the basics of XML code, and the tags we can use to create desired shapes such as the `<cicle>` tag. In order to control the asset, I created two different versions of the SVG shape regarding its width, including one very wide version for desktop viewports. I combined this with a fluid horizontal width to allow it to keep growing for ultra-wide displays, whilst staying pinned to the middle of the hero image which was being centered by the max-width utility class.
 
 ```scss
 &:hover::after {
@@ -77,7 +77,7 @@ I included the above code example specifically to touch upon the blue background
 }
 ```
 
-I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links full-width on hover, whilst then performing the same effect but in the opposite direction when that same hover stopped occuring.
+I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links full-width on hover, whilst then performing the same effect but in the opposite direction when the hover stopped.
 
 ```scss
 .card-brwsr {
@@ -89,7 +89,7 @@ I adapted the original design slightly to play around with more complicated tran
 }
 ```
 
-My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space within the container. Once I removed the flex-grow value from each child, the wrapping behaviour still occured but without the stretching behaviour attatched to it. Although it did create more whitespace around the viewport edges, I didn't want to sacrifice the width of each card for flex's traditional solution to responsive design.
+My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space within the container. Once I removed the flex-grow value from each child, the wrapping behaviour still occured but without the stretching behaviour attatched to it. Although it did create more whitespace around the viewport edges, I didn't want to sacrifice the width of each card for flex-wrap's traditional behaviour.
 
 ```scss
 @keyframes left-right {
@@ -108,11 +108,13 @@ My original solution to controlling the 'browser-extension' cards resolved aroun
 }
 ```
 
-Alongside experimenting with more complex transitions on the primary navigation links, I decided to implement my first 'official' animation within a project as well. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from the site's appropriateness. However, I do think the animation displayed above was minimal enough to not impact the site's effectiveness, although I look forward to refining my ability and creating more advanced movements, merely to deepen my understanding of the language.
+Alongside experimenting with more complex transitions on the primary navigation links, I decided to implement my first 'official' animation within a project as well. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from its appropriateness within the site. However, I do think the animation displayed above was minimal enough to not impact the site's effectiveness, although I look forward to refining my ability and creating more advanced movements, if only to deepen my understanding of the language.
 
 ### Continued development
 
 I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish the project with a much larger components folder.
+
+I feel as if now I am becoming relatively confident with building single-page layouts and re-creating them close to the original design. I would like to branch out furthe in talking larger scale projects, such as multi-page sites which would take my organisation skills to the next level, as well as my CSS.
 
 ### Useful resources
 
