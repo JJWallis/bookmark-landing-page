@@ -108,13 +108,13 @@ My original solution to controlling the 'browser-extension' cards resolved aroun
 }
 ```
 
-Alongside experimenting with more complex transitions on the primary navigation links, I decided to implement my first 'official' animation within a project as well. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from its appropriateness within the site. However, I do think the animation displayed above was minimal enough to not impact the site's effectiveness, although I look forward to refining my ability and creating more advanced movements, if only to deepen my understanding of the language.
+Alongside experimenting with more complex transitions on the primary navigation, I decided to implement my first official animation within a project. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from the appropriateness within the site. However, I do think the animation displayed above was minimal enough to not impact the site's purpose, although I look forward to refining my ability and creating more advanced movements, if only to deepen my understanding of the language.
 
 ### Continued development
 
-I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish the project with a much larger components folder.
+I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish a project with a more diverse range of populated folders.
 
-I feel as if now I am becoming relatively confident with building single-page layouts and re-creating them close to the original design. I would like to branch out furthe in talking larger scale projects, such as multi-page sites which would take my organisation skills to the next level, as well as my CSS.
+I feel as if now I am becoming relatively confident with building single-page layouts, whilst re-creating them as close as possible to the original design. I would like to branch out further in tackling larger scale projects, such as multi-page sites which would take my organisation and CSS skills to the next level.
 
 ### Useful resources
 
