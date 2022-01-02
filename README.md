@@ -77,7 +77,7 @@ I included the above code example specifically to touch upon the blue background
 }
 ```
 
-I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links full-width on hover, whilst then performing the same effect but in the opposite direction when the hover stopped.
+I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links' full-width on hover, whilst then performing the same effect but in the opposite direction when the hover stopped.
 
 ```scss
 .card-brwsr {
@@ -89,7 +89,7 @@ I adapted the original design slightly to play around with more complicated tran
 }
 ```
 
-My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space within the container. Once I removed the flex-grow value from each child, the wrapping behaviour still occured but without the stretching behaviour attatched to it. Although it did create more whitespace around the viewport edges, I didn't want to sacrifice the width of each card for flex-wrap's traditional behaviour.
+My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space. Once I removed that value, the wrapping behaviour still occured but without any fluid stretching behaviour. Although it did create more whitespace around the parent container, I didn't want to sacrifice the width of each card for the traditional `flex-wrap` behaviour.
 
 ```scss
 @keyframes left-right {
