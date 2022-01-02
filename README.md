@@ -52,7 +52,7 @@ Your users should be able to:
 <i class="fab fa-facebook-square social-icon social-icon-fb"></i>
 ```
 
-This project was my first time using NPM through which I was able to install multiple useful technologies to produce this project, including Font Awesome's icon library as demonstrated above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off a user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity efficiency by compiling all of our CSS and JavaScript based technologies (Sass, Typescript, etc) all in one go on every save.
+This project was my first time using the popular package manager NPM, through which I was able to install multiple packages to produce this project, including Font Awesome's icon library as shown above. These icons come with great JavaScript support already built in, which provides much greater hover targets for transitioning icons based off a user actions. I was also able to successfully install the popular bundler Parcel, which provides a massive boost to productivity by compiling all of our Sass and JavaScript code into a 'browser-readable' format every time we save.
 
 ```scss
 .hero {
@@ -125,4 +125,4 @@ I feel as if now I am becoming relatively confident with building single-page la
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
--  Linkedin - [Joshua Jameson-Wallis]()
+-  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
