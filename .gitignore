@@ -2,8 +2,7 @@
 *.xd
 *.fig
 .DS_Store
-
 node_modules
 .prettierignore
-dist
-.cache
+dist/
+.cache/
