@@ -43,7 +43,7 @@ Your users should be able to:
 -  Flexbox
 -  Mobile-first workflow
 -  Sass - CSS preprocessor
--  Vanilla JS
+-  JavaScript
 -  ES6 Modules
 
 ### What I learned
