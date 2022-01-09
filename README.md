@@ -68,9 +68,9 @@ I was also able to successfully install the bundler Parcel which provides a mass
 }
 ```
 
-As mentioned in the previous paragraph, this project was a major step up for me in my whole development process, especially with my use of Sass to write all my CSS. I adopted the 7-1 pattern as described on the official Sass docs, whilst making great use of multiple other features a pre-processor provides us with. These include nesting with the '&' operator to inherit the parent selector, as well as basic mixins which are able to dynamically generate re-usable sections of CSS code based on potential arguments we provide to them in a function like syntax.
+I chose to write all my CSS using the pre-processor Sass where I adopted the 7-1 pattern for organisation, whilst learning how to use nesting with the '&' operator to inherit the parent selector. I also used mixins which are able to dynamically generate re-usable sections of CSS code based on potential arguments we provide to them, all within a function like syntax.
 
-I included the above code example specifically to touch upon the blue background SVG which we had to manually create through code, as well as control in a responsive manner as the viewport size increased. In order to create this shape, I had to research additional information about the basics of XML code, and the tags we can use to create different shapes (such as the `<cicle>` tag). In order to control the asset, I created two different versions of the SVG shape regarding its width, including one very wide version for ultra-wide desktops. I combined this with a fluid horizontal width to allow it to keep growing for those displays, whilst staying pinned to the middle of the hero image which was being centered by the primary max-width utility class.
+The code example above highlights my solution to the blue background SVG which we had to manually create through code. In order to create this shape, I had to research additional information about the basics of XML code and the tags we can use to create different shapes, such as the `<cicle>` tag.
 
 ```scss
 &:hover::after {
@@ -79,7 +79,7 @@ I included the above code example specifically to touch upon the blue background
 }
 ```
 
-I adapted the original design slightly to play around with more complicated transitions and hover effects, since the original design merely required a colour change on hover for the primary navigation links. As displayed above, I applied a pseudo-element to each link which created a small line that would translate horizontally to fill up the links' full-width on hover, whilst then performing the same effect but in the opposite direction when the hover stopped.
+I adapted the original design slightly to play around with more complicated transitions and hover effects for the primary navigation, since the original design merely required a colour change. I had recently learnt about the `transform-origin` property and used it here to allow each small line (attatched to each link) to scale horizontally on hover, whilst then performing the same effect but in the opposite direction due to a different transform-origin value being applied on hover.
 
 ```scss
 .card-brwsr {
