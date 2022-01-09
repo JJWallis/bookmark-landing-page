@@ -91,7 +91,7 @@ I adapted the original design slightly to play around with more complicated tran
 }
 ```
 
-My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce that classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet viewports caused the bottom flex-child to become stretched to fill up all remaining space. Once I removed that value, the wrapping behaviour still occured but without any fluid stretching behaviour. Although it did create more whitespace around the parent container, I didn't want to sacrifice the width of each card for the traditional `flex-wrap` behaviour.
+My original solution to controlling the 'browser-extension' cards resolved around applying a standard `flex-wrap` to the parent, with a fixed `flex-basis` value to reproduce the classic wrapping behaviour. However, I did also apply a `flex-grow: 1` to each flex-child, which at tablet devices caused the bottom flex-child to become stretched to fill up all remaining space. Once I removed that value, the wrapping behaviour still occured but without any fluid stretching alongside it.
 
 ```scss
 @keyframes left-right {
@@ -108,15 +108,19 @@ My original solution to controlling the 'browser-extension' cards resolved aroun
       transform: translateY(-50%) translateX(0);
    }
 }
+
+&_illustration {
+   animation: left-right 3000ms linear backwards infinite;
+}
 ```
 
-Alongside experimenting with more complex transitions on the primary navigation, I decided to implement my first official animation within a project. It was quite hard to find an appropiate use for it, since I would often go too far with the desired effect, ultimately detracting from the appropriateness within the site. However, I do think the animation displayed above was minimal enough to not impact the site's purpose, although I look forward to refining my ability and creating more advanced movements, if only to deepen my understanding of the language.
+I decided to implement my first official animation within this project, learning how to represent the different stages through either percentages or the keywords 'to' and 'from', as well as allowing the animation to continue running for an infinite amount of time.
 
 ### Continued development
 
-I still organised a lot of my styles into the same Sass partials, since I found this more useful when building out the site so I wasn't constantly creating new files all the time. However, grouping styles together to this extent goes against the modular purpose of splitting your code up into re-usable chunks, so therefore I would at least like to finish a project with a more diverse range of populated folders.
+I organised a lot of my styles into the same Sass partials so I wasn't having to constantly create new files as I was building out the page. However, I'm aware this goes against the modular purpose of splitting your code up into re-usable chunks, and therefore look forward to finishing a project with a more diverse range of populated folders.
 
-I feel as if now I am becoming relatively confident with building single-page layouts, whilst re-creating them as close as possible to the original design. I would like to branch out further in tackling larger scale projects, such as multi-page sites which would take my organisation and CSS skills to the next level.
+I feel as if now I am becoming relatively confident with building single-page layouts in accordance with the original designs provided. I would like to branch out further in tackling larger scale projects, such as multi-page sites which would take my organisation and CSS skills to the next level.
 
 ### Useful resources
 
